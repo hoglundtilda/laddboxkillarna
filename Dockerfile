@@ -1,16 +1,19 @@
-FROM node:14
+FROM node:lts-alpine
 
-WORKDIR /usr/src/app
+WORKDIR /laddboxkillarna
 
-COPY . ./
+COPY package*.json ./
 
 RUN npm install
 
-EXPOSE 8080
-
-ENV HOST=0.0.0.0
-ENV PORT=8080
+COPY . .
 
 RUN npm run build
 
-CMD [ "npm", "run", "start" ]
+EXPOSE 3000
+
+ENV NUXT_HOST=0.0.0.0
+
+ENV NUXT_PORT=3000
+
+CMD ["npm", "start" ]
