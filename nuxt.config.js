@@ -11,14 +11,14 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
     ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     'vant/lib/index.css',
-    '~assets/css/main'
+    //'~assets/css/main'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -31,6 +31,7 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    "@nuxtjs/google-fonts",
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -47,9 +48,18 @@ export default {
   build: {
   },
 
+  googleFonts: {
+    download: true,
+    display: "swap",
+    families: {
+      Roboto: { wght: [100, 300, 400, 500,700, 900], ital: [100, 300, 400, 500,700] } ,
+      Saira: { wght: [100, 300, 400, 500,700, 900], ital: [100, 300, 400, 500,700] }
+    },
+  },
+
   styleResources: {
     scss: [
-        '~/assets/css/*.scss',
+        '~assets/css/*.scss',
         //'~/assets/css/mixins.scss',
 
     ]
