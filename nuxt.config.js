@@ -14,7 +14,10 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['vant/lib/index.css', '~assets/css/main'],
+  css: [
+    'vant/lib/index.css',
+    //'~assets/css/main'
+  ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: ['@/plugins/vant'],
@@ -23,7 +26,7 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [],
+  buildModules: ['@nuxtjs/google-fonts'],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -38,9 +41,24 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 
+  googleFonts: {
+    download: true,
+    display: 'swap',
+    families: {
+      Roboto: {
+        wght: [100, 300, 400, 500, 700, 900],
+        ital: [100, 300, 400, 500, 700],
+      },
+      Saira: {
+        wght: [100, 300, 400, 500, 700, 900],
+        ital: [100, 300, 400, 500, 700],
+      },
+    },
+  },
+
   styleResources: {
     scss: [
-      '~/assets/css/*.scss',
+      '~assets/css/*.scss',
       //'~/assets/css/mixins.scss',
     ],
   },
