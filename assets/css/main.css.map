@@ -5,10 +5,7 @@
         "main.scss",
         "_variables.scss",
         "_base.scss",
-        "_components.scss",
-        "_layout.scss",
-        "_fonts.scss",
-        "_buttons.scss"
+        "_fonts.scss"
     ],
     "names": [],
     "file": "main.css"

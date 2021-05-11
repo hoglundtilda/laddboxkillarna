@@ -27,7 +27,6 @@ export default {
 
 <style lang="scss" scoped>
 #header__section {
-  font-family: $headline;
   color: $white;
   height: 100vh;
   background: linear-gradient(

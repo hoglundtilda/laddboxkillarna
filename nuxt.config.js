@@ -16,7 +16,7 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     'vant/lib/index.css',
-    //'~assets/css/main'
+    //'~assets/css/main.scss'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -58,6 +58,7 @@ export default {
 
   styleResources: {
     scss: [
+      '~assets/css/variables.scss',
       '~assets/css/*.scss',
       //'~/assets/css/mixins.scss',
     ],
