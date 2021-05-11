@@ -13,19 +13,22 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }],
   },
 
-  // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-    'vant/lib/index.css',
-    //'~assets/css/main.scss'
-  ],
-
-  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['@/plugins/vant'],
-
-  // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
+  target: 'static',
 
-  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
+  // Axios module configuration: https://go.nuxtjs.dev/config-axios
+  axios: {
+    // API on server or locally
+    baseUrl: process.env.BASE_URL || 'http://localhost:8000'
+  },
+
+  env: {
+    // env fallback axios
+  },
+
+  // Build Configuration: https://go.nuxtjs.dev/config-build
+  build: {},
+
   buildModules: ['@nuxtjs/google-fonts'],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -35,11 +38,6 @@ export default {
     '@nuxtjs/style-resources',
   ],
 
-  // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
-
-  // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
 
   googleFonts: {
     download: true,
@@ -56,11 +54,16 @@ export default {
     },
   },
 
+  css: [
+    'vant/lib/index.css',
+    //'~assets/css/main.scss'
+  ],
+
+  plugins: ['@/plugins/vant'],
+
   styleResources: {
     scss: [
-      '~assets/css/variables.scss',
       '~assets/css/*.scss',
-      //'~/assets/css/mixins.scss',
     ],
   },
 }
