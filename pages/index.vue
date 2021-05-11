@@ -1,15 +1,12 @@
 <template>
   <div class="wrapper">
-    <Header />
-    <WhyUs />
+    <HomepageHeader />
+    <HomepageWhyUs />
   </div>
 </template>
 <script>
-import Header from '@/components/Homepage/Header'
-import WhyUs from '@/components/Homepage/WhyUs'
-
 export default {
-  components: { Header, WhyUs },
+  components: true,
 }
 </script>
 

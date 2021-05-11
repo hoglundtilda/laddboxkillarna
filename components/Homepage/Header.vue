@@ -15,13 +15,15 @@
         lägga en beställning. Vi garanterar återkoppling inom 24 timmar
       </p>
     </section>
-    <button>Produkter</button>
-    <button>Beställ här</button>
+    <buttonsButtonPrimary btn_text="Produkter" />
+    <buttonsButtonGhost btn_text="Beställ här" />
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  components: true,
+}
 </script>
 
 <style lang="scss" scoped>
