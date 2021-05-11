@@ -1,5 +1,6 @@
 <template>
   <div>
+    <AppNavDesktop />
     <Nuxt />
   </div>
 </template>
