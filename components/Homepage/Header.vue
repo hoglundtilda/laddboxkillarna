@@ -15,8 +15,8 @@
         lägga en beställning. Vi garanterar återkoppling inom 24 timmar
       </p>
     </section>
-    <buttonsButtonPrimary @btn_click="click" btn_text="Produkter" />
-    <buttonsButtonGhost btn_text="Beställ här" />
+    <ButtonPrimary @btn_click="click" btn_text="Produkter" />
+    <ButtonGhost btn_text="Beställ här" />
   </div>
 </template>
 
