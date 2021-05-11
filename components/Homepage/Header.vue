@@ -26,6 +26,7 @@ export default {}
 
 <style lang="scss" scoped>
 #header__section {
+  font-family: $headline;
   color: $white;
   height: 100vh;
   background: linear-gradient(
@@ -40,10 +41,11 @@ export default {}
   padding: 10%;
 
   .check {
-    padding: 0.5rem 0;
+    padding: 0.2rem 0;
   }
   .description {
-    width: 50%;
+    width: 60%;
+    margin: 1rem 0;
   }
 }
 </style>
