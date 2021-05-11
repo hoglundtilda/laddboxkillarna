@@ -5,9 +5,7 @@
   </div>
 </template>
 <script>
-export default {
-  components: true,
-}
+export default {}
 </script>
 
 <style lang="scss" scoped></style>
