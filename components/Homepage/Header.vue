@@ -3,10 +3,10 @@
     <section class="text">
       <h1>Din helhetslösning</h1>
       <div>
-        <p class="check">&#x2714; Köp din laddbox</p>
-        <p class="check">&#x2714; Installerat & klart</p>
-        <p class="check">&#x2714; Inga mellanhänder</p>
-        <p class="check">&#x2714; Till Fast Pris</p>
+        <h4 class="check">&#x2714; Köp din laddbox</h4>
+        <h4 class="check">&#x2714; Installerat & klart</h4>
+        <h4 class="check">&#x2714; Inga mellanhänder</h4>
+        <h4 class="check">&#x2714; Till Fast Pris</h4>
       </div>
       <p class="description">
         Vår helhetslösning går ut på att göra det så enkelt som möjligt för dig
