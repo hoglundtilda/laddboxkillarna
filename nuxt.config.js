@@ -19,7 +19,7 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // API on server or locally
-    baseUrl: process.env.BASE_URL || 'http://localhost:8000'
+    baseUrl: process.env.BASE_URL || 'http://localhost:8000',
   },
 
   env: {
@@ -36,8 +36,23 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     '@nuxtjs/style-resources',
+    [
+      'nuxt-fontawesome',
+      {
+        component: 'fa',
+        imports: [
+          //import whole set
+          {
+            set: '@fortawesome/free-solid-svg-icons',
+            icons: ['fas'],
+          },
+          //import 2 icons from set
+          // please note this is PRO set in this example,
+          // you must have it in your node_modules to actually import
+        ],
+      },
+    ],
   ],
-
 
   googleFonts: {
     download: true,
@@ -62,8 +77,6 @@ export default {
   plugins: ['@/plugins/vant'],
 
   styleResources: {
-    scss: [
-      '~assets/css/*.scss',
-    ],
+    scss: ['~assets/css/*.scss'],
   },
 }
