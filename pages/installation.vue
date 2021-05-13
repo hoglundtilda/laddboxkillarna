@@ -118,13 +118,13 @@ export default {
 
 <style lang="scss" scoped>
 .wrapper__installation {
-  padding: 8% 10%;
-  height: 100vh;
+  padding: 10%;
+  min-height: 100vh;
   display: grid;
   justify-content: center;
   font-family: $headline;
   grid-template-areas: 'text form';
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 55% 45%;
 
   .text {
     grid-area: text;
