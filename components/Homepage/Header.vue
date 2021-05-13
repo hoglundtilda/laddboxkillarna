@@ -15,10 +15,8 @@
         lägga en beställning. Vi garanterar återkoppling inom 24 timmar
       </p>
     </section>
-    <div class="buttons">
-      <buttonsButtonPrimary btn_text="Produkter" class="primary" />
-      <buttonsButtonGhost btn_text="Beställ här" class="ghost" />
-    </div>
+    <ButtonPrimary btn_text="Produkter" class="primary" />
+    <ButtonGhost btn_text="Beställ här" class="ghost" />
   </div>
 </template>
 
@@ -28,7 +26,6 @@ export default {}
 
 <style lang="scss" scoped>
 #header__section {
-  font-family: $headline;
   color: $white;
   height: 100vh;
   background: linear-gradient(
