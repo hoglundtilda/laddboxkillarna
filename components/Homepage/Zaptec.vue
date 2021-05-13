@@ -11,7 +11,7 @@
           de skapat en av de minsta 22kW (Maximal laddeffekt) laddaren på
           marknaden och den är lika smart på insidan som enkel på utsidan.
         </p>
-        <buttonsButtonPrimary btn_text="Utforska Zaptec Go" class="primary" />
+        <ButtonPrimary btn_text="Utforska Zaptec Go" class="primary" />
       </div>
     </div>
   </div>

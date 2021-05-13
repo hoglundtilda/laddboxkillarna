@@ -8,15 +8,17 @@
         <h4 class="check">&#x2714; Inga mellanhänder</h4>
         <h4 class="check">&#x2714; Till Fast Pris</h4>
       </div>
-      <p class="description">
+      <p class="description text__standard">
         Vår helhetslösning går ut på att göra det så enkelt som möjligt för dig
         som kund. Vi sköter allt inkl. installation. Inga mellanhänder som drar
         ut på tiden eller trissar upp priser. Det enda du behöver göra är att
         lägga en beställning. Vi garanterar återkoppling inom 24 timmar
       </p>
     </section>
-    <ButtonPrimary btn_text="Produkter" class="primary" />
-    <ButtonGhost btn_text="Beställ här" class="ghost" />
+    <div class="buttons">
+      <ButtonPrimary btn_text="Produkter" class="primary" />
+      <ButtonGhost btn_text="Beställ här" class="ghost" />
+    </div>
   </div>
 </template>
 

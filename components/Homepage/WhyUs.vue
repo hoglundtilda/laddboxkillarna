@@ -7,7 +7,7 @@
       installationer av marknadsledande laddboxar
     </p>
     <h4>Vi har erfarenhet av mer än tusen lyckade installationer</h4>
-    <buttonsButtonGhost btn_text="Läs mer" class="ghost" />
+    <ButtonGhost btn_text="Läs mer" class="ghost" />
   </div>
 </template>
 
