@@ -15,8 +15,10 @@
         lägga en beställning. Vi garanterar återkoppling inom 24 timmar
       </p>
     </section>
-    <buttonsButtonPrimary btn_text="Produkter" />
-    <buttonsButtonGhost btn_text="Beställ här" />
+    <div class="buttons">
+      <buttonsButtonPrimary btn_text="Produkter" class="primary" />
+      <buttonsButtonGhost btn_text="Beställ här" class="ghost" />
+    </div>
   </div>
 </template>
 
@@ -46,6 +48,14 @@ export default {}
   .description {
     width: 60%;
     margin: 1rem 0;
+  }
+
+  .buttons {
+    display: flex;
+  }
+
+  .primary {
+    margin-right: 2rem;
   }
 }
 </style>

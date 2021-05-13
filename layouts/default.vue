@@ -1,12 +1,11 @@
 <template>
   <div>
+    <NavDesktop />
     <Nuxt />
   </div>
 </template>
 
 <style lang="scss">
-
-
 html {
   font-size: 16px;
   word-spacing: 1px;
@@ -23,6 +22,4 @@ html {
   box-sizing: border-box;
   margin: 0;
 }
-
-
 </style>
