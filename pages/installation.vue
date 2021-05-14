@@ -171,13 +171,14 @@ export default {
       .midnight,
       .wood,
       .black {
-        width: 3rem;
-        height: 3rem;
+        width: 2.5rem;
+        height: 2.5rem;
         outline: none;
         padding: 0;
         appearance: none;
         border-radius: 100%;
         margin: 0.5rem;
+        border: none;
       }
       .white:checked,
       .rock:checked,
@@ -208,16 +209,12 @@ export default {
         background-color: $asphalt_black;
       }
     }
-    input[type='text'] {
-      border-radius: 10rem;
-      padding: 0.5rem 1rem;
-      margin: 0.5rem 0;
-      border: 1px solid $black;
+    input {
+      @include input;
     }
     textarea {
-      border-radius: 1rem;
-      padding: 0.5rem 1rem;
-      margin: 0.5rem 0;
+      @include input;
+      border-radius: 2rem;
     }
 
     .primary {
