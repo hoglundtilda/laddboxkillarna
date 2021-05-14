@@ -9,3 +9,10 @@
   display: flex;
   align-self: flex-start;
 }
+
+@mixin input {
+  border-radius: 10rem;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
+  border: 1px solid $black;
+}
