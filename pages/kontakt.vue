@@ -21,10 +21,11 @@
       </section>
     </section>
     <section class="contact">
-      <input type="text" placeholder="Förnamn Efternamn" />
-      <input type="text" placeholder="Epost" />
-      <input type="text" placeholder="Ämne" />
+      <input v-model="name" type="text" placeholder="Förnamn Efternamn" />
+      <input v-model="toEmail" type="text" placeholder="Epost" />
+      <input v-model="subject" type="text" placeholder="Ämne" />
       <textarea
+        v-model="message"
         name=""
         id=""
         cols="30"
@@ -37,7 +38,19 @@
 </template>
 
 <script>
-export default {}
+import { mapActions } from 'vuex'
+
+export default {
+  data() {
+    return {
+      email: { name: '', toEmail: '', subject: '', message: '' },
+    }
+  },
+  methods: {
+          ...mapActions(['contactEmail']),
+
+  }
+}
 </script>
 
 <style lang="scss" scoped>
