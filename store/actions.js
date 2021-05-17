@@ -3,7 +3,8 @@ export default {
       console.log(email)
       const response = await this.$axios
         .$post(`/api/email/contact`, {email})
-        .then((response) => response.data)
+        .then((response) => {
+          console.log(response.data)})
         .catch((error) => {
           console.log(error)
         })
