@@ -1,14 +1,16 @@
+import axios from "axios";
+
 export default {
     async contactEmail({ commit }, email) {
       console.log(email)
       const response = await this.$axios
-        .$post(`/api/email/contact`, {email})
+        .post(`/email/contact`, {email})
         .then((response) => {
-          console.log(response.data)})
+          console.log(response)})
         .catch((error) => {
           console.log(error)
         })
-      console.log(response)
+      //console.log(response)
       //commit('TEST', products)
     },
 }
