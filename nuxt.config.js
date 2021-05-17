@@ -20,7 +20,7 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // API on server or locally
-    baseUrl: process.env.BASE_URL || 'http://test.laddboxkillarna.se',
+    baseUrl: process.env.BASE_URL || 'https://test.laddboxkillarna.se',
   },
 
   env: {
