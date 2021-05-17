@@ -1,6 +1,6 @@
 <template>
   <div id="steps__section">
-    <h3>Så här går det till</h3>
+    <h2>Så här går det till</h2>
     <section class="steps">
       <article class="step1">
         <img src="@/assets/images/steps/step1.png" alt="" />
@@ -29,7 +29,7 @@
         <p>Du kan nu ladda din bil säkert & snabbt!</p>
       </article>
     </section>
-    <h4>Snabbt, smidigt och enkelt!</h4>
+    <h3>Snabbt, smidigt och enkelt!</h3>
   </div>
 </template>
 
