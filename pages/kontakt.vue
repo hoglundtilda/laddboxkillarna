@@ -20,11 +20,11 @@
       </section>
     </section>
     <section class="contact">
-      <input v-model="name" type="text" placeholder="Förnamn Efternamn" />
-      <input v-model="toEmail" type="text" placeholder="Epost" />
-      <input v-model="subject" type="text" placeholder="Ämne" />
+      <input v-model="email.name" type="text" placeholder="Förnamn Efternamn" />
+      <input v-model="email.email" type="text" placeholder="Epost" />
+      <input v-model="email.subject" type="text" placeholder="Ämne" />
       <textarea
-        v-model="message"
+        v-model="email.message"
         name=""
         id=""
         cols="30"
