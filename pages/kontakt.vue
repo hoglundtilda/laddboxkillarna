@@ -4,7 +4,6 @@
       <h1>Kontakta oss</h1>
       <p>Har du frågor eller vill bli samarbetspartner?</p>
       <p>Vi snackar gärna med Er, vi hörs!</p>
-
       <section class="bosses">
         <article>
           <img src="@/assets/images/boss1.png" alt="" />
@@ -32,7 +31,7 @@
         rows="10"
         placeholder="Meddelande"
       ></textarea>
-      <ButtonPrimary btn_text="Skicka" class="primary" />
+      <ButtonPrimary btn_text="Skicka" class="primary" @btn_click="sendEmail" />
     </section>
   </div>
 </template>
@@ -43,13 +42,20 @@ import { mapActions } from 'vuex'
 export default {
   data() {
     return {
-      email: { name: '', toEmail: '', subject: '', message: '' },
+      email: {
+        name: 'Matilda Höglund',
+        email: 'hoglund.matilda@gmail.com',
+        subject: 'test contact-page',
+        message: 'Testar om det fungerar att skicka email från contact-page :)',
+      },
     }
   },
   methods: {
-          ...mapActions(['contactEmail']),
-
-  }
+    ...mapActions(['contactEmail']),
+    sendEmail() {
+      this.contactEmail(this.email)
+    },
+  },
 }
 </script>
 

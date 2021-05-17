@@ -223,8 +223,8 @@ export default {
       }
     }
     .primary {
-      background-color: #121212;
-      color: #fbf9ff;
+      background: $black;
+      color: $white;
       width: 100%;
       display: flex;
       justify-content: center;

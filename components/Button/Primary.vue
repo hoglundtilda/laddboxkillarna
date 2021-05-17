@@ -13,8 +13,6 @@ export default {
 <style lang="scss" scoped>
 .primary__btn {
   @include btn;
-  background: #fbf9ff;
-  color: $black;
   border: none;
 }
 </style>
