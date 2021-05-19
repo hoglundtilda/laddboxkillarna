@@ -4,7 +4,6 @@
       <h1>Kontakta oss</h1>
       <p>Har du frågor eller vill bli samarbetspartner?</p>
       <p>Vi snackar gärna med Er, vi hörs!</p>
-
       <section class="bosses">
         <article>
           <img src="@/assets/images/boss1.png" alt="" />
@@ -21,18 +20,18 @@
       </section>
     </section>
     <section class="contact">
-      <input v-model="name" type="text" placeholder="Förnamn Efternamn" />
-      <input v-model="toEmail" type="text" placeholder="Epost" />
-      <input v-model="subject" type="text" placeholder="Ämne" />
+      <input v-model="email.name" type="text" placeholder="Förnamn Efternamn" />
+      <input v-model="email.email" type="text" placeholder="Epost" />
+      <input v-model="email.subject" type="text" placeholder="Ämne" />
       <textarea
-        v-model="message"
+        v-model="email.message"
         name=""
         id=""
         cols="30"
         rows="10"
         placeholder="Meddelande"
       ></textarea>
-      <ButtonPrimary btn_text="Skicka" class="primary" />
+      <ButtonPrimary btn_text="Skicka" class="primary" @btn_click="sendEmail" />
     </section>
   </div>
 </template>
@@ -43,18 +42,26 @@ import { mapActions } from 'vuex'
 export default {
   data() {
     return {
-      email: { name: '', toEmail: '', subject: '', message: '' },
+      email: {
+        name: 'Matilda Höglund',
+        email: 'hoglund.matilda@gmail.com',
+        subject: 'test contact-page',
+        message: 'Testar om det fungerar att skicka email från contact-page :)',
+      },
     }
   },
   methods: {
-          ...mapActions(['contactEmail']),
-
-  }
+    ...mapActions(['contactEmail']),
+    sendEmail() {
+      this.contactEmail(this.email)
+    },
+  },
 }
 </script>
 
 <style lang="scss" scoped>
 .wrapper__kontakt {
+  font-family: $headline;
   padding: 10%;
   height: 100vh;
   display: grid;
@@ -85,8 +92,8 @@ export default {
   }
 
   .primary {
-    background-color: #121212;
-    color: #fbf9ff;
+    background-color: $black;
+    color: $white;
     width: 100%;
     display: flex;
     justify-content: center;

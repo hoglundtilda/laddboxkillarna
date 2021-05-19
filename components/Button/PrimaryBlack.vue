@@ -1,5 +1,5 @@
 <template>
-  <button @click="$emit('btn_click')" class="primary__btn">
+  <button @click="$emit('btn_click')" class="primary__black">
     {{ btn_text }}
   </button>
 </template>
@@ -11,10 +11,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.primary__btn {
+.primary__black {
   @include btn;
+  background-color: $black;
+  color: $white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
   border: none;
-  background: $white;
-  color: $black;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <AppNavDesktop />
+    <AppNav />
     <Nuxt />
     <AppFooter />
   </div>

@@ -39,7 +39,7 @@ export default {}
 
 <style lang="scss" scoped>
 .wrapper__om {
-  height: 100vh;
+  min-height: 100vh;
   background-image: linear-gradient(
       180deg,
       rgba(18, 18, 18, 0.5) 0%,

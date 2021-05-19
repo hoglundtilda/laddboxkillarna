@@ -1,0 +1,46 @@
+<template>
+  <div class="wrapper__nav_mobile">
+    <fa :icon="fas.faBars" class="hamburger" @click="showOverlay" />
+    <AppNavOverlay v-if="overlay" />
+  </div>
+</template>
+
+<script>
+import { fas } from '@fortawesome/free-solid-svg-icons'
+
+export default {
+  data() {
+    return {
+      overlay: false,
+    }
+  },
+  computed: {
+    fas() {
+      return fas
+    },
+  },
+  methods: {
+    showOverlay() {
+      this.overlay = !this.overlay
+    },
+  },
+}
+</script>
+
+<style lang="scss" scoped>
+.wrapper__nav_mobile {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 2rem;
+  background-color: $black;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+
+  .hamburger {
+    color: $white;
+    font-size: 2rem;
+  }
+}
+</style>
