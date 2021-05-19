@@ -61,6 +61,7 @@ export default {
 
 <style lang="scss" scoped>
 .wrapper__kontakt {
+  font-family: $headline;
   padding: 10%;
   height: 100vh;
   display: grid;
@@ -91,8 +92,8 @@ export default {
   }
 
   .primary {
-    background-color: #121212;
-    color: #fbf9ff;
+    background-color: $black;
+    color: $white;
     width: 100%;
     display: flex;
     justify-content: center;

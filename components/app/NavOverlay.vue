@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper__nav_desktop">
+  <div class="wrapper__nav_overlay">
     <img
       src="@/assets/logo/logo_full_white.png"
       alt="logo with name of company"
@@ -23,49 +23,30 @@ export default {}
 </script>
 
 <style lang="scss" scoped>
-.wrapper__nav_desktop {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  display: grid;
-  grid-template-areas: 'logo links btn';
-  grid-template-columns: 20% 55% 25%;
-  align-items: center;
-  justify-items: center;
-  padding: 2rem;
+.wrapper__nav_overlay {
   background-color: $black;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: $headline;
+
+  width: 100%;
 
   img {
-    width: inherit;
-    grid-area: logo;
+    width: 50%;
   }
 
   .links {
-    grid-area: links;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 
     a {
-      font-family: $headline;
-      font-size: 1.2rem;
-      font-weight: 300;
       padding: 2rem;
       color: $white;
-      text-decoration: none;
-    }
-  }
-
-  .ghost {
-    grid-area: btn;
-    justify-self: flex-start;
-    padding: 6px 30px;
-    font-size: 1rem;
-  }
-}
-@media only screen and (max-width: 1360px) {
-  .wrapper__nav_desktop {
-    .links {
-      a {
-        padding: 1rem;
-      }
+      font-size: 1.5rem;
     }
   }
 }

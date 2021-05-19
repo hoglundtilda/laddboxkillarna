@@ -12,8 +12,10 @@
     </div>
     <div class="footer_text text__secondary">
       <p>&#169; Laddboxkillarna AB</p>
-      <p class="underline">Kontakt</p>
-      <p class="underline">Integritetspolicy</p>
+      <nuxt-link to="Kontakt"> <p class="underline">Kontakt</p></nuxt-link>
+      <nuxt-link to="Policys"
+        ><p class="underline">Integritetspolicy</p></nuxt-link
+      >
     </div>
   </div>
 </template>
@@ -58,6 +60,11 @@ export default {
   .footer_text {
     display: flex;
     margin: 1rem;
+    a {
+      text-decoration: none;
+      color: $white;
+      cursor: pointer;
+    }
     p {
       padding: 0 1rem;
     }
