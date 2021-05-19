@@ -15,12 +15,15 @@ export default {
 
   components: true,
   target: 'static',
-  ssr: false,
+  //ssr: false,
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // API on server or locally
-    baseUrl: process.env.BASE_URL || 'http://localhost:8000',
+    //baseUrl: process.env.BASE_URL || 'https://test.laddboxkillarna.se',
+    baseURL: process.env.NODE_ENV === 'production'
+	    ? 'https://test.laddboxkillarna.se/api'
+	    : 'http://localhost:8000'
   },
 
   env: {
