@@ -18,7 +18,7 @@ export default {}
 <style lang="scss" scoped>
 #whyus__section {
   font-family: $headline;
-  height: 100vh;
+  height: 70vh;
   color: $white;
   background: linear-gradient(
       180deg,
