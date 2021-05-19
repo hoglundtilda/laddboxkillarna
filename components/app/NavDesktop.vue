@@ -34,6 +34,7 @@ export default {}
   justify-items: center;
   padding: 2rem;
   background-color: $black;
+  box-shadow: $box_shadow;
 
   img {
     width: inherit;

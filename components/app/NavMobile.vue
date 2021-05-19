@@ -37,6 +37,7 @@ export default {
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
+  box-shadow: $box_shadow;
 
   .hamburger {
     color: $white;

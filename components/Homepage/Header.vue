@@ -58,6 +58,9 @@ export default {}
   }
 }
 @media only screen and (max-width: 1100px) {
+  #header__section {
+    padding: 20% 10%;
+  }
 }
 @media only screen and (max-width: 600px) {
 }

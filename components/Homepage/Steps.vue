@@ -72,4 +72,40 @@ export default {}
     grid-area: step5;
   }
 }
+@media only screen and (max-width: 900px) {
+  #steps__section {
+    .steps {
+      padding: 6rem 1rem;
+    }
+  }
+}
+@media only screen and (max-width: 850px) {
+  #steps__section {
+    .steps {
+      grid-template-areas:
+        'step1'
+        'step2'
+        'step3'
+        'step4'
+        'step5';
+
+      grid-template-columns: 1fr;
+      justify-items: flex-start;
+      text-align: left;
+      grid-gap: 3rem;
+      padding: 2rem 0rem;
+    }
+  }
+  .step1,
+  .step2,
+  .step3,
+  .step4,
+  .step5 {
+    img {
+      padding-right: 1rem;
+    }
+    display: flex;
+    align-items: center;
+  }
+}
 </style>
