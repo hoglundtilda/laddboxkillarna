@@ -6,20 +6,28 @@
       class="logo"
     />
     <div class="links">
-      <NuxtLink to="/"> Hem </NuxtLink>
-      <NuxtLink to="/om"> Om oss </NuxtLink>
-      <NuxtLink to="/laddbox"> Laddbox </NuxtLink>
-      <NuxtLink to="/foretag-brf"> Företag/BRF </NuxtLink>
-      <NuxtLink to="/kontakt"> Kontakt </NuxtLink>
+      <NuxtLink to="/" @click.native="showOverlay"> Hem </NuxtLink>
+      <NuxtLink to="/om" @click.native="showOverlay"> Om oss </NuxtLink>
+      <NuxtLink to="/laddbox" @click.native="showOverlay"> Laddbox </NuxtLink>
+      <NuxtLink to="/foretag-brf" @click.native="showOverlay">
+        Företag/BRF
+      </NuxtLink>
+      <NuxtLink to="/kontakt" @click.native="showOverlay"> Kontakt </NuxtLink>
     </div>
-    <NuxtLink to="/installation">
+    <NuxtLink to="/installation" @click.native="showOverlay">
       <ButtonGhost btn_text="Beställ laddbox" class="ghost" />
     </NuxtLink>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  methods: {
+    showOverlay() {
+      this.$emit('showOverlay')
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
@@ -31,11 +39,10 @@ export default {}
   align-items: center;
   justify-content: center;
   font-family: $headline;
-
   width: 100%;
 
   img {
-    width: 50%;
+    width: 60%;
   }
 
   .links {

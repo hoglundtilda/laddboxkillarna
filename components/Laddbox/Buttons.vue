@@ -26,18 +26,21 @@ export default {
   margin: 0;
   display: flex;
   font-family: $text;
+  width: 100%;
 
   .left,
   .right {
     padding: 8px 36px;
     background: transparent;
-    border: 0.00001px solid $black;
+    border: 1px solid $black;
   }
   .left {
     border-radius: 80px 0px 0px 80px;
+    width: 50%;
   }
   .right {
     border-radius: 0px 80px 80px 0px;
+    width: 50%;
   }
 }
 </style>

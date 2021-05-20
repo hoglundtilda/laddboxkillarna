@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper__nav_mobile">
     <fa :icon="fas.faBars" class="hamburger" @click="showOverlay" />
-    <AppNavOverlay v-if="overlay" />
+    <AppNavOverlay v-if="overlay" @showOverlay="showOverlay" />
   </div>
 </template>
 
@@ -38,6 +38,7 @@ export default {
   align-items: flex-end;
   justify-content: flex-end;
   box-shadow: $box_shadow;
+  z-index: 5;
 
   .hamburger {
     color: $white;

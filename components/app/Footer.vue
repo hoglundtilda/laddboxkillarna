@@ -11,7 +11,7 @@
       <img src="@/assets/logo/facebook.svg" alt="facebook" />
     </div>
     <div class="footer_text text__secondary">
-      <p>&#169; Laddboxkillarna AB</p>
+      <p>&#169;Laddboxkillarna AB</p>
       <nuxt-link to="Kontakt"> <p class="underline">Kontakt</p></nuxt-link>
       <nuxt-link to="Policys"
         ><p class="underline">Integritetspolicy</p></nuxt-link
@@ -70,6 +70,17 @@ export default {
     }
     .underline {
       text-decoration: underline;
+    }
+  }
+}
+@media only screen and (max-width: 950px) {
+  .wrapper__footer {
+    .footer_text {
+      a {
+      }
+      p {
+        padding: 0 0.5rem;
+      }
     }
   }
 }

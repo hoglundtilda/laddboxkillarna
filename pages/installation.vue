@@ -84,7 +84,8 @@
         </div>
         <div class="checkbox">
           <input type="checkbox" id="agreement" />
-          <label for="agreement">Jag har tagit del av avtalsvillkoren</label>
+          <label for="agreement">Jag har tagit del av </label
+          ><span>avtalsvillkoren</span>
         </div>
       </div>
       <ButtonPrimaryBlack btn_text="Skicka beställning" class="primary" />
@@ -111,7 +112,7 @@ export default {
   justify-content: center;
   font-family: $headline;
   grid-template-areas: 'text form';
-  grid-template-columns: 55% 45%;
+  grid-template-columns: 55% 50%;
 
   .text {
     grid-area: text;
@@ -167,8 +168,33 @@ export default {
     display: flex;
     flex-direction: column;
 
+    span {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
     .checkbox {
       margin: 0.5rem 0;
+    }
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .wrapper__installation {
+    padding: 20% 10%;
+
+    .inputs {
+      padding: 3rem 1rem;
+    }
+  }
+}
+@media only screen and (max-width: 950px) {
+  .wrapper__installation {
+    grid-template-areas:
+      'text'
+      'form';
+    grid-template-columns: 1fr;
+    .text {
+      padding: 0rem 1rem;
     }
   }
 }

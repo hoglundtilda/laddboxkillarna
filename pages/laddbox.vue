@@ -31,7 +31,9 @@
         uppkopplad med WiFi eller 4G LTE-M för att du ska ha tillgång till de
         senaste funktionerna och uppdateringarna.
       </p>
-      <ButtonPrimaryBlack btn_text="Beställ laddbox" class="primary" />
+      <nuxt-link to="/installation"
+        ><ButtonPrimaryBlack btn_text="Beställ laddbox" class="primary"
+      /></nuxt-link>
     </section>
   </div>
 </template>
@@ -42,16 +44,21 @@ export default {}
 
 <style lang="scss" scoped>
 .wrapper__laddbox {
+  min-height: 100vh;
   padding: 10%;
-  display: flex;
+  display: grid;
+  grid-template-areas: 'laddbox info';
+  grid-template-columns: 40% 50%;
+  grid-gap: 3rem;
   font-family: $headline;
   justify-content: center;
 
   .laddbox {
-    width: 40%;
+    grid-area: laddbox;
   }
 
   .information {
+    grid-area: info;
     .headline {
       font-weight: 700;
     }
@@ -66,6 +73,28 @@ export default {}
     .primary {
       margin-top: 2rem;
     }
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .wrapper__laddbox {
+    padding: 15% 10%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .wrapper__laddbox {
+    grid-template-areas:
+      'laddbox'
+      'info';
+    grid-template-columns: 100%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .wrapper__laddbox {
+    padding-top: 30%;
+    grid-template-areas:
+      'laddbox'
+      'info';
+    grid-template-columns: 100%;
   }
 }
 </style>

@@ -16,8 +16,12 @@
       </p>
     </section>
     <div class="buttons">
-      <ButtonPrimary btn_text="Produkter" class="primary" />
-      <ButtonGhost btn_text="Beställ här" class="ghost" />
+      <nuxt-link to="/laddbox">
+        <ButtonPrimary btn_text="Produkter" class="primary"
+      /></nuxt-link>
+      <nuxt-link to="/installation"
+        ><ButtonGhost btn_text="Beställ här" class="ghost"
+      /></nuxt-link>
     </div>
   </div>
 </template>
@@ -29,7 +33,7 @@ export default {}
 <style lang="scss" scoped>
 #header__section {
   color: $white;
-  height: 100vh;
+  min-height: 100vh;
   background: linear-gradient(
       180deg,
       rgba(18, 18, 18, 0) 0%,
@@ -51,6 +55,7 @@ export default {}
 
   .buttons {
     display: flex;
+    margin-top: 2rem;
   }
 
   .primary {
@@ -59,9 +64,43 @@ export default {}
 }
 @media only screen and (max-width: 1100px) {
   #header__section {
-    padding: 20% 10%;
+    background: linear-gradient(
+        180deg,
+        rgba(18, 18, 18, 0) 0%,
+        rgba(18, 18, 18, 0.87) 78.65%,
+        #121212 100%
+      ),
+      url('@/assets/images/background_laddboxkillarna_1_pad.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .text {
+      margin-top: 5rem;
+    }
+
+    .description {
+      width: 100%;
+      margin: 2rem 0;
+    }
   }
 }
 @media only screen and (max-width: 600px) {
+  #header__section {
+    background: linear-gradient(
+        180deg,
+        rgba(18, 18, 18, 0) 0%,
+        rgba(18, 18, 18, 0.87) 78.65%,
+        #121212 100%
+      ),
+      url('@/assets/images/background_laddboxkillarna_1_mob.png');
+
+    background-position: center;
+
+    padding: 10%;
+
+    .text {
+      margin-top: 10rem;
+    }
+  }
 }
 </style>

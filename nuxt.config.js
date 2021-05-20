@@ -21,9 +21,10 @@ export default {
   axios: {
     // API on server or locally
     //baseUrl: process.env.BASE_URL || 'https://test.laddboxkillarna.se',
-    baseURL: process.env.NODE_ENV === 'production'
-	    ? 'https://www.test.laddboxkillarna.se/api'
-	    : 'http://localhost:8000'
+    baseURL:
+      process.env.NODE_ENV === 'production'
+        ? 'https://www.test.laddboxkillarna.se/api'
+        : 'http://localhost:8000',
   },
 
   env: {
@@ -82,5 +83,9 @@ export default {
 
   styleResources: {
     scss: ['~assets/css/*.scss'],
+  },
+  server: {
+    port: 8000, // default: 3000
+    host: '0.0.0.0', // default: localhost
   },
 }

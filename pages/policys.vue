@@ -86,4 +86,9 @@ export default {}
     font-size: 1.2rem;
   }
 }
+@media only screen and (max-width: 950px) {
+  .wrapper__policys {
+    padding: 20% 10%;
+  }
+}
 </style>
