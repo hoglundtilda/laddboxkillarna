@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper__nav_overlay">
     <img
-      src="@/assets/logo/logo_full_white.png"
+      src="@/assets/logo/logo_full_white.svg"
       alt="logo with name of company"
       class="logo"
     />

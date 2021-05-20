@@ -1,14 +1,14 @@
 <template>
   <div class="wrapper__footer">
     <img
-      src="@/assets/logo/logo_full_white.png"
+      src="@/assets/logo/logo_full_white.svg"
       alt="logo with name of company"
       class="logo"
     />
     <div class="socials">
-      <img src="@/assets/logo/Linkedin.png" alt="" />
-      <img src="@/assets/logo/Instagram.png" alt="" />
-      <img src="@/assets/logo/Facebook.png" alt="" />
+      <img src="@/assets/logo/linkedIn.svg" alt="linkedIn" />
+      <img src="@/assets/logo/instagram.svg" alt="instagram" />
+      <img src="@/assets/logo/facebook.svg" alt="facebook" />
     </div>
     <div class="footer_text text__secondary">
       <p>&#169; Laddboxkillarna AB</p>

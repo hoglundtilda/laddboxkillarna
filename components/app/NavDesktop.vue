@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper__nav_desktop">
     <img
-      src="@/assets/logo/logo_full_white.png"
+      src="@/assets/logo/logo_full_white.svg"
       alt="logo with name of company"
       class="logo"
     />
@@ -34,6 +34,7 @@ export default {}
   justify-items: center;
   padding: 2rem;
   background-color: $black;
+  box-shadow: $box_shadow;
 
   img {
     width: inherit;
