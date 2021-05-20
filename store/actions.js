@@ -4,7 +4,7 @@ export default {
     async contactEmail({ commit }, email) {
       console.log(email)
       const response = await this.$axios
-        .post(`/email/contact`, {email})
+        .post(`${this.$axios.defaults.baseUR}/email/contact`, {email})
         .then((response) => {
           console.log(response)})
         .catch((error) => {
