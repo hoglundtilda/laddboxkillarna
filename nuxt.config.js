@@ -22,7 +22,7 @@ export default {
     // API on server or locally
     //baseUrl: process.env.BASE_URL || 'https://test.laddboxkillarna.se',
     baseURL: process.env.NODE_ENV === 'production'
-	    ? 'https://www.test.laddboxkillarna.se/api'
+	    ? 'https://test.laddboxkillarna.se/api'
 	    : 'http://localhost:8000'
   },
 
