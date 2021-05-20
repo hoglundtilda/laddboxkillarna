@@ -1,35 +1,35 @@
 <template>
   <div id="steps__section">
-    <h3>Så här går det till</h3>
+    <h2>Så här går det till</h2>
     <section class="steps">
       <article class="step1">
         <img src="@/assets/images/steps/step1.png" alt="" />
-        <p>Fyll i kontaktformuläret</p>
+        <p class="text__secondary">Fyll i kontaktformuläret</p>
       </article>
       <article class="step2">
         <img src="@/assets/images/steps/step2.png" alt="" />
-        <p>
-          Vi kontaktar dig inom 24 h för att boka in tid för
+        <p class="text__secondary">
+          Vi kontaktar dig inom 24h för att boka in tid för
           installation/kundbesök
         </p>
       </article>
       <article class="step3">
         <img src="@/assets/images/steps/step3.png" alt="" />
-        <p>Vi utför installationen</p>
+        <p class="text__secondary">Vi utför installationen</p>
       </article>
       <article class="step4">
         <img src="@/assets/images/steps/step4.png" alt="" />
-        <p>
+        <p class="text__secondary">
           Vi skickar faktura och ansöker om avdraget grön teknik för din/er
           räkning
         </p>
       </article>
       <article class="step5">
         <img src="@/assets/images/steps/step5.png" alt="" />
-        <p>Du kan nu ladda din bil säkert & snabbt!</p>
+        <p class="text__secondary">Du kan nu ladda din bil säkert & snabbt!</p>
       </article>
     </section>
-    <h4>Snabbt, smidigt och enkelt!</h4>
+    <h3>Snabbt, smidigt och enkelt!</h3>
   </div>
 </template>
 
@@ -45,6 +45,10 @@ export default {}
   flex-direction: column;
   align-items: center;
   padding: 10%;
+
+  article > p {
+    padding-top: 1rem;
+  }
 
   .steps {
     display: grid;
@@ -72,7 +76,7 @@ export default {}
     grid-area: step5;
   }
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1100px) {
   #steps__section {
     .steps {
       padding: 6rem 1rem;
@@ -93,7 +97,10 @@ export default {}
       justify-items: flex-start;
       text-align: left;
       grid-gap: 3rem;
-      padding: 2rem 0rem;
+      padding: 4rem 0rem;
+    }
+    article > p {
+      padding-top: 0rem;
     }
   }
   .step1,
@@ -102,10 +109,15 @@ export default {}
   .step4,
   .step5 {
     img {
-      padding-right: 1rem;
+      padding-right: 3rem;
+      width: 10rem;
     }
     display: flex;
     align-items: center;
+  }
+  .text__secondary {
+    font-size: 1.5rem;
+    width: 60%;
   }
 }
 </style>

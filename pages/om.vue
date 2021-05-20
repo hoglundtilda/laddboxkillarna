@@ -46,17 +46,52 @@ export default {}
       #121212 100%
     ),
     url(@/assets/images/background_laddboxkillarna_2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
   color: $white;
-  padding: 7% 10%;
+  padding: 10%;
   font-family: $headline;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   .text__standard,
   .text__secondary {
-    width: 70%;
+    width: 80%;
   }
 
   .text__secondary {
     padding: 2rem 0;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .wrapper__om {
+    .text__standard,
+    .text__secondary {
+      width: 100%;
+    }
+  }
+}
+@media only screen and (max-width: 900px) {
+  .wrapper__om {
+    padding: 20% 10%;
+    background-image: linear-gradient(
+        180deg,
+        rgba(18, 18, 18, 0.5) 0%,
+        #121212 100%
+      ),
+      url(@/assets/images/background_laddboxkillarna_2_pad.png);
+  }
+}
+@media only screen and (max-width: 600px) {
+  .wrapper__om {
+    background-image: linear-gradient(
+        180deg,
+        rgba(18, 18, 18, 0.5) 0%,
+        #121212 100%
+      ),
+      url(@/assets/images/background_laddboxkillarna_2_mobile.png);
   }
 }
 </style>

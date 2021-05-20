@@ -1,0 +1,17 @@
+{
+    "colors":[
+        {"white": {
+          "white1": "zaptec_products/zaptec_white_1.png",
+          "white2": "zaptec_products/zaptec_white_2.png",
+          "white3": "zaptec_products/zaptec_white_3.png",
+          "name": "Cloud White",
+          "color": "#f6f6f6"
+        }},
+        {"grey": {
+            "grey1": "zaptec_products/zaptec_grey_1.png",
+            "grey2": "zaptec_products/zaptec_grey_2.png",
+            "grey3": "zaptec_products/zaptec_grey_3.png"
+        }}
+    
+    ]
+}

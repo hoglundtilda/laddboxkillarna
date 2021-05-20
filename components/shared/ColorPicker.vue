@@ -1,24 +1,66 @@
 <template>
   <div class="wrapper__colorpicker">
     <form>
-      <input name="radio" value="" type="radio" id="whtie" class="white" />
-      <input name="radio" value="" type="radio" id="rock" class="rock" />
-      <input name="radio" value="" type="radio" id="moss" class="moss" />
+      <input
+        name="radio"
+        value=""
+        type="radio"
+        id="whtie"
+        class="white"
+        @click="selectColor('white')"
+      />
+      <input
+        name="radio"
+        value=""
+        type="radio"
+        id="rock"
+        class="rock"
+        @click="selectColor('rock')"
+      />
+      <input
+        name="radio"
+        value=""
+        type="radio"
+        id="moss"
+        class="moss"
+        @click="selectColor('moss')"
+      />
       <input
         name="radio"
         value=""
         type="radio"
         id="midnight"
         class="midnight"
+        @click="selectColor('midnight')"
       />
-      <input name="radio" value="" type="radio" id="wood" class="wood" />
-      <input name="radio" value="" type="radio" id="black" class="black" />
+      <input
+        name="radio"
+        value=""
+        type="radio"
+        id="wood"
+        class="wood"
+        @click="selectColor('wood')"
+      />
+      <input
+        name="radio"
+        value=""
+        type="radio"
+        id="black"
+        class="black"
+        @click="selectColor('black')"
+      />
     </form>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  methods: {
+    selectColor(input) {
+      this.$emit('selectColor', input)
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
@@ -37,6 +79,7 @@ form {
     border-radius: 100%;
     margin: 0.5rem;
     border: none;
+    box-shadow: $radio_shadow;
   }
   .white:checked,
   .rock:checked,
@@ -48,7 +91,6 @@ form {
   }
 
   .white {
-    box-shadow: 0px 0px 1.5px 0.001px #000000;
     background-color: $cloud_white;
   }
   .rock {

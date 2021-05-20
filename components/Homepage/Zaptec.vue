@@ -1,17 +1,25 @@
 <template>
   <div id="zaptec__section">
     <div class="grid">
-      <img src="@/assets/images/zaptec_1.jpg" alt="" />
+      <video
+        controls
+        muted
+        preload="auto"
+        src="@/assets/video/Produktvideo_Zaptec.mp4"
+        type="video/mp4"
+      ></video>
       <div class="text">
         <h2>Zaptec Go</h2>
         <h3>Fungerar med alla bilar</h3>
-        <p>
+        <p class="text__standard">
           Oavsett var du kör eller vart du ska, är Zaptec go det bästa sättet
           att ladda din resa. Med utgångspunkt i ledande Nordisk grön teknik har
           de skapat en av de minsta 22kW (Maximal laddeffekt) laddaren på
           marknaden och den är lika smart på insidan som enkel på utsidan.
         </p>
-        <ButtonPrimary btn_text="Utforska Zaptec Go" class="primary" />
+        <nuxt-link to="/laddbox"
+          ><ButtonPrimary btn_text="Utforska Zaptec Go" class="primary"
+        /></nuxt-link>
       </div>
     </div>
   </div>
@@ -29,15 +37,17 @@ export default {}
 
   .grid {
     display: grid;
-    grid-template-areas: 'img text';
+    grid-template-areas: 'video text';
     grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-items: center;
   }
-  img {
-    grid-area: img;
-    width: 80%;
+  video {
+    grid-area: video;
+    width: 90%;
+    padding: 2rem;
     justify-self: center;
+    z-index: 0;
   }
 
   .text {
@@ -45,11 +55,66 @@ export default {}
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 100%;
 
     p {
-      font-family: $text;
-      width: 70%;
+      width: 80%;
+      padding: 1rem 0;
+    }
+  }
+}
+@media only screen and (max-width: 1300px) {
+  #zaptec__section {
+    .text {
+      p {
+        width: 100%;
+        padding: 2rem 0;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 900px) {
+  #zaptec__section {
+    .grid {
+      grid-template-areas:
+        'text'
+        'video';
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-gap: 2rem;
+    }
+    video {
+      width: 80%;
+      padding: 0rem;
+    }
+
+    .text {
+      p {
+        width: 100%;
+        padding: 2rem 0;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  #zaptec__section {
+    .grid {
+      grid-template-areas:
+        'text'
+        'video';
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+    video {
+      width: 100%;
+    }
+
+    .text {
+      p {
+        width: 100%;
+        padding: 1rem 0;
+      }
     }
   }
 }
