@@ -2,59 +2,28 @@
   <div class="wrapper__colorpicker">
     <form>
       <input
+        v-for="color in products.colors"
+        :key="color.id"
+        :style="{ backgroundColor: color.color }"
         name="radio"
         value=""
         type="radio"
-        id="whtie"
+        id="white"
         class="white"
-        @click="selectColor('white')"
-      />
-      <input
-        name="radio"
-        value=""
-        type="radio"
-        id="rock"
-        class="rock"
-        @click="selectColor('rock')"
-      />
-      <input
-        name="radio"
-        value=""
-        type="radio"
-        id="moss"
-        class="moss"
-        @click="selectColor('moss')"
-      />
-      <input
-        name="radio"
-        value=""
-        type="radio"
-        id="midnight"
-        class="midnight"
-        @click="selectColor('midnight')"
-      />
-      <input
-        name="radio"
-        value=""
-        type="radio"
-        id="wood"
-        class="wood"
-        @click="selectColor('wood')"
-      />
-      <input
-        name="radio"
-        value=""
-        type="radio"
-        id="black"
-        class="black"
-        @click="selectColor('black')"
+        @click="selectColor(color.id)"
       />
     </form>
   </div>
 </template>
 
 <script>
+import products from '@/assets/productJSON/products.json'
 export default {
+  data() {
+    return {
+      products: products,
+    }
+  },
   methods: {
     selectColor(input) {
       this.$emit('selectColor', input)

@@ -4,24 +4,24 @@
       <div class="images">
         <div class="small_img">
           <img
-            :src="require(`~/assets/images/${smallImage1}`)"
-            @click="changeBigImage(smallImage1)"
+            :src="require(`~/assets/images/${color.smallImage1}`)"
+            @click="changeBigImage(color.smallImage1)"
           />
           <img
-            :src="require(`~/assets/images/${smallImage2}`)"
-            @click="changeBigImage(smallImage2)"
+            :src="require(`~/assets/images/${color.smallImage2}`)"
+            @click="changeBigImage(color.smallImage2)"
           />
           <img
-            :src="require(`~/assets/images/${smallImage3}`)"
-            @click="changeBigImage(smallImage3)"
+            :src="require(`~/assets/images/${color.smallImage3}`)"
+            @click="changeBigImage(color.smallImage3)"
           />
         </div>
         <div class="big_img">
-          <img :src="require(`~/assets/images/${image}`)" />
+          <img :src="require(`~/assets/images/${color.bigImage}`)" />
         </div>
       </div>
       <div class="colorPicker">
-        <span>Välj färg:{{ input }}</span>
+        <span>Välj färg: {{ color.name }}</span>
         <SharedColorPicker @selectColor="selectColor" />
       </div>
       <LaddboxButtons />
@@ -30,58 +30,30 @@
 </template>
 
 <script>
+import Products from '@/assets/productJSON/products.json'
 export default {
   data() {
     return {
-      smallImage1: 'zaptec_products/zaptec_white_1.png',
-      smallImage2: 'zaptec_products/zaptec_white_2.png',
-      smallImage3: 'zaptec_products/zaptec_white_3.png',
-      image: 'zaptec_products/zaptec_white_1.png',
-      input: 'white',
+      color: {
+        smallImage1: 'zaptec_products/zaptec_white_1.png',
+        smallImage2: 'zaptec_products/zaptec_white_2.png',
+        smallImage3: 'zaptec_products/zaptec_white_3.png',
+        bigImage: 'zaptec_products/zaptec_white_1.png',
+        name: 'Cloud White',
+      },
+
+      products: Products,
     }
   },
   methods: {
     selectColor(input) {
-      console.log(input)
-      if (input == 'white') {
-        ;(this.smallImage1 = 'zaptec_products/zaptec_white_1.png'),
-          (this.smallImage2 = 'zaptec_products/zaptec_white_2.png'),
-          (this.smallImage3 = 'zaptec_products/zaptec_white_3.png')
-        this.image = 'zaptec_products/zaptec_white_1.png'
-      }
-      if (input === 'rock') {
-        ;(this.smallImage1 = 'zaptec_products/zaptec_grey_1.png'),
-          (this.smallImage2 = 'zaptec_products/zaptec_grey_2.png'),
-          (this.smallImage3 = 'zaptec_products/zaptec_grey_3.png'),
-          (this.image = 'zaptec_products/zaptec_grey_1.png')
-      }
-      if (input === 'moss') {
-        ;(this.smallImage1 = 'zaptec_products/zaptec_green_1.png'),
-          (this.smallImage2 = 'zaptec_products/zaptec_green_2.png'),
-          (this.smallImage3 = 'zaptec_products/zaptec_green_3.png'),
-          (this.image = 'zaptec_products/zaptec_green_1.png')
-      }
-      if (input === 'midnight') {
-        ;(this.smallImage1 = 'zaptec_products/zaptec_blue_1.png'),
-          (this.smallImage2 = 'zaptec_products/zaptec_blue_2.png'),
-          (this.smallImage3 = 'zaptec_products/zaptec_blue_3.png'),
-          (this.image = 'zaptec_products/zaptec_blue_1.png')
-      }
-      if (input === 'wood') {
-        ;(this.smallImage1 = 'zaptec_products/zaptec_brown_1.png'),
-          (this.smallImage2 = 'zaptec_products/zaptec_brown_2.png'),
-          (this.smallImage3 = 'zaptec_products/zaptec_brown_3.png'),
-          (this.image = 'zaptec_products/zaptec_brown_1.png')
-      }
-      if (input === 'black') {
-        ;(this.smallImage1 = 'zaptec_products/zaptec_black_1.png'),
-          (this.smallImage2 = 'zaptec_products/zaptec_black_2.png'),
-          (this.smallImage3 = 'zaptec_products/zaptec_black_3.png'),
-          (this.image = 'zaptec_products/zaptec_black_1.png')
-      }
+      const index = this.products.colors.findIndex(function (element) {
+        return element.id === input
+      })
+      this.color = this.products.colors[index]
     },
     changeBigImage(smallImage) {
-      this.image = smallImage
+      this.color.bigImage = smallImage
     },
   },
 }

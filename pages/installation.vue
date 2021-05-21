@@ -1,5 +1,6 @@
 <template>
   <div class="wrapper__installation">
+    <InstallationVillkor v-if="terms" />
     <section class="text">
       <h1>Installation</h1>
       <p class="text__secondary">
@@ -65,8 +66,8 @@
         placeholder="Övriga upplysningar"
       ></textarea>
       <div>
-        <span>Välj färg:</span>
-        <SharedColorPicker />
+        <span>Välj färg: {{ color }}</span>
+        <SharedColorPicker @selectColor="selectColor" />
       </div>
       <div class="checkboxes">
         <div class="checkbox">
@@ -84,8 +85,10 @@
         </div>
         <div class="checkbox">
           <input type="checkbox" id="agreement" />
-          <label for="agreement">Jag har tagit del av </label
-          ><span>avtalsvillkoren</span>
+          <label for="agreement">Jag har tagit del av </label>
+          <nuxt-link to="/villkor"
+            ><span @click="showTerms">avtalsvillkoren</span></nuxt-link
+          >
         </div>
       </div>
       <ButtonPrimaryBlack btn_text="Skicka beställning" class="primary" />
@@ -94,8 +97,27 @@
 </template>
 
 <script>
+import products from '@/assets/productJSON/products.json'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 export default {
+  data() {
+    return {
+      products: products,
+      color: '',
+      terms: false,
+    }
+  },
+  methods: {
+    selectColor(input) {
+      const index = this.products.colors.findIndex(function (element) {
+        return element.id === input
+      })
+      this.color = this.products.colors[index].name
+    },
+    showTerms() {
+      this.terms = true
+    },
+  },
   computed: {
     fas() {
       return fas
