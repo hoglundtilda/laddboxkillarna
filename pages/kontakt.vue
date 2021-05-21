@@ -13,7 +13,9 @@
           <a href="mailto:alexander@laddboxkillarna.se"
             ><p class="text__secondary mail">alexander@laddboxkillarna.se</p></a
           >
-          <p class="text__secondary">tlf: 070 049 06 57</p>
+          <a href="tel:+46700490657"
+            ><p class="text__secondary">tlf: 070 049 06 57</p></a
+          >
         </article>
         <article>
           <img src="@/assets/images/boss2.png" alt="" />
@@ -22,7 +24,9 @@
           <a href="mailto:kevin@laddboxkillarna.se"
             ><p class="text__secondary mail">kevin@laddboxkillarna.se</p></a
           >
-          <p class="text__secondary">tlf: 070 471 62 21</p>
+          <a href="tel:+46704716221">
+            <p class="text__secondary">tlf: 070 471 62 21</p></a
+          >
         </article>
       </section>
     </section>

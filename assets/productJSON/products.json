@@ -1,17 +1,64 @@
 {
     "colors":[
-        {"white": {
-          "white1": "zaptec_products/zaptec_white_1.png",
-          "white2": "zaptec_products/zaptec_white_2.png",
-          "white3": "zaptec_products/zaptec_white_3.png",
+       {
+        "id": "1",
+          "smallImage1": "zaptec_products/zaptec_white_1.png",
+          "smallImage2": "zaptec_products/zaptec_white_2.png",
+          "smallImage3": "zaptec_products/zaptec_white_3.png",
+          "bigImage" : "zaptec_products/zaptec_white_1.png",
           "name": "Cloud White",
           "color": "#f6f6f6"
-        }},
-        {"grey": {
-            "grey1": "zaptec_products/zaptec_grey_1.png",
-            "grey2": "zaptec_products/zaptec_grey_2.png",
-            "grey3": "zaptec_products/zaptec_grey_3.png"
-        }}
+        },
+        {
+            "id": "2",
+            "smallImage1": "zaptec_products/zaptec_grey_1.png",
+            "smallImage2": "zaptec_products/zaptec_grey_2.png",
+            "smallImage3": "zaptec_products/zaptec_grey_3.png",
+            "bigImage" : "zaptec_products/zaptec_grey_1.png",
+            "name": "Rock Grey",
+            "color": "#525254"
+
+        },
+        {
+            "id": "3",
+            "smallImage1": "zaptec_products/zaptec_green_1.png",
+            "smallImage2": "zaptec_products/zaptec_green_2.png",
+            "smallImage3": "zaptec_products/zaptec_green_3.png",
+            "bigImage" : "zaptec_products/zaptec_green_1.png",
+            "name": "Moss Green",
+            "color": "#737466"
+
+        },
+        {
+            "id": "4",
+            "smallImage1": "zaptec_products/zaptec_blue_1.png",
+            "smallImage2": "zaptec_products/zaptec_blue_2.png",
+            "smallImage3": "zaptec_products/zaptec_blue_3.png",
+            "bigImage" : "zaptec_products/zaptec_blue_1.png",
+            "name": "Midnight Blue",
+            "color": "#354654"
+
+        },
+        {
+            "id": "5",
+            "smallImage1": "zaptec_products/zaptec_brown_1.png",
+            "smallImage2": "zaptec_products/zaptec_brown_2.png",
+            "smallImage3": "zaptec_products/zaptec_brown_3.png",
+            "bigImage" : "zaptec_products/zaptec_brown_1.png",
+            "name": "Wood Brown",
+            "color": "#564837"
+
+        },
+        {
+            "id": "6",
+            "smallImage1": "zaptec_products/zaptec_black_1.png",
+            "smallImage2": "zaptec_products/zaptec_black_2.png",
+            "smallImage3": "zaptec_products/zaptec_black_3.png",
+            "bigImage" : "zaptec_products/zaptec_black_1.png",
+            "name": "Asphalt Black",
+            "color": "#15181c"
+
+        }
     
     ]
 }
