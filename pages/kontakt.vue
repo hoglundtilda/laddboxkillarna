@@ -63,11 +63,11 @@ export default {
   data() {
     return {
       email: {
-        firstName: 'Matilda ',
-        lastName: 'Höglund',
-        email: 'hoglund.matilda@gmail.com',
-        subject: 'test contact-page',
-        message: 'Testar om det fungerar att skicka email från contact-page :)',
+        firstName: '',
+        lastName: '',
+        email: '',
+        subject: '',
+        message: '',
       },
     }
   },

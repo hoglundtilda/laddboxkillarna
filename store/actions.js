@@ -3,7 +3,7 @@ import axios from "axios";
 export default {
     async contactEmail({ commit }, email) {
       console.log(email)
-      const response = await this.$axios
+       await this.$axios
         .post(`${this.$axios.defaults.baseURL}/email/contact`, {email})
         .then((response) => {
           console.log(response)})
