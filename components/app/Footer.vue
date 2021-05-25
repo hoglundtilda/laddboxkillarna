@@ -52,7 +52,7 @@ export default {
     img {
       width: 100%;
       height: auto;
-      shape-rendering: crispEdges;
+      shape-rendering: geometricPrecision;
     }
   }
 

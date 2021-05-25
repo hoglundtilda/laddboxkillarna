@@ -62,6 +62,7 @@ export default {
 <style lang="scss" scoped>
 .wrapper__images {
   .box {
+
     .images {
       display: flex;
       justify-content: center;
@@ -86,6 +87,7 @@ export default {
     .colorPicker {
       width: 100%;
       justify-self: center;
+      margin: 2.5rem 2rem;
     }
   }
 }
@@ -95,6 +97,11 @@ export default {
       img {
         margin: 0.5rem;
       }
+    }
+
+    .colorPicker {
+      justify-self: center;
+      margin: 1rem 1rem;
     }
   }
 }

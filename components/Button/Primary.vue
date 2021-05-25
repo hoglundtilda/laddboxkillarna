@@ -16,5 +16,12 @@ export default {
   border: none;
   background: $white;
   color: $black;
+  box-shadow: $shadow_btn_white;
+  transition: all 0.3s ease 0s;
+
+  &:hover {
+  box-shadow: $shadow_btn_white-hover;
+
+}
 }
 </style>
