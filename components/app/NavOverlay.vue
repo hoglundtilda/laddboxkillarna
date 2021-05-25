@@ -1,10 +1,12 @@
 <template>
   <div class="wrapper__nav_overlay">
-    <img
-      src="@/assets/logo/logo_full_white.svg"
-      alt="logo with name of company"
-      class="logo"
-    />
+    <div class="image-container">
+      <img
+        src="@/assets/logo/logo_full_white.svg"
+        alt="logo with name of company"
+        class="logo"
+      />
+    </div>
     <div class="links">
       <NuxtLink to="/" @click.native="showOverlay"> Hem </NuxtLink>
       <NuxtLink to="/om" @click.native="showOverlay"> Om oss </NuxtLink>
@@ -41,8 +43,13 @@ export default {
   font-family: $headline;
   width: 100%;
 
-  img {
+  .image-container {
     width: 60%;
+    img {
+      width: 100%;
+      height: auto;
+      shape-rendering: crispEdges;
+    }
   }
 
   .links {

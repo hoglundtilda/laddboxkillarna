@@ -1,10 +1,12 @@
 <template>
   <div class="wrapper__nav_desktop">
-    <img
-      src="@/assets/logo/logo_full_white.svg"
-      alt="logo with name of company"
-      class="logo"
-    />
+    <div class="image-container">
+      <img
+        src="@/assets/logo/logo_full_white.png"
+        alt="logo with name of company"
+        class="logo"
+      />
+    </div>
     <div class="links">
       <NuxtLink to="/"> Hem </NuxtLink>
       <NuxtLink to="/om"> Om oss </NuxtLink>
@@ -37,9 +39,15 @@ export default {}
   box-shadow: $box_shadow;
   z-index: 5;
 
-  img {
-    width: inherit;
+  .image-container {
+    width: 316px;
     grid-area: logo;
+
+    img {
+      width: 100%;
+      height: auto;
+      shape-rendering: crispEdges;
+    }
   }
 
   .links {
