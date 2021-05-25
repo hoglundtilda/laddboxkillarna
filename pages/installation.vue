@@ -41,10 +41,11 @@
         <p>Kapsling för jordfelsbrytare/säkring</p>
         <p>Kabelskydd</p>
         <p>Kabellistning</p>
-        <span class="span_underline"
+        <span class="span_underline" @click="showExtra"
           >Läs mer om extra tillägg och se prislista
         </span>
         <fa :icon="fas.faLink" />
+        <InstallationTillägg v-if="extra" @showExtra="showExtra" />
       </div>
     </section>
     <section class="inputs">
@@ -78,16 +79,22 @@
         </div>
         <div class="checkbox">
           <input type="checkbox" id="cable" />
-          <label for="cable"
-            >Jag vill beställa till en laddkabel
-            <fa :icon="fas.faQuestionCircle" />
-          </label>
+          <label for="cable">Jag vill beställa till en laddkabel </label>
+          <fa
+            :icon="fas.faQuestionCircle"
+            class="question"
+            @mouseover="cable = true"
+            @mouseleave="cable = false"
+          />
+          <InstallationLaddkabel v-if="cable" />
         </div>
         <div class="checkbox">
           <input type="checkbox" id="agreement" />
           <label for="agreement">Jag har tagit del av </label>
           <nuxt-link to="/villkor"
-            ><span @click="showTerms">avtalsvillkoren</span></nuxt-link
+            ><span @click="showTerms" class="span_underline"
+              >avtalsvillkoren</span
+            ></nuxt-link
           >
         </div>
       </div>
@@ -105,6 +112,8 @@ export default {
       products: products,
       color: '',
       terms: false,
+      cable: false,
+      extra: false,
     }
   },
   methods: {
@@ -117,6 +126,9 @@ export default {
     showTerms() {
       this.terms = true
     },
+    showExtra() {
+      this.extra = !this.extra
+    },
   },
   computed: {
     fas() {
@@ -126,7 +138,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .wrapper__installation {
   padding: 10%;
   min-height: 100vh;
@@ -149,6 +161,7 @@ export default {
     }
     .need {
       font-weight: 700;
+
       .need_title {
         display: flex;
         align-items: center;
@@ -165,7 +178,8 @@ export default {
 
   .span_underline {
     text-decoration: underline;
-    font-weight: 300;
+    font-weight: 400;
+    color: $black;
   }
 
   .inputs {
@@ -189,6 +203,7 @@ export default {
   .checkboxes {
     display: flex;
     flex-direction: column;
+    position: relative;
 
     span {
       text-decoration: underline;
@@ -197,6 +212,10 @@ export default {
 
     .checkbox {
       margin: 0.5rem 0;
+
+      .question {
+        cursor: pointer;
+      }
     }
   }
 }
