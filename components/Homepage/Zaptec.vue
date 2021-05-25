@@ -4,9 +4,8 @@
       <video
         controls
         muted
-        preload="auto"
-        src="@/assets/video/Produktvideo_Zaptec.mp4"
-        type="video/mp4"
+        preload="metadata"
+        src="@/assets/video/Produktvideo_Zaptec.mp4#t=0.5"
       ></video>
       <div class="text">
         <h2>Zaptec Go</h2>

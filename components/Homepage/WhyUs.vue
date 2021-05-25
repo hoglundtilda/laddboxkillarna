@@ -25,7 +25,7 @@ export default {}
   background: linear-gradient(
       180deg,
       #121212 0%,
-      rgba(18, 18, 18, 0.74) 51.56%,
+      rgba(18, 18, 18, 0.178) 85.56%,
       #121212 100%
     ),
     url('@/assets/images/background_roads.png');
