@@ -49,14 +49,16 @@ form {
     margin: 0.5rem;
     border: none;
     box-shadow: $radio_shadow;
-  }
-  .white:checked,
-  .rock:checked,
-  .moss:checked,
-  .midnight:checked,
-  .wood:checked,
-  .black:checked {
-    transform: scale(1.35);
+    transition: all 0.05s ease-in-out;
+    cursor: pointer;
+
+    &:checked {
+      transform: scale(1.15);
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   .white {

@@ -42,14 +42,14 @@
 export default {}
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .wrapper__laddbox {
   min-height: 100vh;
-  padding: 10%;
+  padding: 15% 15%;
   display: grid;
   grid-template-areas: 'laddbox info';
   grid-template-columns: 40% 50%;
-  grid-gap: 3rem;
+  grid-gap: 5rem;
   font-family: $headline;
   justify-content: center;
 

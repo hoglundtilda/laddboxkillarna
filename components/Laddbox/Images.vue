@@ -71,8 +71,17 @@ export default {
       flex-direction: column;
       justify-content: center;
       width: 25%;
+      cursor: pointer;
+
+      
       img {
         margin: 1rem;
+              transition: all 0.05s ease-in-out;
+
+
+        &:hover {
+        transform: scale(1.05);
+      }
       }
     }
     .big_img {
@@ -86,6 +95,7 @@ export default {
     .colorPicker {
       width: 100%;
       justify-self: center;
+      margin: 2.5rem 2rem;
     }
   }
 }
@@ -95,6 +105,11 @@ export default {
       img {
         margin: 0.5rem;
       }
+    }
+
+    .colorPicker {
+      justify-self: center;
+      margin: 1rem 1rem;
     }
   }
 }

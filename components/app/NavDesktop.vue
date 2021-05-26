@@ -1,10 +1,12 @@
 <template>
   <div class="wrapper__nav_desktop">
-    <img
-      src="@/assets/logo/logo_full_white.svg"
-      alt="logo with name of company"
-      class="logo"
-    />
+    <div class="image-container">
+      <img
+        src="@/assets/logo/logo_full_white.svg"
+        alt="logo with name of company"
+        class="logo"
+      />
+    </div>
     <div class="links">
       <NuxtLink to="/"> Hem </NuxtLink>
       <NuxtLink to="/om"> Om oss </NuxtLink>
@@ -31,25 +33,32 @@ export default {}
   grid-template-areas: 'logo links btn';
   grid-template-columns: 20% 55% 25%;
   align-items: center;
-  justify-items: center;
-  padding: 2rem;
+  padding: 1.5rem;
   background-color: $black;
   box-shadow: $box_shadow;
   z-index: 5;
 
-  img {
-    width: inherit;
+  .image-container {
+    width: 316px;
     grid-area: logo;
+
+    img {
+      width: 100%;
+      height: auto;
+      shape-rendering: geometricPrecision;
+    }
   }
 
   .links {
     grid-area: links;
+    display: flex;
+    justify-content: center;
 
     a {
       font-family: $headline;
-      font-size: 1.2rem;
-      font-weight: 300;
-      padding: 2rem;
+      font-size: 1.175rem;
+      font-weight: 200;
+      padding: 0 1.5rem;
       color: $white;
       text-decoration: none;
     }
@@ -58,6 +67,9 @@ export default {}
   .ghost {
     grid-area: btn;
     justify-self: flex-start;
+    align-self: flex-start;
+    margin-right: auto;
+    margin-left: 0;
     padding: 6px 30px;
     font-size: 1rem;
   }

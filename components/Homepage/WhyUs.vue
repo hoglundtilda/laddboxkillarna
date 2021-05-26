@@ -6,7 +6,7 @@
       som specialiserar sig inom branschen och utför säkra och kvalitativa
       installationer av marknadsledande laddboxar
     </p>
-    <h4>Vi har erfarenhet av mer än tusen lyckade installationer</h4>
+    <h3>Vi har erfarenhet av mer än tusen lyckade installationer</h3>
     <nuxt-link to="/om"
       ><ButtonGhost btn_text="Läs mer" class="ghost"
     /></nuxt-link>
@@ -20,22 +20,16 @@ export default {}
 <style lang="scss" scoped>
 #whyus__section {
   font-family: $headline;
-  height: 70vh;
+  height: 100vh;
   color: $white;
-  background: linear-gradient(
-      180deg,
-      #121212 0%,
-      rgba(18, 18, 18, 0.74) 51.56%,
-      #121212 100%
-    ),
+  background: linear-gradient(180deg, #0C0C0C 8.54%, rgba(12, 12, 12, 0.6) 49.76%, rgba(12, 12, 12, 0.94) 84.44%, $black 96.51%),
     url('@/assets/images/background_roads.png');
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 10%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-
+  padding: 0 15%;
   .text {
     width: 60%;
     padding: 1.5rem 0;
@@ -46,12 +40,13 @@ export default {}
 }
 @media only screen and (max-width: 900px) {
   #whyus__section {
-    background: linear-gradient(
-        180deg,
-        #121212 0%,
-        rgba(18, 18, 18, 0.74) 51.56%,
-        #121212 100%
-      ),
+    background:linear-gradient(
+      180deg,
+      #0b0b0b 8.54%,
+      rgba(11, 11, 11, 0.6) 49.76%,
+      rgba(11, 11, 11, 0.94) 84.44%,
+      #0b0b0b 96.51%
+    ),
       url('@/assets/images/background_roads_pad.png');
 
     background-position: center;

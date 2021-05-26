@@ -1,7 +1,8 @@
-$black: #121212;
+$black: #0C0C0C;
 $white: #fbf9ff;
 
-$dark_bg: #121212;
+$dark_bg: #0C0C0C;
+
 $light_bg: #ffffff;
 
 $headline: 'Saira', sans-serif;
@@ -15,6 +16,11 @@ $shadow__box-whiteBG: 0px 4px 4px rgba(0, 0, 0, 0.25);
 //box-shadow
 $box_shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
 $radio_shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+$shadow_btn_black: 0px 8px 15px rgba(0, 0, 0, 0.295);
+$shadow_btn_black-hover: 0px 15px 20px rgba(255, 255, 255, 0.219);
+
+$shadow_btn_white: 0px 8px 15px rgba(0, 0, 0, 0.1);
+$shadow_btn_white-hover: 0px 15px 20px rgba(15, 15, 15, 0.603);
 
 // Zaptec colors
 $asphalt_black: #15181c;

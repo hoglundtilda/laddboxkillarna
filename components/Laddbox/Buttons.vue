@@ -28,6 +28,11 @@ export default {
   font-family: $text;
   width: 100%;
 
+  button {
+    box-shadow: $shadow_btn_white;
+    background: $white;
+  }
+
   .left,
   .right {
     padding: 8px 36px;
