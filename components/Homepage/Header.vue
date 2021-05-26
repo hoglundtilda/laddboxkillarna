@@ -34,13 +34,9 @@ export default {}
 #header__section {
   color: $white;
   min-height: 100vh;
-  background: linear-gradient(
-      180deg,
-      rgba(18, 18, 18, 0) 0%,
-      rgba(18, 18, 18, 0.87) 78.65%,
-      #121212 100%
-    ),
-    url('@/assets/images/background_laddboxkillarna_1.png');
+  background: linear-gradient(180deg, rgba(12, 12, 12, 0) 0%, rgba(12, 12, 12, 0.789338) 59.9%, rgba(12, 12, 12, 0.98) 88.54%, $black 94.27%),
+    url(@/assets/images/background_laddboxkillarna_1.png);
+
   background-size: cover;
   background-repeat: no-repeat;
   padding: 10%;
@@ -68,7 +64,7 @@ export default {}
         180deg,
         rgba(18, 18, 18, 0) 0%,
         rgba(18, 18, 18, 0.87) 78.65%,
-        #121212 100%
+        $black 100%
       ),
       url('@/assets/images/background_laddboxkillarna_1_pad.png');
     background-size: cover;

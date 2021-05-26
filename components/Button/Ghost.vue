@@ -14,13 +14,13 @@ export default {
 .ghost__btn {
   @include btn;
   color: $white;
-  border: 1.5px solid $white;
+  box-shadow: 0px 0px 0px 1.5px $white inset;
+  border: none;
   transition: all 0.15s ease-in;
-  
+
   &:hover {
     background: $white;
     color: $black;
-    font-weight: 500;
   }
 }
 </style>

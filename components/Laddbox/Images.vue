@@ -62,7 +62,6 @@ export default {
 <style lang="scss" scoped>
 .wrapper__images {
   .box {
-
     .images {
       display: flex;
       justify-content: center;
@@ -72,8 +71,17 @@ export default {
       flex-direction: column;
       justify-content: center;
       width: 25%;
+      cursor: pointer;
+
+      
       img {
         margin: 1rem;
+              transition: all 0.05s ease-in-out;
+
+
+        &:hover {
+        transform: scale(1.05);
+      }
       }
     }
     .big_img {

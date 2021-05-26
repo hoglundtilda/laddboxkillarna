@@ -98,7 +98,11 @@
           >
         </div>
       </div>
-      <ButtonPrimaryBlack btn_text="Skicka beställning" class="primary" />
+      <ButtonPrimaryBlack
+        btn_text="Skicka beställning"
+        class="primary"
+        @btn_click="sendOrder"
+      />
     </section>
   </div>
 </template>
@@ -106,6 +110,8 @@
 <script>
 import products from '@/assets/productJSON/products.json'
 import { fas } from '@fortawesome/free-solid-svg-icons'
+import { mapActions } from 'vuex'
+
 export default {
   data() {
     return {
@@ -116,7 +122,14 @@ export default {
       extra: false,
     }
   },
+  computed: {
+    fas() {
+      return fas
+    },
+  },
   methods: {
+    ...mapActions(['orderEmail']),
+
     selectColor(input) {
       const index = this.products.colors.findIndex(function (element) {
         return element.id === input
@@ -129,10 +142,8 @@ export default {
     showExtra() {
       this.extra = !this.extra
     },
-  },
-  computed: {
-    fas() {
-      return fas
+    sendOrder() {
+      this.orderEmail()
     },
   },
 }

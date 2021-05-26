@@ -22,13 +22,7 @@ export default {}
   font-family: $headline;
   height: 100vh;
   color: $white;
-  background: linear-gradient(
-      180deg,
-      #0b0b0b 8.54%,
-      rgba(11, 11, 11, 0.6) 49.76%,
-      rgba(11, 11, 11, 0.94) 84.44%,
-      #0b0b0b 96.51%
-    ),
+  background: linear-gradient(180deg, #0C0C0C 8.54%, rgba(12, 12, 12, 0.6) 49.76%, rgba(12, 12, 12, 0.94) 84.44%, $black 96.51%),
     url('@/assets/images/background_roads.png');
   background-size: cover;
   background-repeat: no-repeat;
