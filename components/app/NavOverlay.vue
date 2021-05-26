@@ -1,11 +1,12 @@
 <template>
   <div class="wrapper__nav_overlay">
     <div class="image-container">
-      <img
-        src="@/assets/logo/logo_full_white.svg"
-        alt="logo with name of company"
-        class="logo"
-      />
+      <NuxtLink to="/">
+        <img
+          src="@/assets/logo/logo_full_white.svg"
+          alt="logga"
+          class="logo"
+      /></NuxtLink>
     </div>
     <div class="links">
       <NuxtLink to="/" @click.native="showOverlay"> Hem </NuxtLink>

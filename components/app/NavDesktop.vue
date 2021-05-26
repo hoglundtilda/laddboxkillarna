@@ -1,11 +1,12 @@
 <template>
-  <div class="wrapper__nav_desktop">
+  <div
+    class="wrapper__nav_desktop"
+    :class="setBackground ? 'dark-theme' : 'light-theme'"
+  >
     <div class="image-container">
-      <img
-        src="@/assets/logo/logo_full_white.svg"
-        alt="logo with name of company"
-        class="logo"
-      />
+      <NuxtLink to="/">
+        <img src="@/assets/logo/logo_full_white.svg" alt="logga" class="logo"
+      /></NuxtLink>
     </div>
     <div class="links">
       <NuxtLink to="/"> Hem </NuxtLink>
@@ -21,10 +22,38 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      nav_background: false,
+    }
+  },
+  computed: {
+    setBackground() {
+      const path = this.$route.path
+      console.log(path)
+      if (path === '/' || path === '/om') {
+        console.log('here')
+        return true
+      } else {
+        return false
+      }
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
+.dark-theme {
+  background-color: none;
+  box-shadow: none;
+}
+
+.light-theme {
+  background-color: $black;
+  box-shadow: $box_shadow;
+}
+
 .wrapper__nav_desktop {
   position: fixed;
   top: 0;
@@ -33,9 +62,7 @@ export default {}
   grid-template-areas: 'logo links btn';
   grid-template-columns: 20% 55% 25%;
   align-items: center;
-  padding: 1.5rem;
-  background-color: $black;
-  box-shadow: $box_shadow;
+  padding: 1rem 1.5rem;
   z-index: 5;
 
   .image-container {
@@ -70,7 +97,7 @@ export default {}
     align-self: flex-start;
     margin-right: auto;
     margin-left: 0;
-    padding: 6px 30px;
+    padding: 8px 30px;
     font-size: 1rem;
   }
 }

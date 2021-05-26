@@ -20,8 +20,10 @@ export default {
   transition: all 0.3s ease 0s;
 
   &:hover {
-  box-shadow: $shadow_btn_white-hover;
+    color: $white;
+    background: none;
+      box-shadow: 0px 0px 0px 1.5px $white inset;
 
-}
+  }
 }
 </style>

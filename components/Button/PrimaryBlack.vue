@@ -22,9 +22,14 @@ export default {
   box-shadow: $shadow_btn_black;
   transition: all 0.3s ease-in-out;
 
-    &:active {
-  box-shadow: $shadow_btn_black-hover;
-  transform: scale(1.03);
-}
+  &:active {
+    box-shadow: $shadow_btn_black-hover;
+    transform: scale(1.03);
+  }
+
+  &:hover {
+    color: $black;
+    background: none;
+  }
 }
 </style>

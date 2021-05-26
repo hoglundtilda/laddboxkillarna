@@ -3,16 +3,15 @@
     <section class="text">
       <h1>Din helhetslösning</h1>
       <div>
-        <h4 class="check">&#x2714; Köp din laddbox</h4>
-        <h4 class="check">&#x2714; Installerat & klart</h4>
-        <h4 class="check">&#x2714; Inga mellanhänder</h4>
-        <h4 class="check">&#x2714; Till Fast Pris</h4>
+        <h4 class="check">&#x2714; Laddbox</h4>
+        <h4 class="check">&#x2714; Installation</h4>
+        <h4 class="check">&#x2714; Grön Teknik avdrag</h4>
+        <h4 class="check">&#x2714; Fast pris</h4>
       </div>
       <p class="description text__standard">
         Vår helhetslösning går ut på att göra det så enkelt som möjligt för dig
-        som kund. Vi sköter allt inkl. installation. Inga mellanhänder som drar
-        ut på tiden eller trissar upp priser. Det enda du behöver göra är att
-        lägga en beställning. Vi garanterar återkoppling inom 24 timmar
+        som kund. Vi sköter allt från beställning till installation för ett fast
+        pris.
       </p>
     </section>
     <div class="buttons">
@@ -34,12 +33,21 @@ export default {}
 #header__section {
   color: $white;
   min-height: 100vh;
-  background: linear-gradient(180deg, rgba(12, 12, 12, 0) 0%, rgba(12, 12, 12, 0.789338) 59.9%, rgba(12, 12, 12, 0.98) 88.54%, $black 94.27%),
+  background: linear-gradient(
+      180deg,
+      rgba(12, 12, 12, 0) 0%,
+      rgba(12, 12, 12, 0.789338) 59.9%,
+      rgba(12, 12, 12, 0.98) 88.54%,
+      $black 94.27%
+    ),
     url(@/assets/images/background_laddboxkillarna_1.png);
 
   background-size: cover;
   background-repeat: no-repeat;
   padding: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   .check {
     padding: 0.2rem 0;
