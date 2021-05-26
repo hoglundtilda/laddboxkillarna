@@ -33,7 +33,6 @@ export default {
       const path = this.$route.path
       console.log(path)
       if (path === '/' || path === '/om') {
-        console.log('here')
         return true
       } else {
         return false
