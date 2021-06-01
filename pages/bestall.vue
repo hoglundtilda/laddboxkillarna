@@ -108,7 +108,7 @@
           >
         </div>
       </div>
-      <span class="validation_agreement" v-if="isAgreement"
+      <span class="validation_agreement" v-if="showAgreement"
         >Du behöver läsa och acceptera avtalsvillkor för att lägga en
         beställning</span
       >
@@ -160,13 +160,12 @@ export default {
   methods: {
     ...mapActions(['orderEmail']),
 
-    selectColor(colorId, color) {
-      console.log(color)
+    selectColor(color) {
       const index = this.products.colors.findIndex(function (element) {
-        return element.id === colorId
+        return element.id === color.id
       })
       this.color = this.products.colors[index].name
-      this.order.color = color
+      this.order.color = color.name
     },
     showTerms() {
       this.terms = true
@@ -174,9 +173,9 @@ export default {
     showExtra() {
       this.extra = !this.extra
     },
-    async sendOrder() {
+    sendOrder() {
       //const isValid = await validate(this.order)
-      if (this.order.egreement === true) {
+      if (this.order.agreement === true) {
         this.orderEmail(this.order)
         this.showAgreement = false
       }

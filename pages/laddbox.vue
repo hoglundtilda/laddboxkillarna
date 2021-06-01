@@ -31,7 +31,7 @@
         uppkopplad med WiFi eller 4G LTE-M för att du ska ha tillgång till de
         senaste funktionerna och uppdateringarna.
       </p>
-      <nuxt-link to="/installation"
+      <nuxt-link to="/bestall"
         ><ButtonPrimaryBlack btn_text="Beställ laddbox" class="primary"
       /></nuxt-link>
     </section>

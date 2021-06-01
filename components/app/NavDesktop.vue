@@ -15,7 +15,7 @@
       <NuxtLink to="/foretag-brf"> Företag/BRF </NuxtLink>
       <NuxtLink to="/kontakt"> Kontakt </NuxtLink>
     </div>
-    <NuxtLink to="/installation">
+    <NuxtLink to="/bestall">
       <ButtonGhost btn_text="Beställ laddbox" class="ghost" />
     </NuxtLink>
   </div>

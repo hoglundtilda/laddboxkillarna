@@ -26,7 +26,7 @@ export default {
   },
   methods: {
     selectColor(color) {
-      this.$emit('selectColor', color.id, color.color)
+      this.$emit('selectColor', color)
     },
   },
 }

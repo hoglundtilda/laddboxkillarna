@@ -46,10 +46,12 @@ export default {
     }
   },
   methods: {
-    selectColor(colorId) {
+    selectColor(color) {
+      console.log(color)
       const index = this.products.colors.findIndex(function (element) {
-        return element.colorId === input
+        return element.id === color.id
       })
+      console.log(index)
       this.color = this.products.colors[index]
     },
     changeBigImage(smallImage) {

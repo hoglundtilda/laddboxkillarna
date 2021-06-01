@@ -18,7 +18,7 @@
       <nuxt-link to="/laddbox">
         <ButtonPrimary btn_text="Produkter" class="primary"
       /></nuxt-link>
-      <nuxt-link to="/installation"
+      <nuxt-link to="/bestall"
         ><ButtonGhost btn_text="Beställ här" class="ghost"
       /></nuxt-link>
     </div>
