@@ -6,11 +6,11 @@
         :key="color.id"
         :style="{ backgroundColor: color.color }"
         name="radio"
-        value=""
+        value="color.color"
         type="radio"
         id="white"
         class="white"
-        @click="selectColor(color.id)"
+        @click="selectColor(color)"
       />
     </form>
   </div>
@@ -25,8 +25,8 @@ export default {
     }
   },
   methods: {
-    selectColor(input) {
-      this.$emit('selectColor', input)
+    selectColor(color) {
+      this.$emit('selectColor', color.id, color.color)
     },
   },
 }

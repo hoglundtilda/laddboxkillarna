@@ -46,9 +46,9 @@ export default {
     }
   },
   methods: {
-    selectColor(input) {
+    selectColor(colorId) {
       const index = this.products.colors.findIndex(function (element) {
-        return element.id === input
+        return element.colorId === input
       })
       this.color = this.products.colors[index]
     },
@@ -73,15 +73,13 @@ export default {
       width: 25%;
       cursor: pointer;
 
-      
       img {
         margin: 1rem;
-              transition: all 0.05s ease-in-out;
-
+        transition: all 0.05s ease-in-out;
 
         &:hover {
-        transform: scale(1.05);
-      }
+          transform: scale(1.05);
+        }
       }
     }
     .big_img {
