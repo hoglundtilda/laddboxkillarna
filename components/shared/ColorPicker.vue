@@ -53,11 +53,7 @@ form {
     cursor: pointer;
 
     &:checked {
-      transform: scale(1.15);
-    }
-
-    &:hover {
-      transform: scale(1.1);
+      transform: scale(1.2);
     }
   }
 

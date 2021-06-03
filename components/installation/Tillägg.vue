@@ -4,17 +4,12 @@
       <fa :icon="fas.faTimes" class="close" @click="closeExtra" />
       <div class="information">
         <h3>Extratillägg inkl. moms</h3>
-        <p class="text__standard">Lastbalansering (PRIS)</p>
-        <p class="text__standard">Kabel för 16A (5 ledare) 315 kr/m</p>
-        <p class="text__standard">Kabel för 32A (5 ledare) 450 kr/m</p>
-        <p class="text__standard">Kapsling 1000kr/st</p>
-        <p class="text__standard">Markförläggning i befintligt rör 125 kr/m</p>
-        <p class="text__standard">Uppsäkring 1600kr</p>
-        <p class="text__standard">Extra arbete 700kr/h</p>
-        <p class="text__standard">
-          Diverse material som inte ingår i standardmaterialet.
-        </p>
-        <p class="text__standard">Underentreprenör vid behov</p>
+        <p class="text__secondary">Kabel för 16A (5 ledare) 315 kr/m</p>
+        <p class="text__secondary">Kabel för 32A (5 ledare) 450 kr/m</p>
+        <p class="text__secondary">Kapsling 1000kr/st</p>
+        <p class="text__secondary">Markförläggning i befintligt rör 125 kr/m</p>
+        <p class="text__secondary">Uppsäkring 1600kr</p>
+        <p class="text__secondary">Extra arbete 700kr/h</p>
       </div>
     </section>
   </div>
@@ -62,7 +57,7 @@ export default {
     }
   }
   .close {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     color: $black;
     align-self: flex-end;
     margin: 1rem;
