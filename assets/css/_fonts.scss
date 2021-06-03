@@ -38,6 +38,7 @@ h1 {
 
 h2 {
   font-size: 3rem;
+  font-weight: 500;
 }
 
 h3 {
@@ -51,14 +52,16 @@ h4 {
 }
 
 .text__standard {
-  font-size: 1.65rem;
+  font-size: 1.5rem;
   line-height: 140%;
-  font-weight: 100;
+  font-weight: 300;
   font-family: $text;
 }
 
 .text__secondary {
   font-size: 1.125rem;
+  line-height: 140%;
+  font-weight: 100;
   font-family: $text;
 
 }
