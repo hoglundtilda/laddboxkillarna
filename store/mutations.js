@@ -1,6 +1,9 @@
 export default {
-    updateState(state) {
-      state.counter++
-      console.log(state.counter)
-    }
-  }
+  responseHandler(state, response) {
+    if (response.status !== 200)
+      state.statusMessage = { success: false, message: response.data }
+
+    if (response.status === 200)
+      state.statusMessage = { success: true, message: response.data }
+  },
+}

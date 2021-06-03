@@ -52,12 +52,13 @@
         class="primary"
         @btn_click="sendEmail"
       />
+      <SharedStatusMessage :statusMessage="statusMessage" />
     </section>
   </div>
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 
 export default {
   data() {
@@ -70,6 +71,11 @@ export default {
         message: '',
       },
     }
+  },
+  computed: {
+    ...mapState({
+      statusMessage: (state) => state.statusMessage,
+    }),
   },
   methods: {
     ...mapActions(['contactEmail']),

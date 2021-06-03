@@ -117,6 +117,7 @@
         class="primary"
         @btn_click="sendOrder"
       />
+      <SharedStatusMessage :statusMessage="statusMessage" />
     </section>
   </div>
 </template>
@@ -124,7 +125,7 @@
 <script>
 import products from '@/assets/productJSON/products.json'
 import { fas } from '@fortawesome/free-solid-svg-icons'
-import { mapActions } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 import { validateOrder } from '@/modules/validation'
 
 export default {
@@ -153,6 +154,9 @@ export default {
     }
   },
   computed: {
+    ...mapState({
+      statusMessage: (state) => state.statusMessage,
+    }),
     fas() {
       return fas
     },
