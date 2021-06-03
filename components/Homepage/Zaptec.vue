@@ -2,14 +2,6 @@
   <div id="zaptec__section">
     <h2>Zaptec Go</h2>
     <section class="main">
-      <video
-        autoplay
-        loop
-        muted
-        preload="metadata"
-        src="@/assets/video/Produktvideo_Zaptec.mp4#t=0.5"
-      ></video>
-
       <div class="text">
         <h3>Fungerar med alla bilar</h3>
         <p class="text__standard">
@@ -22,6 +14,13 @@
           ><ButtonPrimary btn_text="Utforska Zaptec Go" class="primary"
         /></nuxt-link>
       </div>
+      <video
+        autoplay
+        loop
+        muted
+        preload="metadata"
+        src="@/assets/video/Produktvideo_Zaptec.mp4#t=0.5"
+      ></video>
     </section>
   </div>
 </template>
@@ -41,7 +40,7 @@ export default {}
   color: $white;
 
   h2 {
-    padding: 0 0 5%;
+    margin: 1rem 0;
   }
 
   .main {
@@ -53,14 +52,12 @@ export default {}
   }
 
   .text {
-    margin-left: 5rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
 
     p {
       width: 85%;
-      padding: 2rem 0;
     }
   }
 }

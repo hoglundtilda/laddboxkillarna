@@ -1,12 +1,11 @@
 <template>
   <div class="wrapper__laddbox">
+    <h1>Zaptec Go</h1>
     <LaddboxImages class="laddbox" />
     <section class="information">
-      <h1>Zaptec Go</h1>
       <p class="text__secondary headline">
-        6 250 SEK Inkl. 25% moms installerat & klart (efter avdraget Grön
-        Teknik) eller 12 500 SEK Inkl. 25% moms installerat & klart utan
-        skattereduktion
+        6 250 SEK Inkl. 25% moms installerat & klart (efter avdraget Grön Teknik
+        som vi ansöker om för Er räkning)
       </p>
       <p class="text__secondary">
         <span>Passar alla bilar</span> samt hem och med en storlek motsvarande
@@ -45,20 +44,27 @@ export default {}
 <style lang="scss">
 .wrapper__laddbox {
   min-height: 100vh;
-  padding: 10% 15%;
+  padding: 8% 15%;
   display: grid;
-  grid-template-areas: 'laddbox info';
-  grid-template-columns: 40% 50%;
-  grid-gap: 5rem;
-  font-family: $headline;
+  grid-template-areas: '. headline' 'laddbox info';
+  grid-template-columns: 40% 40%;
+  grid-template-rows: 10% 80%;
+  row-gap: 2rem;
+  column-gap: 5rem;
   justify-content: center;
+  align-items: flex-end;
 
   .laddbox {
     grid-area: laddbox;
   }
 
+  h1 {
+    grid-area: headline;
+  }
+
   .information {
     grid-area: info;
+
     .headline {
       font-weight: 700;
     }
@@ -71,7 +77,8 @@ export default {}
       }
     }
     .primary {
-      margin-top: 2rem;
+      margin-top: auto;
+      bottom: 0;
     }
   }
 }
