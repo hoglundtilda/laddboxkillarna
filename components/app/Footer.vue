@@ -8,12 +8,13 @@
       />
     </div>
     <div class="socials">
-      <img src="@/assets/logo/linkedIn.svg" alt="linkedIn" />
+      <img src="@/assets/logo/linkedIn.svg" alt="linkedIn" /> <a href=""></a>
       <img src="@/assets/logo/instagram.svg" alt="instagram" />
       <img src="@/assets/logo/facebook.svg" alt="facebook" />
     </div>
     <div class="footer_text text__secondary">
       <p>&#169;Laddboxkillarna AB</p>
+      <p>Org nr: 559311-4142</p>
       <nuxt-link to="Kontakt"> <p class="underline">Kontakt</p></nuxt-link>
       <nuxt-link to="Policys"
         ><p class="underline">Integritetspolicy</p></nuxt-link
@@ -35,7 +36,7 @@ export default {
 
 <style lang="scss" scoped>
 .wrapper__footer {
-  padding: 3% 5%;
+  padding: 1% 5%;
   color: white;
   display: grid;
   grid-template-areas:
@@ -48,7 +49,7 @@ export default {
   background-color: $black;
 
   .image-container {
-    width: 50%;
+    width: 35%;
     img {
       width: 100%;
       height: auto;
@@ -68,6 +69,9 @@ export default {
   }
   .footer_text {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     margin: 1rem;
     a {
       text-decoration: none;
@@ -84,11 +88,14 @@ export default {
 }
 @media only screen and (max-width: 950px) {
   .wrapper__footer {
+    padding: 5%;
     .footer_text {
-
       p {
         padding: 0 0.5rem;
       }
+    }
+    .image-container {
+      width: 50%;
     }
   }
 }

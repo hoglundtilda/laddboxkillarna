@@ -60,6 +60,8 @@
       <p class="text__secondary">&#x2714; INTERNATIONELL STANDARD</p>
     </div>
     <div class="video">
+      <img src="@/assets/images/pro/Zaptec_Pro.png" alt="charger" class="pro" />
+      <LaddboxButtons produktblad="Zaptec_Pro.pdf" class="spec" />
       <iframe
         width="100%"
         src="https://www.youtube.com/embed/7dSkQ2fAetA"
@@ -68,13 +70,15 @@
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
       ></iframe>
-      <p class="text__secondary">
-        Är du en juridisk person hänvisar vi till förfrågningar vid mejl eller
-        telefon
-      </p>
-      <nuxt-link to="/kontakt"
-        ><ButtonPrimary btn_text="Kontakta oss" class="primary"
-      /></nuxt-link>
+      <div>
+        <p class="text__secondary">
+          Är du en juridisk person hänvisar vi till förfrågningar vid mejl eller
+          telefon
+        </p>
+        <nuxt-link to="/kontakt"
+          ><ButtonPrimaryBlack btn_text="Kontakta oss" class="primary"
+        /></nuxt-link>
+      </div>
     </div>
   </div>
 </template>
@@ -83,7 +87,7 @@
 export default {}
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .wrapper__foretag {
   min-height: 100vh;
   padding: 10%;
@@ -95,7 +99,7 @@ export default {}
 
   .text__standard {
     font-weight: 400;
-    padding: 0.5rem;
+    padding: 0.5rem 0;
   }
 
   .text {
@@ -104,8 +108,10 @@ export default {}
 
   .video {
     grid-area: video;
-    justify-self: center;
-    padding-top: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 
     iframe {
       height: 20rem;
@@ -114,10 +120,15 @@ export default {}
     p {
       margin-top: 2rem;
     }
+    .pro {
+      width: 40%;
+      padding: 15% 0;
+    }
+    .spec {
+      padding: 0 0 5%;
+    }
   }
   .primary {
-    background-color: $black;
-    color: $white;
     margin-top: 2rem;
   }
 }
@@ -129,11 +140,27 @@ export default {}
       'video';
     grid-template-columns: 100%;
     grid-gap: 0rem;
+
+    .video {
+      align-items: flex-start;
+
+      .pro {
+        padding: 10% 0;
+        width: 30%;
+      }
+    }
   }
 }
 @media only screen and (max-width: 700px) {
   .wrapper__foretag {
     padding: 20% 10%;
+
+    .video {
+      align-items: center;
+      .pro {
+        width: 50%;
+      }
+    }
   }
 }
 </style>

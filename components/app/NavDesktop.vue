@@ -26,18 +26,30 @@ export default {
   data() {
     return {
       nav_background: false,
+      scrollPosition: null,
     }
   },
   computed: {
     setBackground() {
       const path = this.$route.path
       console.log(path)
+
       if (path === '/' || path === '/om') {
-        return true
+        if (this.scrollPosition < 1000) {
+          return true
+        }
       } else {
         return false
       }
     },
+  },
+  methods: {
+    updateScroll() {
+      this.scrollPosition = window.scrollY
+    },
+  },
+  mounted() {
+    window.addEventListener('scroll', this.updateScroll)
   },
 }
 </script>
