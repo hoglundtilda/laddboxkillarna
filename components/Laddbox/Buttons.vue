@@ -1,9 +1,14 @@
 <template>
   <div>
     <div class="buttons">
-      <button class="left">Teknisk specifikation</button>
+      <button class="left">
+        <a :href="produktblad" target="_blank"> Teknisk specifikation</a>
+      </button>
+
       <button class="right">
-        Ladda ner PDF <fa :icon="fas.faFileDownload" />
+        <a :href="produktblad" download>
+          Ladda ner PDF <fa :icon="fas.faFileDownload"
+        /></a>
       </button>
     </div>
   </div>
@@ -13,6 +18,9 @@
 import { fas } from '@fortawesome/free-solid-svg-icons'
 
 export default {
+  props: {
+    produktblad: String,
+  },
   computed: {
     fas() {
       return fas

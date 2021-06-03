@@ -24,7 +24,7 @@
         <span>Välj färg: {{ color.name }}</span>
         <SharedColorPicker @selectColor="selectColor" />
       </div>
-      <LaddboxButtons />
+      <LaddboxButtons produktblad="Zaptec_Go.pdf" />
     </section>
   </div>
 </template>
