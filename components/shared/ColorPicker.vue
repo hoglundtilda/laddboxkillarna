@@ -52,6 +52,12 @@ form {
     transition: all 0.05s ease-in-out;
     cursor: pointer;
 
+    &:checked:hover {
+      transform: scale(1.2);
+    }
+    &:hover {
+      transform: scale(1.08);
+    }
     &:checked {
       transform: scale(1.2);
     }

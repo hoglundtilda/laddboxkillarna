@@ -45,7 +45,7 @@ export default {}
 <style lang="scss">
 .wrapper__laddbox {
   min-height: 100vh;
-  padding: 15% 15%;
+  padding: 10% 15%;
   display: grid;
   grid-template-areas: 'laddbox info';
   grid-template-columns: 40% 50%;
