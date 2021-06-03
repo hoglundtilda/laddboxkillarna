@@ -39,6 +39,10 @@ export default {
   button {
     box-shadow: $shadow_btn_white;
     background: $white;
+
+    a {
+      color: $black;
+    }
   }
 
   .left,

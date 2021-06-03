@@ -1,14 +1,16 @@
 <template>
   <div id="zaptec__section">
-    <div>
+    <h2>Zaptec Go</h2>
+    <section class="main">
       <video
-        controls
+        autoplay
+        loop
         muted
         preload="metadata"
         src="@/assets/video/Produktvideo_Zaptec.mp4#t=0.5"
       ></video>
+
       <div class="text">
-        <h2>Zaptec Go</h2>
         <h3>Fungerar med alla bilar</h3>
         <p class="text__standard">
           Oavsett var du kör eller vart du ska, är Zaptec go det bästa sättet
@@ -20,7 +22,7 @@
           ><ButtonPrimary btn_text="Utforska Zaptec Go" class="primary"
         /></nuxt-link>
       </div>
-    </div>
+    </section>
   </div>
 </template>
 
@@ -30,43 +32,46 @@ export default {}
 
 <style lang="scss" scoped>
 #zaptec__section {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  padding: 5% 10%;
+  padding: 10% 15%;
   font-family: $headline;
   color: $white;
 
-  .grid {
-    display: grid;
-    grid-template-areas: 'video text';
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    justify-items: center;
+  h2 {
+    padding: 0 0 5%;
   }
+
+  .main {
+    display: flex;
+  }
+
   video {
-    grid-area: video;
-    width: 90%;
-    padding: 2rem;
-    justify-self: center;
-    z-index: 0;
+    width: 50%;
   }
 
   .text {
-    grid-area: text;
+    margin-left: 5rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
 
     p {
-      width: 80%;
-      padding: 1rem 0;
+      width: 85%;
+      padding: 2rem 0;
     }
   }
 }
 @media only screen and (max-width: 1300px) {
   #zaptec__section {
+    .main {
+      flex-direction: column;
+    }
     .text {
+      padding-top: 3rem;
+      margin-left: 0rem;
       p {
         width: 100%;
         padding: 2rem 0;
@@ -77,14 +82,6 @@ export default {}
 }
 @media only screen and (max-width: 900px) {
   #zaptec__section {
-    .grid {
-      grid-template-areas:
-        'text'
-        'video';
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr;
-      grid-gap: 2rem;
-    }
     video {
       width: 80%;
       padding: 0rem;
@@ -101,13 +98,6 @@ export default {}
 }
 @media only screen and (max-width: 600px) {
   #zaptec__section {
-    .grid {
-      grid-template-areas:
-        'text'
-        'video';
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr;
-    }
     video {
       width: 100%;
     }
