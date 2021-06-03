@@ -1,6 +1,6 @@
 <template>
   <div id="zaptec__section">
-    <div class="grid">
+    <div>
       <video
         controls
         muted
@@ -30,7 +30,10 @@ export default {}
 
 <style lang="scss" scoped>
 #zaptec__section {
-  padding: 10%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 5% 10%;
   font-family: $headline;
   color: $white;
 

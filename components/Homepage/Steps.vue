@@ -9,13 +9,13 @@
       <article class="step2">
         <img src="@/assets/images/steps/step2.png" alt="" />
         <p class="text__secondary">
-          Vi kontaktar dig inom 24h för att boka in tid för
+          Kontakt inom 24h för att boka tid för
           installation/kundbesök
         </p>
       </article>
       <article class="step3">
         <img src="@/assets/images/steps/step3.png" alt="" />
-        <p class="text__secondary">Vi utför installationen</p>
+        <p class="text__secondary">Vi installerar laddboxen</p>
       </article>
       <article class="step4">
         <img src="@/assets/images/steps/step4.png" alt="" />
@@ -29,7 +29,7 @@
         <p class="text__secondary">Du kan nu ladda din bil säkert & snabbt!</p>
       </article>
     </section>
-    <h3>Snabbt, smidigt och enkelt!</h3>
+    <span class="">Snabbt, smidigt och enkelt!</span>
   </div>
 </template>
 
@@ -44,21 +44,25 @@ export default {}
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10%;
+  padding: 10% 15%;
 
   article > p {
     padding-top: 1rem;
+    letter-spacing: 1px;
+    max-width: 220px;
   }
 
   .steps {
     display: grid;
     grid-template-areas: 'step1 step2 step3 step4 step5';
     grid-template-columns: repeat(5, 1fr);
-
-    justify-items: center;
     text-align: center;
-    padding: 6rem 4rem;
-    grid-gap: 1rem;
+    padding: 8rem 0;
+    grid-gap: 2rem;
+
+    article {
+      max-width: 230px;
+    }
   }
   .step1 {
     grid-area: step1;
@@ -74,6 +78,10 @@ export default {}
   }
   .step5 {
     grid-area: step5;
+  }
+
+  span {
+    font-size: 2rem;
   }
 }
 @media only screen and (max-width: 1100px) {

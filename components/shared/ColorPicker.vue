@@ -43,7 +43,7 @@ form {
     width: 2.5rem;
     height: 2.5rem;
     outline: none;
-    padding: 0;
+    padding: 1rem;
     appearance: none;
     border-radius: 100%;
     margin: 0.5rem;

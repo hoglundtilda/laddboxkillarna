@@ -2,10 +2,7 @@
   <div class="wrapper__nav_overlay">
     <div class="image-container">
       <NuxtLink to="/">
-        <img
-          src="@/assets/logo/logo_full_white.svg"
-          alt="logga"
-          class="logo"
+        <img src="@/assets/logo/logo_full_white.svg" alt="logga" class="logo"
       /></NuxtLink>
     </div>
     <div class="links">
@@ -17,7 +14,7 @@
       </NuxtLink>
       <NuxtLink to="/kontakt" @click.native="showOverlay"> Kontakt </NuxtLink>
     </div>
-    <NuxtLink to="/installation" @click.native="showOverlay">
+    <NuxtLink to="/bestall" @click.native="showOverlay">
       <ButtonGhost btn_text="Beställ laddbox" class="ghost" />
     </NuxtLink>
   </div>
