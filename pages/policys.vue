@@ -26,7 +26,6 @@
         Namn, adress, telefonnummer och epostadress lagras för att kunna skapa
         kontakt med dig för att möjliggöra en installation.
       </p>
-      <span>Bankuppgifter sparas för att bla bla </span>
       <p>
         Vi lagrar dina uppgifter under sju år med hänvisning till
         bokföringslagen
@@ -68,10 +67,6 @@ export default {}
   h3 {
     font-size: 2rem;
     font-weight: 300;
-  }
-
-  div > span {
-    color: red;
   }
 
   .text__div {

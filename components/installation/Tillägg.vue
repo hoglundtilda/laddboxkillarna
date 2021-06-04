@@ -4,12 +4,30 @@
       <fa :icon="fas.faTimes" class="close" @click="closeExtra" />
       <div class="information">
         <h3>Extratillägg inkl. moms</h3>
-        <p class="text__secondary">Kabel för 16A (5 ledare) 315 kr/m</p>
-        <p class="text__secondary">Kabel för 32A (5 ledare) 450 kr/m</p>
-        <p class="text__secondary">Kapsling 1000kr/st</p>
-        <p class="text__secondary">Markförläggning i befintligt rör 125 kr/m</p>
-        <p class="text__secondary">Uppsäkring 1600kr</p>
-        <p class="text__secondary">Extra arbete 700kr/h</p>
+        <div class="prices">
+          <p class="text__secondary">Kabel för 16A (5 ledare)</p>
+          <p class="text__secondary right">315 kr/m</p>
+        </div>
+        <div class="prices">
+          <p class="text__secondary">Kabel för 32A (5 ledare)</p>
+          <p class="text__secondary right">450 kr/m</p>
+        </div>
+        <div class="prices">
+          <p class="text__secondary">Kapsling</p>
+          <p class="text__secondary right">1000kr/st</p>
+        </div>
+        <div class="prices">
+          <p class="text__secondary">Markförläggning i befintligt rör</p>
+          <p class="text__secondary right">125 kr/m</p>
+        </div>
+        <div class="prices">
+          <p class="text__secondary">Uppsäkring</p>
+          <p class="text__secondary right">1600kr</p>
+        </div>
+        <div class="prices">
+          <p class="text__secondary">Extra arbete</p>
+          <p class="text__secondary right">700kr/h</p>
+        </div>
       </div>
     </section>
   </div>
@@ -35,11 +53,20 @@ export default {
 <style lang="scss" scoped>
 .wrapper__tillägg {
   position: absolute;
-
+  width: 500px;
   top: 50%;
-  left: 20%;
-  transform: translateX(-50%) translateY(-20%);
+  left: 2rem;
   z-index: 1;
+
+  .prices {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: underline;
+
+    .right {
+      text-align: right;
+    }
+  }
 
   .text {
     background-color: $white;
@@ -63,9 +90,9 @@ export default {
     margin: 1rem;
   }
 }
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 750px) {
   .wrapper__tillägg {
-    width: 80%;
+    width: 90%;
   }
 }
 </style>

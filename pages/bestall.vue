@@ -51,19 +51,50 @@
     <section class="inputs">
       <h3>Dina beställningsuppgifter</h3>
       <div class="names">
-        <input v-model="order.firstName" type="text" placeholder="Förnamn" />
+        <input
+          v-model="order.firstName"
+          type="text"
+          placeholder="Förnamn"
+          class="user_input"
+        />
 
-        <input v-model="order.lastName" type="text" placeholder="Efternamn" />
+        <input
+          v-model="order.lastName"
+          type="text"
+          placeholder="Efternamn"
+          class="user_input"
+        />
       </div>
       <input
         v-model="order.street"
         type="text"
         placeholder="Gatuadress (där laddbox ska installeras)"
+        class="user_input"
       />
-      <input v-model="order.postNr" type="text" placeholder="Postnummer" />
-      <input v-model="order.state" type="text" placeholder="Ort" />
-      <input v-model="order.email" type="text" placeholder="Epost" />
-      <input v-model="order.phoneNr" type="text" placeholder="Telefonnummer" />
+      <input
+        v-model="order.postNr"
+        type="text"
+        placeholder="Postnummer"
+        class="user_input"
+      />
+      <input
+        v-model="order.state"
+        type="text"
+        placeholder="Ort"
+        class="user_input"
+      />
+      <input
+        v-model="order.email"
+        type="text"
+        placeholder="Epost"
+        class="user_input"
+      />
+      <input
+        v-model="order.phoneNr"
+        type="text"
+        placeholder="Telefonnummer"
+        class="user_input"
+      />
       <textarea
         v-model="order.information"
         name=""
@@ -71,6 +102,7 @@
         cols="30"
         rows="5"
         placeholder="Övriga upplysningar"
+        class="user_input"
       ></textarea>
       <div>
         <span>Välj färg: {{ color }}</span>
@@ -250,10 +282,10 @@ export default {
       }
     }
 
-    input {
+    .user_input {
       @include input;
     }
-    textarea {
+    .user_input {
       @include input;
       border-radius: 2rem;
     }

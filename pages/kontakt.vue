@@ -7,7 +7,7 @@
           Har du frågor eller vill bli samarbetspartner? <br />
           Vi snackar gärna med Er, vi hörs!
         </p>
-        <p class="text__standard"></p>
+
         <section class="bosses">
           <article>
             <!--0<img src="@/assets/images/boss1.png" alt="" />-->
@@ -17,9 +17,12 @@
                 alexander@laddboxkillarna.se
               </p></a
             >
-            <a href="tel:+46700490657"
-              ><p class="text__secondary">tlf: 070 049 06 57</p></a
-            >
+            <div>
+              <img src="@/assets/logo/phone.svg" alt="" />
+              <a href="tel:+46700490657">
+                <p class="text__secondary">070 049 06 57</p></a
+              >
+            </div>
           </article>
           <article>
             <!--<img src="@/assets/images/boss2.png" alt="" />-->
@@ -28,9 +31,12 @@
             <a href="mailto:kevin@laddboxkillarna.se"
               ><p class="text__secondary mail">kevin@laddboxkillarna.se</p></a
             >
-            <a href="tel:+46704716221">
-              <p class="text__secondary">tlf: 070 471 62 21</p></a
-            >
+            <div>
+              <img src="@/assets/logo/phone.svg" alt="" />
+              <a href="tel:+46704716221">
+                <p class="text__secondary">070 471 62 21</p></a
+              >
+            </div>
           </article>
         </section>
       </section>
@@ -121,6 +127,13 @@ export default {
 
     article {
       margin: 1rem 0;
+      div {
+        display: flex;
+        img {
+          width: 1.5rem;
+          margin-right: 0.4rem;
+        }
+      }
 
       a {
         text-decoration: underline;
@@ -172,46 +185,18 @@ export default {
 @media only screen and (max-width: 1100px) {
   .wrapper__kontakt {
     padding: 20% 10%;
-    grid-template-areas:
-      'information'
-      'contact';
-    grid-gap: 0;
-    grid-template-columns: 1fr;
-
-    .information {
-      article {
-        img {
-          width: 70%;
-        }
-      }
-    }
   }
 }
 @media only screen and (max-width: 700px) {
   .wrapper__kontakt {
-    padding: 20% 5%;
-    grid-template-areas:
-      'information'
-      'contact';
-    grid-gap: 0;
-    grid-template-columns: 1fr;
-    .bosses {
-      article {
-        margin: 2rem 0.5rem 2rem 0;
-      }
+    .contact__information {
+      flex-direction: column;
     }
-
+    .contact {
+      padding-top: 5rem;
+    }
     .information {
       article {
-        margin: 2 0.5rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        img {
-          min-height: 20rem;
-          min-width: 13rem;
-        }
         .mail {
           font-size: 1.2rem;
         }
