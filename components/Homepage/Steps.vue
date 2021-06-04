@@ -8,20 +8,16 @@
       </article>
       <article class="step2">
         <img src="@/assets/images/steps/step2.png" alt="" />
-        <p class="text__secondary">
-          Kontakt inom 24h för att boka tid för
-          installation/kundbesök
-        </p>
+        <p class="text__secondary">Vi kontaktar dig för att boka in tid</p>
       </article>
       <article class="step3">
         <img src="@/assets/images/steps/step3.png" alt="" />
-        <p class="text__secondary">Vi installerar laddboxen</p>
+        <p class="text__secondary">Vi utför installationen</p>
       </article>
       <article class="step4">
         <img src="@/assets/images/steps/step4.png" alt="" />
         <p class="text__secondary">
-          Vi skickar faktura och ansöker om avdraget grön teknik för din/er
-          räkning
+          Vi skickar faktura efter avdraget Grön Teknik
         </p>
       </article>
       <article class="step5">
@@ -39,29 +35,38 @@ export default {}
 
 <style lang="scss" scoped>
 #steps__section {
-  font-family: $headline;
   color: $white;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 10% 15%;
 
-  article > p {
-    padding-top: 1rem;
-    letter-spacing: 1px;
-    max-width: 220px;
-  }
-
   .steps {
-    display: grid;
-    grid-template-areas: 'step1 step2 step3 step4 step5';
-    grid-template-columns: repeat(5, 1fr);
-    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
     padding: 8rem 0;
-    grid-gap: 2rem;
+
+    width: 100%;
 
     article {
-      max-width: 230px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 1rem;
+      min-width: 12rem;
+
+      img {
+        width: 7rem;
+        height: 7rem;
+      }
+
+      p {
+        padding-top: 1rem;
+        letter-spacing: 1px;
+        max-width: 10rem;
+      }
     }
   }
   .step1 {
@@ -84,48 +89,53 @@ export default {}
     font-size: 2rem;
   }
 }
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1000px) {
   #steps__section {
     .steps {
-      padding: 6rem 1rem;
+      flex-direction: column;
+      width: 60%;
+      padding: 4rem 0;
+      text-align: left;
+
+      article {
+        flex-direction: row;
+        justify-content: space-between;
+
+        padding: 1rem 0;
+        text-align: left;
+
+        p {
+          padding: 0 2.5rem;
+          min-width: 18rem;
+        }
+      }
     }
   }
 }
 @media only screen and (max-width: 850px) {
   #steps__section {
     .steps {
-      grid-template-areas:
-        'step1'
-        'step2'
-        'step3'
-        'step4'
-        'step5';
+      article {
+        width: 100%;
 
-      grid-template-columns: 1fr;
-      justify-items: flex-start;
-      text-align: left;
-      grid-gap: 3rem;
-      padding: 4rem 0rem;
-    }
-    article > p {
-      padding-top: 0rem;
+        p {
+          width: 100%;
+        }
+      }
     }
   }
-  .step1,
-  .step2,
-  .step3,
-  .step4,
-  .step5 {
-    img {
-      padding-right: 3rem;
-      width: 10rem;
+}
+@media only screen and (max-width: 550px) {
+  #steps__section {
+    .steps {
+      article {
+        width: 100%;
+        justify-content: center;
+
+        p {
+        }
+      }
     }
-    display: flex;
-    align-items: center;
-  }
-  .text__secondary {
-    font-size: 1.5rem;
-    width: 60%;
   }
 }
 </style>
