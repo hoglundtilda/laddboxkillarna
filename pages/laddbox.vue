@@ -88,10 +88,6 @@ export default {}
         font-weight: 600;
       }
     }
-    .primary {
-      margin-top: auto;
-      bottom: 0;
-    }
   }
 }
 
@@ -99,9 +95,11 @@ export default {}
   .wrapper__laddbox {
     width: 100%;
     padding: 15% 5%;
-    .divider {
-      padding: 1rem;
+
+    .title {
+      padding: 0 2rem;
     }
+
     .laddbox {
       width: 50%;
     }
@@ -112,6 +110,7 @@ export default {}
 }
 @media only screen and (max-width: 800px) {
   .wrapper__laddbox {
+    padding: 20% 8%;
     .title {
       width: 100%;
       transform: translateX(0%);
@@ -122,6 +121,7 @@ export default {}
     }
     .information {
       width: 100%;
+      padding: 0;
 
       .primary {
         margin-top: 2rem;
@@ -134,10 +134,6 @@ export default {}
     .text__secondary {
       margin: 1rem 0;
     }
-  }
-}
-@media only screen and (max-width: 700px) {
-  .wrapper__laddbox {
   }
 }
 </style>
