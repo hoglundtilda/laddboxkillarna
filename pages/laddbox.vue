@@ -1,12 +1,15 @@
 <template>
   <div class="wrapper__laddbox">
-    <h1>Zaptec Go</h1>
+    <div class="headline">
+      <h1>Zaptec Go</h1>
+      <span class="span">6 250 SEK Inkl. 25% moms</span>
+    </div>
     <LaddboxImages class="laddbox" />
     <section class="information">
-      <p class="text__secondary headline">
-        6 250 SEK Inkl. 25% moms installerat & klart (efter avdraget Grön Teknik
-        som vi ansöker om för Er räkning)
-      </p>
+      <h4 class="text_1">
+        Installerat & klart efter avdraget Grön Teknik som vi ansöker om för Er
+        räkning
+      </h4>
       <p class="text__secondary">
         <span>Passar alla bilar</span> samt hem och med en storlek motsvarande
         en surfplatta är Zaptec go 80 % mindre och lättare än andra laddare av
@@ -44,29 +47,51 @@ export default {}
 <style lang="scss">
 .wrapper__laddbox {
   min-height: 100vh;
-  padding: 8% 15%;
+  max-width: 1200px;
   display: grid;
-  grid-template-areas: '. headline' 'laddbox info';
-  grid-template-columns: 40% 40%;
+  margin: auto;
+  padding: 10% 0;
+  grid-template-areas: 'headline headline' 'laddbox info';
+  grid-template-columns: 45% 45%;
   grid-template-rows: 10% 80%;
-  row-gap: 2rem;
-  column-gap: 5rem;
+  column-gap: 6rem;
   justify-content: center;
   align-items: flex-end;
 
-  .laddbox {
-    grid-area: laddbox;
+  .headline {
+    display: flex;
+    gap: 2rem;
+    grid-area: headline;
+    justify-content: flex-end;
   }
 
-  h1 {
-    grid-area: headline;
+  .span {
+    font-family: $headline;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    margin-top: auto;
+    margin-bottom: 1.1rem;
+    bottom: 0;
+  }
+
+  .laddbox {
+    grid-area: laddbox;
+    width: 100%;
   }
 
   .information {
     grid-area: info;
+    width: 100%;
 
-    .headline {
-      font-weight: 700;
+    h4 {
+      margin: 1rem 0;
+      font-weight: 200;
+    }
+
+    h4 {
+      font-weight: 600;
+      margin-bottom: 2rem;
     }
 
     .text__secondary {
@@ -77,22 +102,38 @@ export default {}
       }
     }
     .primary {
-      margin-top: auto;
+      margin-top: 1.5rem;
       bottom: 0;
     }
   }
 }
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1400px) {
   .wrapper__laddbox {
-    padding: 15% 10%;
+      grid-template-areas: '. headline' 'laddbox info';
+
+    .headline {
+      flex-direction: column;
+    }
+    .span {
+      grid-area: price;
+      margin-bottom: 2rem;
+    }
+
+    .information {
+      .text_1 {
+        grid-area: text_1;
+      }
+    }
   }
 }
 @media only screen and (max-width: 900px) {
   .wrapper__laddbox {
     grid-template-areas:
-      'laddbox'
-      'info';
+      'headline .'
+      'laddbox laddbox'
+      'info info';
     grid-template-columns: 100%;
+    grid-template-rows: 10% 90%;
   }
 }
 @media only screen and (max-width: 700px) {
@@ -100,6 +141,7 @@ export default {}
     padding-top: 30%;
     grid-template-areas:
       'laddbox'
+      'headline'
       'info';
     grid-template-columns: 100%;
   }
