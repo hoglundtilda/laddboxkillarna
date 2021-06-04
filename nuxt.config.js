@@ -64,7 +64,7 @@ export default {
     display: 'swap',
     families: {
       Roboto: {
-        wght: [100, 300, 400, 500, 700, 900],
+        wght: [100, 200, 300, 400, 500, 700, 900],
         ital: [100, 300, 400, 500, 700],
       },
       Saira: {
