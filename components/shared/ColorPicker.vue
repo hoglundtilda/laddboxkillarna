@@ -26,6 +26,7 @@ export default {
   },
   methods: {
     selectColor(color) {
+      console.log(color)
       this.$emit('selectColor', color)
     },
   },

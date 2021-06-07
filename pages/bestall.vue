@@ -48,52 +48,66 @@
         <InstallationTillägg v-if="extra" @showExtra="showExtra" />
       </div>
     </section>
-    <section class="inputs">
+    <form autocomplete="on" class="inputs">
       <h3>Dina beställningsuppgifter</h3>
       <div class="names">
         <input
           v-model="order.firstName"
           type="text"
+          autocomplete="given-name"
           placeholder="Förnamn"
           class="user_input"
+          required
         />
 
         <input
           v-model="order.lastName"
           type="text"
+          autocomplete="family-name"
           placeholder="Efternamn"
           class="user_input"
+          required
         />
       </div>
       <input
         v-model="order.street"
         type="text"
+        name="address-line1"
         placeholder="Gatuadress (där laddbox ska installeras)"
         class="user_input"
+        required
       />
       <input
         v-model="order.postNr"
-        type="text"
+        type="number"
+        autocomplete="postal-code"
         placeholder="Postnummer"
         class="user_input"
+        required
       />
       <input
         v-model="order.state"
         type="text"
+        name="address-level2"
         placeholder="Ort"
         class="user_input"
+        required
       />
       <input
         v-model="order.email"
-        type="text"
+        type="email"
+        autocomplete="email"
         placeholder="Epost"
         class="user_input"
+        required
       />
       <input
         v-model="order.phoneNr"
-        type="text"
+        type="number"
+        autocomplete="tel-national"
         placeholder="Telefonnummer"
         class="user_input"
+        required
       />
       <textarea
         v-model="order.information"
@@ -131,7 +145,12 @@
           <InstallationLaddkabel v-if="cable" />
         </div>
         <div class="checkbox">
-          <input v-model="order.agreement" type="checkbox" id="agreement" />
+          <input
+            v-model="order.agreement"
+            type="checkbox"
+            id="agreement"
+            required
+          />
           <label for="agreement">Jag har tagit del av </label>
           <nuxt-link to="/villkor"
             ><span @click="showTerms" class="span_underline"
@@ -150,7 +169,7 @@
         @btn_click="sendOrder"
       />
       <SharedStatusMessage :statusMessage="statusMessage" />
-    </section>
+    </form>
   </div>
 </template>
 
@@ -209,13 +228,12 @@ export default {
     showExtra() {
       this.extra = !this.extra
     },
-    sendOrder() {
-      //const isValid = await validate(this.order)
-      if (this.order.agreement === true) {
+    async sendOrder() {
+      const isValid = await validateOrder(this.order)
+      if (this.order.agreement === true && isValid === true) {
         this.orderEmail(this.order)
         this.showAgreement = false
       }
-
       if (this.order.agreement === false) this.showAgreement = true
     },
   },
