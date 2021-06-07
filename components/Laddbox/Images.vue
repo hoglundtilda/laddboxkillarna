@@ -21,7 +21,7 @@
         </div>
       </div>
       <div class="colorPicker">
-        <span>Välj färg: {{ color.name }}</span>
+        <span>{{ color.name }}</span>
         <SharedColorPicker @selectColor="selectColor" />
       </div>
       <LaddboxButtons produktblad="Zaptec_Go.pdf" />
@@ -89,13 +89,16 @@ export default {
         width: 100%;
       }
     }
-    span {
-      font-size: 1.5rem;
-    }
+
     .colorPicker {
       width: 100%;
       justify-self: center;
-      margin: 2.5rem 2rem;
+      margin: 2.5rem 2rem; 
+
+      span {
+        font-size: 1.25rem;
+        margin: 0.5rem;
+      }
     }
   }
 }
