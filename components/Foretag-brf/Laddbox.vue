@@ -74,7 +74,7 @@
         </div>
       </section>
     </section>
-    <LaddboxButtons produktblad="Zaptec_Pro.pdf" />
+    <LaddboxButtons produktblad="Zaptec_Pro.pdf" class="pdf_btn" />
   </div>
 </template>
 
@@ -82,7 +82,7 @@
 export default {}
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .wrapper__black {
   padding: 10% 0;
   background-color: $black;
@@ -126,11 +126,6 @@ export default {}
   }
 
   .laddboxImg {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-
     img {
       padding: 2rem;
     }
@@ -145,21 +140,77 @@ export default {}
 
   .checkmark {
     display: flex;
-
-    div {
-      display: flex;
-      flex-direction: column;
-    }
   }
- 
+  .pdf_btn {
+    margin-top: 5rem;
+  }
 }
 
-//  .specification__button_wrapper {
-//     button {
-//       background: $black !important;
-//       a {
-//         color: $white !important;
-//       }
-//     }
-//   }
+@media only screen and (max-width: 1250px) {
+  .wrapper__black {
+    min-height: 100vh;
+    padding: 10% 5%;
+
+    .laddbox {
+      width: 100%;
+    }
+
+    .laddboxImg {
+      img {
+        padding: 4rem;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1150px) {
+  .wrapper__black {
+    padding: 10%;
+
+    .laddboxImg {
+      display: flex;
+      align-self: center;
+      justify-content: center;
+      img {
+        padding: 2rem;
+        width: 90%;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .wrapper__black {
+    padding: 10%;
+
+    .laddboxImg {
+      display: flex;
+      align-self: center;
+      justify-content: center;
+      img {
+        padding: 2rem;
+        width: 90%;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 900px) {
+  .wrapper__black {
+    padding: 10%;
+
+    .laddbox {
+      flex-direction: column;
+    }
+    .laddboxImg {
+      img {
+        width: 50%;
+      }
+    }
+
+    .left {
+      width: 100%;
+    }
+    .right {
+      width: 100%;
+    }
+  }
+}
 </style>

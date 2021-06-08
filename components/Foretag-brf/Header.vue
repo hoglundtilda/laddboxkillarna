@@ -20,7 +20,10 @@
         </div>
       </div>
       <div class="header__right">
-        <img src="@/assets/images/pro/on_poles.png" alt="" />
+        <img
+          src="@/assets/images/pro/on_poles.png"
+          alt="Zaptez Pro on poles outside"
+        />
       </div>
     </section>
   </div>
@@ -53,6 +56,58 @@ export default {}
         }
       }
     }
+  }
+}
+@media only screen and (max-width: 1400px) {
+  .wrapper__header {
+    width: 1100px;
+
+    .header__section {
+      .header__left {
+        .contact {
+          width: 90%;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 1150px) {
+    .wrapper__header {
+      padding: 10% 5%;
+      width: 100%;
+      .header__section {
+        .header__left {
+          padding-right: 1rem;
+        }
+        .header__right {
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 1000px) {
+    .wrapper__header {
+      width: 100%;
+      .header__section {
+        flex-direction: column;
+
+        .header__left {
+          padding: 3rem 0;
+          width: 100%;
+
+          .contact {
+            width: 60%;
+            padding: 3rem 0;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 700px) {
+  .wrapper__header {
+    padding: 20% 10%;
   }
 }
 </style>

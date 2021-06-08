@@ -1,10 +1,10 @@
 <template>
   <div class="specification__button_wrapper">
-    <button class="left">
+    <button :class="setBackground ? 'dark-theme left' : 'light-theme left'">
       <a :href="produktblad" target="_blank"> Teknisk specifikation</a>
     </button>
 
-    <button class="right">
+    <button :class="setBackground ? 'dark-theme right' : 'light-theme right'">
       <a :href="produktblad" download>
         Ladda ner PDF <fa :icon="fas.faFileDownload"
       /></a>
@@ -31,9 +31,10 @@ export default {
     setBackground() {
       const path = this.$route.path
       console.log(path)
-      if (path === '/laddbox') {
+      if (path === '/foretag-brf') {
         return true
-      } else {
+      }
+      if (path === '/laddbox') {
         return false
       }
     },
@@ -41,35 +42,34 @@ export default {
 }
 </script>
 
-<style lang="scss" >
-/* .light-theme {
+<style lang="scss">
+.light-theme {
   border: 1px solid $black;
   background: $white;
-  color: $black;
+
+  a {
+    color: $black;
+  }
 }
 .dark-theme {
   border: 1px solid $white;
   background: $black;
-  color: $white;
-} */
+  a {
+    color: $white;
+  }
+}
 
 .specification__button_wrapper {
   margin: 0;
   display: flex;
   font-family: $text;
-  width: 100%;
   font-weight: 300;
 
   button {
     box-shadow: $shadow_btn_white;
     white-space: nowrap;
     padding: 8px 36px;
-    background: $white;
-    border: 1px solid $black;
-
-    a {
-      color: $black;
-    }
+    background: inherit;
   }
 
   .left {

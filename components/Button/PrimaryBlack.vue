@@ -19,11 +19,11 @@ export default {
   display: flex;
   justify-content: center;
   border: none;
-  box-shadow: $shadow_btn_black;
+  box-shadow: $shadow_btn_white;
   transition: all 0.3s ease-in-out;
 
   &:active {
-    box-shadow: $shadow_btn_black-hover;
+    box-shadow: $shadow_btn_white-hover;
     transform: scale(1.03);
   }
 
