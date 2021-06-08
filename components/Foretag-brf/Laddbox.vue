@@ -154,12 +154,12 @@ export default {}
  
 }
 
- .specification__button_wrapper {
-    button {
-      background: $black !important;
-      a {
-        color: $white !important;
-      }
-    }
-  }
+//  .specification__button_wrapper {
+//     button {
+//       background: $black !important;
+//       a {
+//         color: $white !important;
+//       }
+//     }
+//   }
 </style>
