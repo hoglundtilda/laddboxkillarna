@@ -56,8 +56,9 @@ export default {
 
 <style lang="scss" scoped>
 .dark-theme {
-  background-color: none;
-  box-shadow: none;
+  background-color: transparent;
+  box-shadow: transparent;
+  border: none;
 }
 
 .light-theme {

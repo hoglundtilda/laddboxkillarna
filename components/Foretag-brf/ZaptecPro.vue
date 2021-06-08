@@ -101,12 +101,7 @@ export default {}
     width: 100%;
 
     .pro {
-      .pro__left {
-        padding-right: 1rem;
-      }
       .pro__right {
-        padding-left: 1rem;
-
         img {
           width: 80%;
         }
@@ -121,9 +116,6 @@ export default {}
       flex-direction: column;
       align-items: center;
 
-      article {
-        padding: 1.5rem 0;
-      }
       .pro__left {
         width: 100%;
       }
@@ -134,6 +126,9 @@ export default {}
           padding: 2rem 0;
         }
       }
+      article {
+        padding: 1.5rem 0;
+      }
     }
   }
 }
@@ -141,6 +136,7 @@ export default {}
   .wrapper__zaptecPro {
     .pro {
       .pro__right {
+        padding-left: 0rem;
         img {
           width: 100%;
           padding: 4rem 0;
