@@ -4,6 +4,7 @@ export default {
     await this.$axios
       .post(`${this.$axios.defaults.baseURL}/email/contact`, email)
       .then((response) => {
+        console.log(response)
         commit('responseHandler', response.data)
       })
       .catch((error) => {
@@ -29,7 +30,6 @@ export default {
         commit('responseHandler', response.data)
       })
       .catch((error) => {
-        console.log("ERROR HERE")
         if (!error.response) {
           const error = {
             status: 404,
