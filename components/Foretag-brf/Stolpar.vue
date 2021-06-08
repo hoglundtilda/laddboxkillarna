@@ -95,6 +95,9 @@ export default {}
 @media only screen and (max-width: 650px) {
   .wrapper__stolpe {
     padding: 10%;
+    .ghost {
+      margin-top: 2.5rem;
+    }
 
     h2 {
       margin-bottom: 0rem;

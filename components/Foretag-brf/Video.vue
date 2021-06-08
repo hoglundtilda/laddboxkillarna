@@ -18,7 +18,7 @@ export default {}
 
 <style lang="scss" scoped>
 .wrapper__video {
-  margin: 5%;
+  margin: 10% 5%;
   display: flex;
   justify-content: center;
   align-items: center;

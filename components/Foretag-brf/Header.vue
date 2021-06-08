@@ -35,7 +35,7 @@ export default {}
 
 <style lang="scss" scoped>
 .wrapper__header {
-  padding: 8% 0;
+  padding: 10% 0;
   width: 1300px;
   margin: auto;
   .header__section {
@@ -52,7 +52,7 @@ export default {}
       .contact {
         width: 60%;
         button {
-          margin: 1rem 0 0;
+          margin-top: 1rem;
         }
       }
     }
@@ -65,7 +65,7 @@ export default {}
     .header__section {
       .header__left {
         .contact {
-          width: 90%;
+          width: 80%;
         }
       }
     }
@@ -108,6 +108,19 @@ export default {}
 @media only screen and (max-width: 700px) {
   .wrapper__header {
     padding: 20% 10%;
+    h1 {
+      font-size: 3.5rem;
+    }
+    .header__section {
+      .header__left {
+        .contact {
+          width: 80%;
+          button {
+            margin-top: 2.5rem;
+          }
+        }
+      }
+    }
   }
 }
 </style>
