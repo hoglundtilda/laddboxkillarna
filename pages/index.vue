@@ -4,6 +4,7 @@
     <HomepageSteps />
     <HomepageWhyUs />
     <HomepageZaptec />
+    <SharedPhoneIcon />
   </div>
 </template>
 <script>

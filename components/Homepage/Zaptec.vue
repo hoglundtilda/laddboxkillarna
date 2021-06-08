@@ -70,6 +70,7 @@ export default {}
 
     video {
       width: 100%;
+      min-height: auto;
     }
   }
 }
@@ -94,6 +95,9 @@ export default {}
       video {
         width: 100%;
       }
+    }
+    .primary {
+      margin: 2rem 0;
     }
   }
 }

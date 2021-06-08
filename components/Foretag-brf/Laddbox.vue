@@ -133,6 +133,7 @@ export default {}
   .laddboxImg {
     img {
       padding: 2rem;
+      min-height: auto;
     }
   }
 

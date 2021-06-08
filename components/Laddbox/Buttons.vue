@@ -1,10 +1,14 @@
 <template>
   <div class="specification__button_wrapper">
-    <button :class="setBackground ? 'dark-theme left' : 'light-theme left'">
+    <button
+      :class="setBackground ? 'dark-theme left-btn' : 'light-theme left-btn'"
+    >
       <a :href="produktblad" target="_blank"> Teknisk specifikation</a>
     </button>
 
-    <button :class="setBackground ? 'dark-theme right' : 'light-theme right'">
+    <button
+      :class="setBackground ? 'dark-theme right-btn' : 'light-theme right-btn'"
+    >
       <a :href="produktblad" download>
         Ladda ner PDF <fa :icon="fas.faFileDownload"
       /></a>
@@ -72,11 +76,11 @@ export default {
     background: inherit;
   }
 
-  .left {
+  .left-btn {
     border-radius: 80px 0px 0px 80px;
     width: 50%;
   }
-  .right {
+  .right-btn {
     border-radius: 0px 80px 80px 0px;
     width: 50%;
   }
