@@ -8,17 +8,13 @@
 
 html {
   scroll-behavior: smooth;
+  min-height: auto;
 }
 
-
-
 @media (max-width: 900px) {
-
-
 }
 
 @media (max-width: 600px) {
-
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -29,12 +25,12 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type=number] {
+input[type='number'] {
   -moz-appearance: textfield;
 }
 
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
+input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 textarea:-webkit-autofill,
 textarea:-webkit-autofill:hover,
@@ -47,4 +43,3 @@ select:-webkit-autofill:focus {
   -webkit-box-shadow: inherit;
   transition: background-color 5000s ease-in-out 0s;
 }
-
