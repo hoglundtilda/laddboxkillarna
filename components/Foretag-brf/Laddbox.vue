@@ -74,6 +74,7 @@
         </div>
       </section>
     </section>
+    <LaddboxButtons produktblad="Zaptec_Pro.pdf" class="pdf_btn" />
   </div>
 </template>
 
@@ -125,7 +126,14 @@ export default {}
   }
 
   .laddboxImg {
-    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+      padding: 2rem;
+    }
   }
 
   .right {
@@ -142,6 +150,9 @@ export default {}
       display: flex;
       flex-direction: column;
     }
+  }
+  .pdf_btn {
+    margin-top: 5rem;
   }
 }
 </style>

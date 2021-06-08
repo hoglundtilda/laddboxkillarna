@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="buttons">
+    <div class="asdf">
       <button class="left">
         <a :href="produktblad" target="_blank"> Teknisk specifikation</a>
       </button>
@@ -18,6 +18,11 @@
 import { fas } from '@fortawesome/free-solid-svg-icons'
 
 export default {
+  data() {
+    return {
+      nav_background: false,
+    }
+  },
   props: {
     produktblad: String,
   },
@@ -25,20 +30,40 @@ export default {
     fas() {
       return fas
     },
+    setBackground() {
+      const path = this.$route.path
+      console.log(path)
+      if (path === '/laddbox') {
+        return true
+      } else {
+        return false
+      }
+    },
   },
 }
 </script>
 
 <style lang="scss" scoped>
-.buttons {
+/* .light-theme {
+  border: 1px solid $black;
+  background: $white;
+  color: $black;
+}
+.dark-theme {
+  border: 1px solid $white;
+  background: $black;
+  color: $white;
+} */
+.asdf {
   margin: 0;
   display: flex;
   font-family: $text;
   width: 100%;
+  font-weight: 300;
 
   button {
     box-shadow: $shadow_btn_white;
-    background: $white;
+    white-space: nowrap;
 
     a {
       color: $black;
@@ -48,7 +73,7 @@ export default {
   .left,
   .right {
     padding: 8px 36px;
-    background: transparent;
+    background: $white;
     border: 1px solid $black;
   }
   .left {

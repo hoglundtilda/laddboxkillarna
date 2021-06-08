@@ -38,13 +38,13 @@ export default {}
   .header__section {
     display: flex;
     padding: 3rem 0;
+    justify-content: space-between;
 
     .header__left {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       width: 50%;
-      padding-right: 2rem;
 
       .contact {
         width: 60%;
@@ -52,9 +52,6 @@ export default {}
           margin: 1rem 0 0;
         }
       }
-    }
-    .header__right {
-      padding-left: 2rem;
     }
   }
 }
