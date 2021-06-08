@@ -7,9 +7,10 @@
     <div class="divider">
       <LaddboxImages class="laddbox" />
       <section class="information">
-        <h3>6 250 SEK <span class="moms"> Inkl. 25% moms</span></h3>
+        <h3>6 495 SEK <span class="moms"> Inkl. 25% moms</span></h3>
         <p class="text__secondary headline">
           Vi ansöker om avdraget Grön Teknik för er räkning
+          <span class="moms">(Ord pris: 12990:-) </span>
         </p>
         <p class="text__secondary">
           <span>Passar alla bilar</span> samt hem och med en storlek motsvarande

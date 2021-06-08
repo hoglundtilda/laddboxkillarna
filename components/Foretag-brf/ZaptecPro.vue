@@ -81,6 +81,7 @@ export default {}
 
       img {
         width: 60%;
+        min-height: auto;
       }
       .primary {
         background-color: $orange;

@@ -56,6 +56,9 @@ export default {}
         }
       }
     }
+    .header__right {
+      min-height: auto;
+    }
   }
 }
 @media only screen and (max-width: 1400px) {

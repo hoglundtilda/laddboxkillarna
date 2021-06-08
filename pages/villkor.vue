@@ -45,9 +45,9 @@
         <p class="text__standard">3. Pris</p>
         <p class="text__secondary">
           Laddboxkillarna AB’s standardavtal avseende installation av kunds
-          beställda laddboxlösning innebär ett fast pris på 16000 SEK åt
+          beställda laddboxlösning innebär ett fast pris på 12990 SEK åt
           privatpersoner. Andra villkor gäller för juridiska personer. Priset på
-          16000 SEK kan komma att överskridas om installationen kräver
+          12990 SEK kan komma att överskridas om installationen kräver
           exempelvis längre kabelsträckor än vad som anges i standardavtalet.
           Vid installationstillfälle går Laddboxkillarna igenom med kund om
           eventuella merkostnader installationen kan tänkas krävas och genomför

@@ -78,7 +78,7 @@ export default {
       img {
         margin: 1rem;
         transition: all 0.05s ease-in-out;
-
+        min-height: auto;
         &:hover {
           transform: scale(1.05);
         }
@@ -93,7 +93,7 @@ export default {
     .colorPicker {
       width: 100%;
       justify-self: center;
-      margin: 2.5rem 2rem; 
+      margin: 2.5rem 2rem;
 
       span {
         font-size: 1.25rem;

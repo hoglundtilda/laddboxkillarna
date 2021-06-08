@@ -74,6 +74,10 @@ export default {}
     flex-direction: column;
     align-items: center;
     padding: 0 3rem;
+
+    img {
+      min-height: auto;
+    }
   }
 }
 

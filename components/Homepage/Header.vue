@@ -44,7 +44,7 @@ export default {}
 
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 10%;
+  padding: 8% 10%;
   display: flex;
   flex-direction: column;
   justify-content: center;
