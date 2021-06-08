@@ -125,7 +125,7 @@ export default {}
       width: 100%;
       justify-content: center;
       div {
-        width: 70%;
+        width: 60%;
       }
     }
   }
@@ -133,8 +133,10 @@ export default {}
 @media only screen and (max-width: 500px) {
   .wrapper__laddbox_mobile {
     .checkmark {
+      width: 100%;
+      justify-content: center;
       div {
-        width: 100%;
+        width: 75%;
       }
     }
   }

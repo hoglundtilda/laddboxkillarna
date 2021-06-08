@@ -107,7 +107,7 @@ export default {}
 }
 @media only screen and (max-width: 700px) {
   .wrapper__header {
-    padding: 20% 10%;
+    padding: 25% 10%;
     h1 {
       font-size: 3.5rem;
     }

@@ -10,8 +10,8 @@
       </div>
       <p class="description text__standard">
         Vår helhetslösning går ut på att göra det så enkelt som möjligt för dig
-        som kund. <br> Vi sköter allt från beställning till installation för ett fast
-        pris.
+        som kund. <br />
+        Vi sköter allt från beställning till installation för ett fast pris.
       </p>
     </section>
     <div class="buttons">
