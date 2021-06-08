@@ -74,7 +74,7 @@
         </div>
       </section>
     </section>
-    <LaddboxButtons produktblad="Zaptec_Pro.pdf" class="pdf_btn" />
+    <LaddboxButtons produktblad="Zaptec_Pro.pdf" />
   </div>
 </template>
 
@@ -151,8 +151,15 @@ export default {}
       flex-direction: column;
     }
   }
-  .pdf_btn {
-    margin-top: 5rem;
-  }
+ 
 }
+
+ .specification__button_wrapper {
+    button {
+      background: $black !important;
+      a {
+        color: $white !important;
+      }
+    }
+  }
 </style>

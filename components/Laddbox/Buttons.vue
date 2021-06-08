@@ -1,16 +1,14 @@
 <template>
-  <div>
-    <div class="asdf">
-      <button class="left">
-        <a :href="produktblad" target="_blank"> Teknisk specifikation</a>
-      </button>
+  <div class="specification__button_wrapper">
+    <button class="left">
+      <a :href="produktblad" target="_blank"> Teknisk specifikation</a>
+    </button>
 
-      <button class="right">
-        <a :href="produktblad" download>
-          Ladda ner PDF <fa :icon="fas.faFileDownload"
-        /></a>
-      </button>
-    </div>
+    <button class="right">
+      <a :href="produktblad" download>
+        Ladda ner PDF <fa :icon="fas.faFileDownload"
+      /></a>
+    </button>
   </div>
 </template>
 
@@ -43,7 +41,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" >
 /* .light-theme {
   border: 1px solid $black;
   background: $white;
@@ -54,7 +52,8 @@ export default {
   background: $black;
   color: $white;
 } */
-.asdf {
+
+.specification__button_wrapper {
   margin: 0;
   display: flex;
   font-family: $text;
@@ -64,18 +63,15 @@ export default {
   button {
     box-shadow: $shadow_btn_white;
     white-space: nowrap;
+    padding: 8px 36px;
+    background: $white;
+    border: 1px solid $black;
 
     a {
       color: $black;
     }
   }
 
-  .left,
-  .right {
-    padding: 8px 36px;
-    background: $white;
-    border: 1px solid $black;
-  }
   .left {
     border-radius: 80px 0px 0px 80px;
     width: 50%;
