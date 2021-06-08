@@ -143,6 +143,11 @@ export default {}
       .pro__right {
         img {
           width: 100%;
+          padding: 4rem 0;
+        }
+        .primary {
+          margin-top: 2.5rem;
+          font-weight: 400;
         }
       }
     }

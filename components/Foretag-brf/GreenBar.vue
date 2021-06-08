@@ -69,6 +69,7 @@ export default {}
   .wrapper__green {
     article {
       width: 100%;
+      padding: 0;
     }
   }
 }
@@ -76,6 +77,7 @@ export default {}
 @media only screen and (max-width: 800px) {
   .wrapper__green {
     flex-direction: column;
+    padding: 10%;
   }
 }
 </style>
