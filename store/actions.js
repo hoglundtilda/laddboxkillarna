@@ -25,9 +25,11 @@ export default {
     await this.$axios
       .post(`${this.$axios.defaults.baseURL}/email/order`, order)
       .then((response) => {
+        console.log(response)
         commit('responseHandler', response.data)
       })
       .catch((error) => {
+        console.log("ERROR HERE")
         if (!error.response) {
           const error = {
             status: 404,
