@@ -2,15 +2,14 @@ export default {
   responseHandler(state, response) {
 
     if(response === 'refresh') {
-      console.log('hejhopp')
       state.statusMessage = {}
     }
 
     if (response.status !== 200)
-      state.statusMessage = { success: false, message: response.data }
+      state.statusMessage = { success: false, message: response.data.error }
 
     if (response.status === 200)
-      state.statusMessage = { success: true, message: response.data }
+      state.statusMessage = { success: true, message: response.data.message }
   },
 
 }
