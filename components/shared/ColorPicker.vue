@@ -11,6 +11,7 @@
         id="white"
         class="white"
         @click="selectColor(color)"
+        required
       />
     </form>
   </div>
@@ -26,6 +27,7 @@ export default {
   },
   methods: {
     selectColor(color) {
+      console.log(color)
       this.$emit('selectColor', color)
     },
   },

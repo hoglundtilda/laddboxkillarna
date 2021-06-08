@@ -5,7 +5,9 @@
       <section class="information">
         <p class="text__standard">
           Har du frågor eller vill bli samarbetspartner? <br />
-          Vi snackar gärna med Er, vi hörs!
+
+          Vi snackar gärna med Er! <br />
+          Skicka ett meddelande till oss så hör vi av oss inom 24h
         </p>
 
         <section class="bosses">
@@ -40,18 +42,38 @@
           </article>
         </section>
       </section>
-      <section class="contact">
-        <p class="text__secondary">
-          Skicka ett meddelande till oss så hör vi av oss inom 24h
-        </p>
+      <form autocomplete="on" class="contact">
         <div class="names">
-          <input v-model="email.firstName" type="text" placeholder="Förnamn" />
+          <input
+            v-model="email.firstName"
+            type="text"
+            placeholder="Förnamn"
+            autocomplete="given-name"
+            required
+          />
 
-          <input v-model="email.lastName" type="text" placeholder="Efternamn" />
+          <input
+            v-model="email.lastName"
+            type="text"
+            placeholder="Efternamn"
+            autocomplete="family-name"
+            required
+          />
         </div>
-
-        <input v-model="email.email" type="text" placeholder="Epost" />
-        <input v-model="email.subject" type="text" placeholder="Ämne" />
+        <input
+          v-model="email.email"
+          type="email"
+          placeholder="Epost"
+          autocomplete="email"
+          required
+        />
+        <input
+          v-model="email.subject"
+          type="text"
+          placeholder="Ämne"
+          autocomplete="off"
+          required
+        />
         <textarea
           v-model="email.message"
           name=""
@@ -59,6 +81,8 @@
           cols="30"
           rows="10"
           placeholder="Meddelande"
+          autocomplete="off"
+          required
         ></textarea>
         <ButtonPrimaryBlack
           btn_text="Skicka"
@@ -66,13 +90,14 @@
           @btn_click="sendEmail"
         />
         <SharedStatusMessage :statusMessage="statusMessage" />
-      </section>
+      </form>
     </div>
   </div>
 </template>
 
 <script>
 import { mapState, mapActions } from 'vuex'
+import { validateContactEmail } from '@/modules/validation'
 
 export default {
   data() {
@@ -93,8 +118,11 @@ export default {
   },
   methods: {
     ...mapActions(['contactEmail']),
-    sendEmail() {
-      this.contactEmail(this.email)
+    async sendEmail() {
+      const isValid = await validateContactEmail(this.email)
+      if (isValid === true) {
+        this.contactEmail(this.email)
+      }
     },
   },
 }
@@ -130,7 +158,7 @@ export default {
       div {
         display: flex;
         img {
-          width: 1.5rem;
+          width: 1.125rem;
           margin-right: 0.4rem;
         }
       }
@@ -153,11 +181,8 @@ export default {
     flex-direction: column;
     justify-content: center;
 
-    .text__secondary {
-      word-break: keep-all;
+    .text__standard {
       margin-bottom: 1rem;
-      font-weight: 500;
-      font-family: $headline;
     }
 
     .names {
