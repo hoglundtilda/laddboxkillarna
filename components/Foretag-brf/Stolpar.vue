@@ -67,12 +67,56 @@ export default {}
 
   .stolpar {
     display: flex;
+    justify-content: center;
   }
   .stolpe {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0 3rem;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .wrapper__stolpe {
+    width: 1100px;
+  }
+}
+@media only screen and (max-width: 1150px) {
+  .wrapper__stolpe {
+    padding: 10% 5%;
+    width: 100%;
+
+    .stolpe {
+      padding: 0 1.5rem;
+    }
+  }
+}
+@media only screen and (max-width: 650px) {
+  .wrapper__stolpe {
+    padding: 10%;
+
+    h2 {
+      margin-bottom: 0rem;
+    }
+
+    .divider {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .info {
+      width: 100%;
+      padding: 2rem 0;
+      .text__standard {
+        padding: 1rem 0;
+      }
+    }
+
+    .stolpe {
+      padding: 2rem;
+    }
   }
 }
 </style>

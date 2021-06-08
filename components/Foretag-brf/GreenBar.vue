@@ -41,11 +41,11 @@ export default {}
 <style lang="scss" scoped>
 .wrapper__green {
   background-color: $green;
-  margin: 5% 0;
+  margin: 10% 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2% 10%;
+  padding: 5% 10%;
 
   div {
     display: flex;
@@ -62,6 +62,20 @@ export default {}
     img {
       margin: 2rem;
     }
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .wrapper__green {
+    article {
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .wrapper__green {
+    flex-direction: column;
   }
 }
 </style>

@@ -61,6 +61,10 @@ export default {}
 
     article {
       padding: 1rem 0;
+
+      h4 {
+        font-weight: 700;
+      }
     }
 
     .pro__left {
@@ -82,6 +86,64 @@ export default {}
         background-color: $orange;
         text-decoration: underline;
         box-shadow: $shadow_btn_black;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1400px) {
+  .wrapper__zaptecPro {
+    width: 1100px;
+  }
+}
+@media only screen and (max-width: 1150px) {
+  .wrapper__zaptecPro {
+    padding: 10% 5%;
+    width: 100%;
+
+    .pro {
+      .pro__left {
+        padding-right: 1rem;
+      }
+      .pro__right {
+        padding-left: 1rem;
+
+        img {
+          width: 80%;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 910px) {
+  .wrapper__zaptecPro {
+    padding: 0 10%;
+    .pro {
+      flex-direction: column;
+      align-items: center;
+
+      article {
+        padding: 1.5rem 0;
+      }
+      .pro__left {
+        width: 100%;
+      }
+      .pro__right {
+        width: 100%;
+        img {
+          width: 50%;
+          padding: 2rem 0;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 700px) {
+  .wrapper__zaptecPro {
+    .pro {
+      .pro__right {
+        img {
+          width: 100%;
+        }
       }
     }
   }
