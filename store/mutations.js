@@ -1,5 +1,6 @@
 export default {
   responseHandler(state, response) {
+    console.log(response)
 
     if(response === 'refresh') {
       state.statusMessage = {}
