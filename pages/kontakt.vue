@@ -49,6 +49,8 @@
             type="text"
             placeholder="Förnamn"
             autocomplete="given-name"
+            pattern="^[a-zA-ZåäöÅÄÖ]+$"
+            title="Vänligen fyll i ett giltigt namn"
             required
           />
 
@@ -57,6 +59,8 @@
             type="text"
             placeholder="Efternamn"
             autocomplete="family-name"
+            pattern="^[a-zA-ZåäöÅÄÖ]+$"
+            title="Vänligen fyll i ett giltigt namn"
             required
           />
         </div>
@@ -65,6 +69,8 @@
           type="email"
           placeholder="Epost"
           autocomplete="email"
+          pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+          title="Fyll i en giltig epost"
           required
         />
         <input
@@ -72,6 +78,9 @@
           type="text"
           placeholder="Ämne"
           autocomplete="off"
+          max="50"
+          min="2"
+          title="Fyll i ämne"
           required
         />
         <textarea
@@ -82,21 +91,19 @@
           rows="10"
           placeholder="Meddelande"
           autocomplete="off"
+          min="1"
+          title="Fyll i meddelande"
           required
         ></textarea>
-        <ButtonPrimaryBlack
-          btn_text="Skicka"
-          class="primary"
-          @btn_click="sendEmail"
-        />
         <SharedStatusMessage :statusMessage="statusMessage" />
+        <ButtonSubmit btn_text="Skicka" @btn_click="validateInputs" />
       </form>
     </div>
   </div>
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex'
+import { mapState, mapActions, mapMutations } from 'vuex'
 import { validateContactEmail } from '@/modules/validation'
 
 export default {
@@ -118,12 +125,20 @@ export default {
   },
   methods: {
     ...mapActions(['contactEmail']),
-    async sendEmail() {
+    ...mapMutations(['responseHandler']),
+    async validateInputs() {
       const isValid = await validateContactEmail(this.email)
       if (isValid === true) {
         this.contactEmail(this.email)
       }
+      this.contactEmail(this.email)
     },
+    async refresh() {
+      await this.responseHandler('refresh')
+    },
+  },
+  beforeMount() {
+    this.refresh()
   },
 }
 </script>
@@ -202,9 +217,6 @@ export default {
       @include input;
       border-radius: 2rem;
     }
-  }
-  .primary {
-    margin-top: 2rem;
   }
 }
 @media only screen and (max-width: 1100px) {

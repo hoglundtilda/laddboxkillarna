@@ -20,6 +20,8 @@ export const validateContactEmail = (email) => {
     firstName: pattern.name.test(email.firstName),
     lastName: pattern.name.test(email.lastName),
     email: pattern.email.test(email.email),
+    subject: pattern.isNotEmpty(email.subject),
+    message: pattern.isNotEmpty(email.message)
   }
 
   return Object.values(isValid).every((item) => item === true)

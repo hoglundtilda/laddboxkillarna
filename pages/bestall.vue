@@ -183,13 +183,13 @@
           >Du behöver läsa och acceptera avtalsvillkor för att lägga en
           beställning</span
         >
+        <SharedStatusMessage :statusMessage="statusMessage" />
+
         <ButtonSubmit
           btn_text="Skicka beställning"
-          class="primary"
           @btn_click="validateInputs"
         />
       </form>
-      <SharedStatusMessage :statusMessage="statusMessage" />
     </section>
   </div>
 </template>
@@ -197,7 +197,7 @@
 <script>
 import products from '@/assets/productJSON/products.json'
 import { fas } from '@fortawesome/free-solid-svg-icons'
-import { mapState, mapActions } from 'vuex'
+import { mapState, mapActions, mapMutations } from 'vuex'
 import { validateOrder } from '@/modules/validation'
 
 export default {
@@ -236,6 +236,7 @@ export default {
   },
   methods: {
     ...mapActions(['orderEmail']),
+    ...mapMutations(['responseHandler']),
 
     selectColor(color) {
       const index = this.products.colors.findIndex(function (element) {
@@ -264,6 +265,12 @@ export default {
     sendOrder(order) {
       this.orderEmail(order)
     },
+    async refresh() {
+      await this.responseHandler('refresh')
+    },
+  },
+  beforeMount() {
+    this.refresh()
   },
 }
 </script>
@@ -342,10 +349,6 @@ export default {
 
       .validation_agreement {
         color: $red;
-      }
-
-      .primary {
-        margin-top: 2rem;
       }
     }
     .checkboxes {

@@ -1,5 +1,5 @@
 <template>
-  <button @click.prevent="$emit('btn_click')" type="submit" class="primary__black">
+  <button @click.prevent="$emit('btn_click')" type="submit" class="submit__black">
     {{ btn_text }}
   </button>
 </template>
@@ -11,7 +11,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.primary__black {
+.submit__black {
   @include btn;
   background-color: $black;
   color: $white;
