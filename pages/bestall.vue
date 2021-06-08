@@ -48,128 +48,149 @@
         <InstallationTillägg v-if="extra" @showExtra="showExtra" />
       </div>
     </section>
-    <form autocomplete="on" class="inputs">
+    <section class="inputs">
       <h3>Dina beställningsuppgifter</h3>
-      <div class="names">
-        <input
-          v-model="order.firstName"
-          type="text"
-          autocomplete="given-name"
-          placeholder="Förnamn"
-          class="user_input"
-          required
-        />
-
-        <input
-          v-model="order.lastName"
-          type="text"
-          autocomplete="family-name"
-          placeholder="Efternamn"
-          class="user_input"
-          required
-        />
-      </div>
-      <input
-        v-model="order.street"
-        type="text"
-        name="address-line1"
-        placeholder="Gatuadress (där laddbox ska installeras)"
-        class="user_input"
-        required
-      />
-      <input
-        v-model="order.postNr"
-        type="number"
-        autocomplete="postal-code"
-        placeholder="Postnummer"
-        class="user_input"
-        required
-      />
-      <input
-        v-model="order.state"
-        type="text"
-        name="address-level2"
-        placeholder="Ort"
-        class="user_input"
-        required
-      />
-      <input
-        v-model="order.email"
-        type="email"
-        autocomplete="email"
-        placeholder="Epost"
-        class="user_input"
-        required
-      />
-      <input
-        v-model="order.phoneNr"
-        type="number"
-        autocomplete="tel-national"
-        placeholder="Telefonnummer"
-        class="user_input"
-        required
-      />
-      <textarea
-        v-model="order.information"
-        name=""
-        id=""
-        cols="30"
-        rows="5"
-        placeholder="Övriga upplysningar"
-        class="user_input"
-      ></textarea>
-      <div>
-        <span>Välj färg: {{ color }}</span>
-        <SharedColorPicker @selectColor="selectColor" />
-      </div>
-      <div class="checkboxes">
-        <div class="checkbox">
+      <form class="form__container" autocomplete="on">
+        <div class="names">
           <input
-            v-model="order.consultation"
-            type="checkbox"
-            id="consulation"
-          />
-          <label for="consulation"
-            >Jag behöver konsultation kring extra tillägg vid beställning</label
-          >
-        </div>
-        <div class="checkbox">
-          <input v-model="order.charging_cable" type="checkbox" id="cable" />
-          <label for="cable">Jag vill beställa till en laddkabel </label>
-          <fa
-            :icon="fas.faQuestionCircle"
-            class="question"
-            @mouseover="cable = true"
-            @mouseleave="cable = false"
-          />
-          <InstallationLaddkabel v-if="cable" />
-        </div>
-        <div class="checkbox">
-          <input
-            v-model="order.agreement"
-            type="checkbox"
-            id="agreement"
+            v-model="order.firstName"
+            type="text"
+            autocomplete="given-name"
+            placeholder="Förnamn"
+            class="user_input"
+            pattern="^[a-zA-ZåäöÅÄÖ]+$"
+            title="Vänligen fyll i ett giltigt namn"
             required
           />
-          <label for="agreement">Jag har tagit del av </label>
-          <nuxt-link to="/villkor"
-            ><span @click="showTerms" class="span_underline"
-              >avtalsvillkoren</span
-            ></nuxt-link
-          >
+
+          <input
+            v-model="order.lastName"
+            type="text"
+            autocomplete="family-name"
+            placeholder="Efternamn"
+            class="user_input"
+            pattern="^[a-zA-ZåäöÅÄÖ]+$"
+            title="Vänligen fyll i ett giltigt namn"
+            required
+          />
         </div>
-      </div>
-      <span class="validation_agreement" v-if="showAgreement"
-        >Du behöver läsa och acceptera avtalsvillkor för att lägga en
-        beställning</span
-      >
-      <ButtonPrimaryBlack
-        btn_text="Skicka beställning"
-        class="primary"
-        @btn_click="sendOrder"
-      />
+        <input
+          v-model="order.street"
+          type="text"
+          name="address-line1"
+          placeholder="Gatuadress (där laddbox ska installeras)"
+          class="user_input"
+          min="5"
+          max="50"
+          title="Vänligen fyll i en giltig gatuadress"
+          required
+        />
+        <input
+          v-model="order.postNr"
+          type="number"
+          autocomplete="postal-code"
+          placeholder="Postnummer"
+          class="user_input"
+          pattern="^(s-|S-){0,1}[0-9]{3}\s?[0-9]{2}$"
+          title="Fyll i ett giltigt postnummer '123 45'"
+          required
+        />
+        <input
+          v-model="order.state"
+          type="text"
+          name="address-level2"
+          placeholder="Ort"
+          class="user_input"
+          max="50"
+          min="2"
+          title="Fyll i en giltig postort"
+          required
+        />
+        <input
+          v-model="order.email"
+          type="email"
+          autocomplete="email"
+          placeholder="Epost"
+          class="user_input"
+          pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+          title="Fyll i en giltig epost"
+          required
+        />
+        <input
+          v-model="order.phoneNr"
+          type="number"
+          autocomplete="tel-national"
+          placeholder="Telefonnummer"
+          class="user_input"
+          pattern="(\+\d{2})?((\(0\)\d{2,3})|\d{2,3})?\d+"
+          title="Fyll i ett giltigt telefonnummer"
+          required
+        />
+        <textarea
+          v-model="order.information"
+          name=""
+          id=""
+          cols="30"
+          rows="5"
+          placeholder="Övriga upplysningar"
+          class="user_input"
+        ></textarea>
+        <div>
+          <span :class="colorErrorMsg ? 'error' : ''"
+            >Välj färg: {{ color }}</span
+          >
+          <SharedColorPicker @selectColor="selectColor" />
+        </div>
+        <div class="checkboxes">
+          <div class="checkbox">
+            <input
+              v-model="order.consultation"
+              type="checkbox"
+              id="consulation"
+            />
+            <label for="consulation"
+              >Jag behöver konsultation kring extra tillägg vid
+              beställning</label
+            >
+          </div>
+          <div class="checkbox">
+            <input v-model="order.charging_cable" type="checkbox" id="cable" />
+            <label for="cable">Jag vill beställa till en laddkabel </label>
+            <fa
+              :icon="fas.faQuestionCircle"
+              class="question"
+              @mouseover="cable = true"
+              @mouseleave="cable = false"
+            />
+            <InstallationLaddkabel v-if="cable" />
+          </div>
+          <div class="checkbox">
+            <input
+              v-model="order.agreement"
+              type="checkbox"
+              id="agreement"
+              required
+            />
+            <label for="agreement">Jag har tagit del av </label>
+            <nuxt-link to="/villkor"
+              ><span @click="showTerms" class="span_underline"
+                >avtalsvillkoren</span
+              ></nuxt-link
+            >
+          </div>
+        </div>
+        <span class="validation_agreement" v-if="agreementErrorMsg"
+          >Du behöver läsa och acceptera avtalsvillkor för att lägga en
+          beställning</span
+        >
+        <ButtonSubmit
+          btn_text="Skicka beställning"
+          class="primary"
+          @btn_click="validateInputs"
+        />
+      </form>
       <SharedStatusMessage :statusMessage="statusMessage" />
-    </form>
+    </section>
   </div>
 </template>
 
@@ -201,7 +222,8 @@ export default {
         charging_cable: false,
         agreement: false,
       },
-      showAgreement: false,
+      agreementErrorMsg: false,
+      colorErrorMsg: false,
     }
   },
   computed: {
@@ -228,13 +250,19 @@ export default {
     showExtra() {
       this.extra = !this.extra
     },
-    async sendOrder() {
-      const isValid = await validateOrder(this.order)
-      if (this.order.agreement === true && isValid === true) {
-        this.orderEmail(this.order)
-        this.showAgreement = false
+    async validateInputs() {
+      const validation = await validateOrder(this.order)
+      const isValid = Object.values(validation).every((item) => item === true)
+
+      this.colorErrorMsg = validation.color ? false : true
+      this.agreementErrorMsg = this.order.agreement ? false : true
+
+      if (isValid === true) {
+        this.sendOrder(this.order)
       }
-      if (this.order.agreement === false) this.showAgreement = true
+    },
+    sendOrder(order) {
+      this.orderEmail(order)
     },
   },
 }
@@ -290,50 +318,59 @@ export default {
     grid-area: form;
     padding: 3rem 5rem;
 
-    .names {
-      width: 100%;
+    .form__container {
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
 
-      input {
-        width: 49%;
+      .names {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        input {
+          width: 49%;
+        }
+      }
+
+      .user_input {
+        @include input;
+      }
+      .user_input {
+        @include input;
+        border-radius: 2rem;
+      }
+
+      .validation_agreement {
+        color: $red;
+      }
+
+      .primary {
+        margin-top: 2rem;
       }
     }
+    .checkboxes {
+      display: flex;
+      flex-direction: column;
+      position: relative;
 
-    .user_input {
-      @include input;
-    }
-    .user_input {
-      @include input;
-      border-radius: 2rem;
-    }
-
-    .validation_agreement {
-      color: $red;
-    }
-
-    .primary {
-      margin-top: 2rem;
-    }
-  }
-  .checkboxes {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-
-    span {
-      text-decoration: underline;
-      cursor: pointer;
-    }
-
-    .checkbox {
-      margin: 0.5rem 0;
-
-      .question {
+      span {
+        text-decoration: underline;
         cursor: pointer;
       }
+
+      .checkbox {
+        margin: 0.5rem 0;
+
+        .question {
+          cursor: pointer;
+        }
+      }
     }
   }
+}
+
+.error {
+  color: $red;
 }
 @media only screen and (max-width: 1200px) {
   .wrapper__installation {

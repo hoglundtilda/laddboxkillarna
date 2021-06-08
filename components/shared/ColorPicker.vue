@@ -11,6 +11,7 @@
         id="white"
         class="white"
         @click="selectColor(color)"
+        required
       />
     </form>
   </div>

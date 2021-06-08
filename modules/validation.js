@@ -11,7 +11,8 @@ export const validateOrder = (order) => {
     phoneNr: pattern.phoneNr.test(order.phoneNr),
     color: pattern.isNotEmpty(order.color),
   }
-  return Object.values(isValid).every((item) => item === true)
+  return isValid
+  //return Object.values(isValid).every((item) => item === true)
 }
 
 export const validateContactEmail = (email) => {
