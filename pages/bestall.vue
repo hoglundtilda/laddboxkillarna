@@ -165,7 +165,7 @@
             />
             <InstallationLaddkabel v-if="cable" />
           </div>
-          <div class="checkbox">
+          <div class="checkbox bottom__checkbox-div">
             <input
               v-model="order.agreement"
               type="checkbox"
@@ -186,7 +186,7 @@
         >
         <SharedStatusMessage :statusMessage="statusMessage" />
 
-        <ButtonSubmit
+        <ButtonSubmit class="submit__button"
           btn_text="Skicka beställning"
           @btn_click="validateInputs"
         />
@@ -324,6 +324,10 @@ export default {
     }
   }
 
+  .submit__button {
+    margin-top: 1rem;
+  }
+
   .span_underline {
     text-decoration: underline;
     font-weight: 400;
@@ -361,11 +365,14 @@ export default {
       .validation_agreement {
         color: $red;
       }
+
+
     }
     .checkboxes {
       display: flex;
       flex-direction: column;
       position: relative;
+      margin: 1rem 0;
 
       span {
         text-decoration: underline;

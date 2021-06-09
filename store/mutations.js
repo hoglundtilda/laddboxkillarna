@@ -2,9 +2,9 @@ export default {
   responseHandler(state, response) {
     console.log(response)
 
-    // if(response === 'refresh') {
-    //   state.statusMessage = {}
-    // }
+    if(response === 'refresh') {
+      state.statusMessage = {}
+    }
 
     if (response.status !== 200)
       state.statusMessage = {

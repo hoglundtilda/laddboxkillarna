@@ -1,5 +1,5 @@
 <template>
-  <span :class="[statusMessage.success ? 'success' : '', 'message']">{{
+  <span v-if="statusMessage.message" :class="[statusMessage.success ? 'success' : '', 'message']">{{
     statusMessage.message
   }}</span>
 </template>

@@ -210,6 +210,7 @@ export default {
     textarea {
       @include input;
       border-radius: 2rem;
+      margin-bottom: 2rem;
     }
   }
 }
