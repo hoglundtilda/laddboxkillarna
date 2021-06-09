@@ -20,7 +20,6 @@ export default {
       })
       .catch((error) => {
         if (error) {
-          console.log(error)
           commit('responseHandler', error.response.data.error)
         }
       })
