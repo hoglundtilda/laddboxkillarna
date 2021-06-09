@@ -4,9 +4,17 @@ html {
   font-size: 16px;
 }
 
+input::placeholder, textarea::placeholder {
+  font-size: 1.3rem;
+}
+
 @media only screen and (max-width: 1200px) {
   html {
     font-size: 14px;
+  }
+
+  input::placeholder, textarea::placeholder {
+    font-size: 1.3rem;
   }
 }
 
@@ -14,6 +22,8 @@ html {
   html {
     font-size: 12px;
   }
+
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -25,6 +35,11 @@ html {
     .text__secondary {
       font-size: 1.5rem;
     }
+  }
+
+  
+  input::placeholder, textarea::placeholder {
+    font-size: 1.5rem;
   }
 }
 
