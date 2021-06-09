@@ -37,7 +37,20 @@
 </template>
 
 <script>
-export default {}
+export default {
+  head: {
+    title: 'Om Laddboxkillarna AB',
+    slug: 'https://www.laddboxkillarna.se/om',
+    meta: [
+      {
+        hid: 'om',
+        name: 'om',
+        content:
+          'Certifierade och behöriga elektriker med flera års samlade erfarenheter inom elbilsladdning',
+      },
+    ],
+  },
+}
 </script>
 
 <style lang="scss">

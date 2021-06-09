@@ -56,7 +56,20 @@
 </template>
 
 <script>
-export default {}
+export default {
+   head: {
+    title: 'Policys',
+    slug: 'https://www.laddboxkillarna.se/policys',
+    meta: [
+      {
+        hid: 'policys',
+        name: 'policys',
+        content:
+          'Hur behandlar vi dina personuppgifter? Laddboxkillarnas integritetspolicy',
+      },
+    ],
+  },
+}
 </script>
 
 <style lang="scss" scoped>

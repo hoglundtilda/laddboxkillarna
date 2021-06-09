@@ -10,7 +10,20 @@
 </template>
 
 <script>
-export default {}
+export default {
+  head: {
+    title: 'Information för Företag och Brf',
+    slug: 'https://www.laddboxkillarna.se/foretag-brf',
+    meta: [
+      {
+        hid: 'foretag-brf',
+        name: 'foretag-brf',
+        content:
+          'Vi utför installationer för företag och BRF med laddsystemet Zaptec Pro',
+      },
+    ],
+  },
+}
 </script>
 
 <style lang="scss">

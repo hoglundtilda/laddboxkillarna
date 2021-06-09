@@ -41,6 +41,7 @@ select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
   border: 1px solid inherit;
   -webkit-text-fill-color: inherit;
+  box-shadow: inherit;
   -webkit-box-shadow: inherit;
   transition: background-color 5000s ease-in-out 0s;
 }

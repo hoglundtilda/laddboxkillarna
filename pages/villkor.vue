@@ -249,7 +249,20 @@
 </template>
 
 <script>
-export default {}
+export default {
+   head: {
+    title: 'Villkor',
+    slug: 'https://www.laddboxkillarna.se/villkor',
+    meta: [
+      {
+        hid: 'villkor',
+        name: 'villkor',
+        content:
+          'Avtalsvillkor för beställning av laddbox via Laddboxkillarna.se',
+      },
+    ],
+  },
+}
 </script>
 
 <style lang="scss" scoped>

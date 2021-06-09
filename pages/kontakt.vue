@@ -111,6 +111,18 @@ import { mapState, mapActions } from 'vuex'
 import { validateContactEmail } from '@/modules/validation'
 
 export default {
+    head: {
+    title: 'Kontakt',
+    slug: 'https://www.laddboxkillarna.se/kontakt',
+    meta: [
+      {
+        hid: 'kontakt',
+        name: 'kontakt',
+        content:
+          'Kontakta oss - återkoppling inom 24 timmar',
+      },
+    ],
+  },
   data() {
     return {
       email: {

@@ -8,7 +8,19 @@
   </div>
 </template>
 <script>
-export default {}
+export default {
+    head: {
+    title: 'Laddbox och installation',
+    slug: 'https://www.laddboxkillarna.se',
+    meta: [
+      {
+        hid: 'Hem',
+        name: 'Hem',
+        content: 'Vi har lång erfarenhet av laddbox installationer och erbjuder allt i ett till fast pris',
+      },
+    ],
+  },
+}
 </script>
 
 <style lang="scss">
