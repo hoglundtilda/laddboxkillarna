@@ -54,12 +54,17 @@ export default {
     display: flex;
     flex-direction: column;
     text-align: center;
+    padding: 6rem;
 
     a {
-      padding: 2rem;
+      padding: 2.5rem;
       color: $white;
-      font-size: 1.5rem;
+      font-size: 2rem;
     }
+  }
+  .ghost {
+    font-size: 2rem;
+    padding: 1.5rem 4rem;
   }
 }
 </style>
