@@ -16,4 +16,14 @@
   padding: 0.5rem 1rem;
   margin: 0.5rem 0;
   border: 1px solid $black;
+  font-family: $text;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+@mixin placeholder {
+  font-size: 1.5rem;
+  font-family: $text;
+  color: $black;
+  opacity: 0.6;
 }

@@ -19,4 +19,3 @@ $ npm install
 $ nodemon app.js (or what ever floats your boat)
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
