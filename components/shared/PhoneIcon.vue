@@ -1,9 +1,10 @@
 <template>
   <div class="wrapper__phoneicon">
+    <a href="tel:+4631250100">
     <div>
       <img src="@/assets/logo/phone_white.svg" alt="white phone icon" />
     </div>
-    <a href="tel:+4631250100"></a>
+    </a>
   </div>
 </template>
 
