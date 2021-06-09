@@ -8,20 +8,20 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'description', name: 'description', content: '' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }],
   },
 
   components: true,
-  target: 'static',
   ssr: false,
-  server: {
-    port: 5000,
-    host: '0.0.0.0',
-  },
+  target: 'static',
+  
 
+  // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // API on server or locally
+    //baseUrl: process.env.BASE_URL || 'https://test.laddboxkillarna.se',
     baseURL:
       process.env.NODE_ENV === 'production'
         ? 'https://www.laddboxkillarna.se/api'
@@ -31,6 +31,8 @@ export default {
   env: {
     // env fallback axios
   },
+
+  build: {},
 
   buildModules: ['@nuxtjs/google-fonts'],
 
@@ -68,7 +70,7 @@ export default {
 
   css: [
     'vant/lib/index.css',
-    '~/assets/css/main.scss'
+    //'~assets/css/main.scss'
   ],
 
   plugins: ['@/plugins/vant'],
@@ -76,5 +78,8 @@ export default {
   styleResources: {
     scss: ['~/assets/css/*.scss'],
   },
-
+  server: {
+    port: 5000,
+    host: '0.0.0.0',
+  },
 }
