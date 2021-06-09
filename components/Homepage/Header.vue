@@ -1,26 +1,28 @@
 <template>
   <div id="header__section">
-    <section class="text">
-      <h1>Din helhetslösning</h1>
-      <div>
-        <h4 class="check">&#x2714; Laddbox</h4>
-        <h4 class="check">&#x2714; Installation</h4>
-        <h4 class="check">&#x2714; Grön Teknik avdrag</h4>
-        <h4 class="check">&#x2714; Fast pris</h4>
+    <div class="container">
+      <section class="text">
+        <h1>Din helhetslösning</h1>
+        <div>
+          <h4 class="check">&#x2714; Laddbox</h4>
+          <h4 class="check">&#x2714; Installation</h4>
+          <h4 class="check">&#x2714; Grön Teknik avdrag</h4>
+          <h4 class="check">&#x2714; Fast pris</h4>
+        </div>
+        <p class="description text__standard">
+          Vår helhetslösning går ut på att göra det så enkelt som möjligt för
+          dig som kund. <br />
+          Vi sköter allt från beställning till installation för ett fast pris.
+        </p>
+      </section>
+      <div class="buttons">
+        <nuxt-link to="/laddbox">
+          <ButtonPrimary btn_text="Produkter" class="primary"
+        /></nuxt-link>
+        <nuxt-link to="/bestall"
+          ><ButtonGhost btn_text="Beställ här" class="ghost"
+        /></nuxt-link>
       </div>
-      <p class="description text__standard">
-        Vår helhetslösning går ut på att göra det så enkelt som möjligt för dig
-        som kund. <br />
-        Vi sköter allt från beställning till installation för ett fast pris.
-      </p>
-    </section>
-    <div class="buttons">
-      <nuxt-link to="/laddbox">
-        <ButtonPrimary btn_text="Produkter" class="primary"
-      /></nuxt-link>
-      <nuxt-link to="/bestall"
-        ><ButtonGhost btn_text="Beställ här" class="ghost"
-      /></nuxt-link>
     </div>
   </div>
 </template>
@@ -44,10 +46,15 @@ export default {}
     background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 8% 10%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  padding: 10% 0;
+
+  .container {
+    width: 1300px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
   .check {
     padding: 0.2rem 0;
@@ -66,8 +73,17 @@ export default {}
     margin-right: 2rem;
   }
 }
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1350px) {
   #header__section {
+    padding: 10% 5%;
+    .container {
+      width: 1100px;
+    }
+  }
+}
+@media only screen and (max-width: 1150px) {
+  #header__section {
+    padding: 20% 10%;
     background: linear-gradient(
         180deg,
         rgba(18, 18, 18, 0) 0%,
@@ -78,6 +94,9 @@ export default {}
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    .container {
+      width: 100%;
+    }
 
     .text {
       margin-top: 5rem;

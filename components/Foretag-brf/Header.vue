@@ -52,7 +52,7 @@ export default {}
       .contact {
         width: 60%;
         button {
-          margin-top: 1rem;
+          margin-top: 2rem;
         }
       }
     }
@@ -75,7 +75,7 @@ export default {}
   }
   @media only screen and (max-width: 1150px) {
     .wrapper__header {
-      padding: 10% 5%;
+      padding: 15% 10%;
       width: 100%;
       .header__section {
         .header__left {

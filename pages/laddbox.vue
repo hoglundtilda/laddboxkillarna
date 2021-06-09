@@ -50,8 +50,8 @@ export default {}
 <style lang="scss">
 .wrapper__laddbox {
   min-height: 100vh;
-  padding: 8% 0;
-  width: 1100px;
+  padding: 10% 0;
+  width: 1300px;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -65,6 +65,7 @@ export default {}
   .divider {
     display: flex;
     justify-content: space-between;
+
     .moms {
       font-size: 0.9rem;
       font-weight: 500;
@@ -72,7 +73,7 @@ export default {}
   }
 
   .laddbox {
-    width: 45%;
+    width: 40%;
   }
 
   .information {
@@ -89,6 +90,11 @@ export default {}
         font-weight: 600;
       }
     }
+  }
+}
+@media only screen and (max-width: 1350px) {
+  .wrapper__laddbox {
+    width: 1100px;
   }
 }
 
@@ -111,7 +117,7 @@ export default {}
 }
 @media only screen and (max-width: 800px) {
   .wrapper__laddbox {
-    padding: 20% 8%;
+    padding: 20% 10%;
     .title {
       width: 100%;
       transform: translateX(0%);

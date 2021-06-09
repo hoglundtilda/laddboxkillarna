@@ -77,6 +77,7 @@ export default {}
 @media only screen and (max-width: 800px) {
   .wrapper__green {
     flex-direction: column;
+    align-items: flex-start;
     padding: 10%;
   }
 }

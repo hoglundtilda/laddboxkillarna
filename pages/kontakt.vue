@@ -1,109 +1,113 @@
 <template>
   <div class="wrapper__kontakt">
-    <h1>Kontakta oss</h1>
-    <div class="contact__information">
-      <section class="information">
-        <p class="text__standard">
-          Har du frågor eller vill bli samarbetspartner? <br />
+    <div class="container">
+      <h1>Kontakta oss</h1>
+      <div class="contact__information">
+        <section class="information">
+          <p class="text__standard">
+            Har du frågor eller vill bli samarbetspartner? <br />
 
-          Vi snackar gärna med Er! <br />
-          Skicka ett meddelande till oss så hör vi av oss inom 24h
-        </p>
+            Vi snackar gärna med Er! <br />
+            Skicka ett meddelande till oss så hör vi av oss inom 24h
+          </p>
 
-        <section class="bosses">
-          <article>
-            <!--0<img src="@/assets/images/boss1.png" alt="" />-->
-            <h3>Alexander Pettersson</h3>
-            <a href="mailto:alexander@laddboxkillarna.se"
-              ><p class="text__secondary mail">
-                alexander@laddboxkillarna.se
-              </p></a
-            >
-            <div>
-              <img src="@/assets/logo/phone.svg" alt="" />
-              <a href="tel:+46700490657">
-                <p class="text__secondary">070 049 06 57</p></a
+          <section class="bosses">
+            <article>
+              <!--0<img src="@/assets/images/boss1.png" alt="" />-->
+              <h3>Alexander Pettersson</h3>
+              <a href="mailto:alexander@laddboxkillarna.se"
+                ><p class="text__secondary mail">
+                  alexander@laddboxkillarna.se
+                </p></a
               >
-            </div>
-          </article>
-          <article>
-            <!--<img src="@/assets/images/boss2.png" alt="" />-->
+              <div>
+                <img src="@/assets/logo/phone.svg" alt="" />
+                <a href="tel:+46700490657">
+                  <p class="text__secondary">070 049 06 57</p></a
+                >
+              </div>
+            </article>
+            <article>
+              <!--<img src="@/assets/images/boss2.png" alt="" />-->
 
-            <h3>Kevin Olsson</h3>
-            <a href="mailto:kevin@laddboxkillarna.se"
-              ><p class="text__secondary mail">kevin@laddboxkillarna.se</p></a
-            >
-            <div>
-              <img src="@/assets/logo/phone.svg" alt="" />
-              <a href="tel:+46704716221">
-                <p class="text__secondary">070 471 62 21</p></a
+              <h3>Kevin Olsson</h3>
+              <a href="mailto:kevin@laddboxkillarna.se"
+                ><p class="text__secondary mail">kevin@laddboxkillarna.se</p></a
               >
-            </div>
-          </article>
+              <div>
+                <img src="@/assets/logo/phone.svg" alt="" />
+                <a href="tel:+46704716221">
+                  <p class="text__secondary">070 471 62 21</p></a
+                >
+              </div>
+            </article>
+          </section>
         </section>
-      </section>
-      <form autocomplete="on" class="contact">
-        <div class="names">
-          <input
-            v-model="email.firstName"
-            type="text"
-            placeholder="Förnamn"
-            autocomplete="given-name"
-            pattern="^[a-zA-ZåäöÅÄÖ]+$"
-            title="Vänligen fyll i ett giltigt namn"
-            required
-          />
+        <form autocomplete="on" class="contact">
+          <div class="names">
+            <input
+              v-model="email.firstName"
+              type="text"
+              placeholder="Förnamn"
+              autocomplete="given-name"
+              pattern="^[a-zA-ZåäöÅÄÖ]+$"
+              title="Vänligen fyll i ett giltigt namn"
+              required
+            />
 
+            <input
+              v-model="email.lastName"
+              type="text"
+              placeholder="Efternamn"
+              autocomplete="family-name"
+              pattern="^[a-zA-ZåäöÅÄÖ]+$"
+              title="Vänligen fyll i ett giltigt namn"
+              required
+            />
+          </div>
           <input
-            v-model="email.lastName"
-            type="text"
-            placeholder="Efternamn"
-            autocomplete="family-name"
-            pattern="^[a-zA-ZåäöÅÄÖ]+$"
-            title="Vänligen fyll i ett giltigt namn"
+            v-model="email.email"
+            type="email"
+            placeholder="Epost"
+            autocomplete="email"
+            pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+            title="Fyll i en giltig epost"
             required
           />
-        </div>
-        <input
-          v-model="email.email"
-          type="email"
-          placeholder="Epost"
-          autocomplete="email"
-          pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
-          title="Fyll i en giltig epost"
-          required
-        />
-        <input
-          v-model="email.subject"
-          type="text"
-          placeholder="Ämne"
-          autocomplete="off"
-          max="50"
-          min="2"
-          title="Fyll i ämne"
-          required
-        />
-        <textarea
-          v-model="email.message"
-          name=""
-          id=""
-          cols="30"
-          rows="10"
-          placeholder="Meddelande"
-          autocomplete="off"
-          min="1"
-          title="Fyll i meddelande"
-          required
-        ></textarea>
-        <SharedStatusMessage :statusMessage="statusMessage" />
-        <ButtonSubmit btn_text="Skicka" @btn_click="validateInputs" />
-      </form>
+          <input
+            v-model="email.subject"
+            type="text"
+            placeholder="Ämne"
+            autocomplete="off"
+            max="50"
+            min="2"
+            title="Fyll i ämne"
+            required
+          />
+          <textarea
+            v-model="email.message"
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="Meddelande"
+            autocomplete="off"
+            required
+          ></textarea>
+          <ButtonPrimaryBlack
+            btn_text="Skicka"
+            class="primary"
+            @btn_click="sendEmail"
+          />
+          <SharedStatusMessage :statusMessage="statusMessage" />
+        </form>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import { mapState, mapActions, mapMutations } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 import { validateContactEmail } from '@/modules/validation'
 
 export default {
@@ -125,30 +129,35 @@ export default {
   },
   methods: {
     ...mapActions(['contactEmail']),
-    ...mapMutations(['responseHandler']),
-    async validateInputs() {
+
+    async sendEmail() {
       const isValid = await validateContactEmail(this.email)
       if (isValid === true) {
         this.contactEmail(this.email)
       }
-      this.contactEmail(this.email)
     },
   },
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .wrapper__kontakt {
-  padding: 10% 20%;
+  padding: 10% 0;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+
+  .container {
+    width: 1300px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
   .contact__information {
     display: flex;
     justify-content: space-between;
     margin-top: 2rem;
+    gap: 3rem;
   }
 
   .information {
@@ -210,13 +219,26 @@ export default {
     textarea {
       @include input;
       border-radius: 2rem;
-      margin-bottom: 2rem;
+      max-width: 3;
+    }
+  }
+  .primary {
+    margin-top: 2rem;
+  }
+}
+@media only screen and (max-width: 1350px) {
+  .wrapper__kontakt {
+    .container {
+      width: 1100px;
     }
   }
 }
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1150px) {
   .wrapper__kontakt {
     padding: 20% 10%;
+    .container {
+      width: 100%;
+    }
   }
 }
 @media only screen and (max-width: 700px) {
@@ -224,9 +246,7 @@ export default {
     .contact__information {
       flex-direction: column;
     }
-    .contact {
-      padding-top: 5rem;
-    }
+
     .information {
       article {
         .mail {
