@@ -133,12 +133,6 @@ export default {
       }
       this.contactEmail(this.email)
     },
-    async refresh() {
-      await this.responseHandler('refresh')
-    },
-  },
-  beforeMount() {
-    this.refresh()
   },
 }
 </script>

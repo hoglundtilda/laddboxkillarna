@@ -6,13 +6,8 @@ export default {
         commit('responseHandler', response.data)
       })
       .catch((error) => {
-        if (!error.response) {
-          const error = {
-            status: 404,
-            data: 'Tyvärr något gick fel, vänligen kontakta oss per telefon eller email',
-          }
-          commit('responseHandler', error)
-        } else {
+        if (error) {
+          console.log(error)
           commit('responseHandler', error.response)
         }
       })
@@ -25,13 +20,8 @@ export default {
         commit('responseHandler', response.data)
       })
       .catch((error) => {
-        if (!error.response) {
-          const error = {
-            status: 404,
-            data: 'Tyvärr något gick fel, vänligen kontakta oss per telefon eller email',
-          }
-          commit('responseHandler', error)
-        } else {
+        if (error) {
+          console.log(error)
           commit('responseHandler', error.response)
         }
       })
