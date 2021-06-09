@@ -32,7 +32,7 @@ export default {}
 <style lang="scss" scoped>
 #header__section {
   color: $white;
-  min-height: 100vh;
+  height: 100vh;
   background: linear-gradient(
       180deg,
       rgba(12, 12, 12, 0) 0%,
@@ -41,7 +41,7 @@ export default {}
       $black 94.27%
     ),
     url(@/assets/images/background_laddboxkillarna_1.png);
-
+    background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   padding: 8% 10%;
@@ -71,11 +71,12 @@ export default {}
     background: linear-gradient(
         180deg,
         rgba(18, 18, 18, 0) 0%,
-        rgba(18, 18, 18, 0.87) 78.65%,
+        $black 90.00%,
         $black 100%
       ),
       url('@/assets/images/background_laddboxkillarna_1_pad.png');
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
 
     .text {
@@ -90,16 +91,17 @@ export default {}
 }
 @media only screen and (max-width: 600px) {
   #header__section {
+    height: 80vh;
     background: linear-gradient(
         180deg,
         rgba(18, 18, 18, 0) 0%,
         rgba(18, 18, 18, 0.87) 78.65%,
-        #121212 100%
+        $black 100%
       ),
       url('@/assets/images/background_laddboxkillarna_1_mob.png');
-
+    background-size: cover;
     background-position: center;
-
+    background-repeat: no-repeat;
     padding: 10%;
 
     .text {

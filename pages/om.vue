@@ -40,7 +40,13 @@ export default {}
 <style lang="scss" scoped>
 .wrapper__om {
   min-height: 100vh;
-  background-image:  linear-gradient(180deg, rgba(12, 12, 12, 0) 0%, rgba(12, 12, 12, 0.789338) 59.9%, rgba(12, 12, 12, 0.98) 88.54%, $black 94.27%),
+  background-image: linear-gradient(
+      180deg,
+      $black 0%,
+      rgba(12, 12, 12, 0.789338) 59.9%,
+      rgba(12, 12, 12, 0.98) 88.54%,
+      $black 94.27%
+    ),
     url(@/assets/images/background_laddboxkillarna_2.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -75,7 +81,7 @@ export default {}
     background-image: linear-gradient(
         180deg,
         rgba(18, 18, 18, 0.5) 0%,
-        #121212 100%
+        $black 100%
       ),
       url(@/assets/images/background_laddboxkillarna_2_pad.png);
   }
@@ -85,7 +91,7 @@ export default {}
     background-image: linear-gradient(
         180deg,
         rgba(18, 18, 18, 0.5) 0%,
-        #121212 100%
+        $black 100%
       ),
       url(@/assets/images/background_laddboxkillarna_2_mobile.png);
   }
