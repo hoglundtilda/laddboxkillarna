@@ -16,11 +16,13 @@ export default {
   components: true,
   target: 'static',
   ssr: false,
+  server: {
+    port: 5000,
+    host: '0.0.0.0',
+  },
 
-  // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // API on server or locally
-    //baseUrl: process.env.BASE_URL || 'https://test.laddboxkillarna.se',
     baseURL:
       process.env.NODE_ENV === 'production'
         ? 'https://www.laddboxkillarna.se/api'
@@ -31,14 +33,9 @@ export default {
     // env fallback axios
   },
 
-  // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
-
   buildModules: ['@nuxtjs/google-fonts'],
 
-  // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     '@nuxtjs/style-resources',
     [
@@ -46,14 +43,10 @@ export default {
       {
         component: 'fa',
         imports: [
-          //import whole set
           {
             set: '@fortawesome/free-solid-svg-icons',
             icons: ['fas'],
           },
-          //import 2 icons from set
-          // please note this is PRO set in this example,
-          // you must have it in your node_modules to actually import
         ],
       },
     ],
@@ -76,16 +69,13 @@ export default {
 
   css: [
     'vant/lib/index.css',
-    //'~assets/css/main.scss'
+    '~/assets/css/main.scss'
   ],
 
   plugins: ['@/plugins/vant'],
 
   styleResources: {
-    scss: ['~assets/css/*.scss'],
+    scss: ['~/assets/css/*.scss'],
   },
-  server: {
-    port: 5000, // default: 3000
-    host: '0.0.0.0', // default: localhost
-  },
+
 }
