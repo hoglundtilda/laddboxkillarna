@@ -317,6 +317,10 @@ export default {
   }
   .text {
     width: 50%;
+
+    .text__secondary {
+      width: 90%;
+    }
     .fa-link {
       color: black;
       font-size: 1rem;
@@ -483,7 +487,7 @@ export default {
             }
             &:checked:after {
               top: -1px;
-              left: 2px;
+              left: 1.5px;
             }
           }
         }

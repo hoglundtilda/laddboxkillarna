@@ -20,7 +20,7 @@ export default {}
 <style lang="scss" scoped>
 #whyus__section {
   font-family: $headline;
-  height: 80vh;
+  height: 70vh;
   color: $white;
   background: linear-gradient(
       180deg,
@@ -36,7 +36,7 @@ export default {}
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 15%;
+  padding: 0 10%;
   .text {
     width: 60%;
     padding: 1.5rem 0;

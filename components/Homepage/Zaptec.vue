@@ -36,7 +36,7 @@ export default {}
 
 <style lang="scss" scoped>
 #zaptec__section {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -76,7 +76,7 @@ export default {}
 }
 @media only screen and (max-width: 1150px) {
   #zaptec__section {
-    padding: 10% 15%;
+    padding: 0 10% 10%;
 
     .main {
       flex-direction: column;
