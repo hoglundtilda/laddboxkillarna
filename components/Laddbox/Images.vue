@@ -61,7 +61,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .wrapper__images {
   .box {
     .images {
@@ -74,6 +74,7 @@ export default {
       justify-content: center;
       width: 25%;
       cursor: pointer;
+      min-height: auto;
 
       img {
         margin: 1rem;
