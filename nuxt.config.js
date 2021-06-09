@@ -36,6 +36,7 @@ export default {
 
   modules: [
     '@nuxtjs/axios',
+    '@nuxtjs/sitemap',
     '@nuxtjs/style-resources',
     [
       'nuxt-fontawesome',
