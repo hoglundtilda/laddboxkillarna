@@ -341,6 +341,10 @@ export default {
     }
   }
 
+  .submit__button {
+    margin-top: 1rem;
+  }
+
   .span_underline {
     text-decoration: underline;
     font-weight: 400;
@@ -382,6 +386,7 @@ export default {
       display: flex;
       flex-direction: column;
       position: relative;
+      margin: 1rem 0;
 
       span {
         text-decoration: underline;

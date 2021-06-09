@@ -89,7 +89,7 @@ export default {}
     background-image: linear-gradient(
         180deg,
         rgba(18, 18, 18, 0.5) 0%,
-        #121212 100%
+        $black 100%
       ),
       url(@/assets/images/background_laddboxkillarna_2_pad.png);
   }
@@ -99,7 +99,7 @@ export default {}
     background-image: linear-gradient(
         180deg,
         rgba(18, 18, 18, 0.5) 0%,
-        #121212 100%
+        $black 100%
       ),
       url(@/assets/images/background_laddboxkillarna_2_mobile.png);
   }

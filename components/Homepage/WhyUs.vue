@@ -20,14 +20,15 @@ export default {}
 <style lang="scss" scoped>
 #whyus__section {
   font-family: $headline;
-  height: 100vh;
+  height: 80vh;
   color: $white;
   background: linear-gradient(
       180deg,
-      $black 8.54%,
-      rgba(12, 12, 12, 0.6) 49.76%,
-      rgba(12, 12, 12, 0.94) 84.44%,
-      $black 96.51%
+      #0c0d0e 12.12%,
+      rgba(12, 13, 14, 0.548469) 45.96%,
+      rgba(12, 13, 14, 0.29) 45.71%,
+      rgba(12, 13, 14, 0.92) 77.97%,
+      #0c0d0e 89.69%
     ),
     url('@/assets/images/background_roads.png');
   background-size: cover;
@@ -48,10 +49,9 @@ export default {}
   #whyus__section {
     background: linear-gradient(
         180deg,
-        #0b0b0b 8.54%,
-        rgba(11, 11, 11, 0.6) 49.76%,
-        rgba(11, 11, 11, 0.94) 84.44%,
-        #0b0b0b 96.51%
+        #0c0d0e 12.12%,
+        rgba(12, 13, 14, 0.18) 55.75%,
+        #0c0d0e 89.69%
       ),
       url('@/assets/images/background_roads_pad.png');
 
@@ -66,9 +66,9 @@ export default {}
   #whyus__section {
     background: linear-gradient(
         180deg,
-        #121212 3%,
-        rgba(18, 18, 18, 0.74) 51.56%,
-        #121212 100%
+        #0c0d0e 12.12%,
+        rgba(12, 13, 14, 0.18) 55.75%,
+        #0c0d0e 89.69%
       ),
       url('@/assets/images/background_roads_mobile.png');
 
