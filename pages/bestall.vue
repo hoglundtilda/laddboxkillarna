@@ -1,8 +1,9 @@
 <template>
   <div class="wrapper__installation">
     <InstallationVillkor v-if="terms" />
+    <h1>Beställ laddbox & installation</h1>
     <section class="text">
-      <h1>Installation</h1>
+      <h2>Installation</h2>
       <p class="text__secondary">
         Då alla installationer har olika förutsättningar för att kunna
         möjliggöra en säker installation har vi utformat ett s.k standard avtal
@@ -49,7 +50,7 @@
       </div>
     </section>
     <section class="inputs">
-      <h3>Dina beställningsuppgifter</h3>
+      <h2>Dina beställningsuppgifter</h2>
       <form class="form__container" autocomplete="on">
         <div class="names">
           <input
@@ -201,6 +202,16 @@ import { mapState, mapActions, mapMutations } from 'vuex'
 import { validateOrder } from '@/modules/validation'
 
 export default {
+  head: {
+    title: 'Beställ laddbox',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Home page description',
+      },
+    ],
+  },
   data() {
     return {
       products: products,

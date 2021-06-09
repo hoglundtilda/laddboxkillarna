@@ -8,7 +8,7 @@ export default {
       .catch((error) => {
         if (error) {
           console.log(error)
-          commit('responseHandler', error.response)
+          commit('responseHandler', error)
         }
       })
   },
@@ -22,7 +22,7 @@ export default {
       .catch((error) => {
         if (error) {
           console.log(error)
-          commit('responseHandler', error.response)
+          commit('responseHandler', error)
         }
       })
   },
