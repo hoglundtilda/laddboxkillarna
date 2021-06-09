@@ -46,7 +46,7 @@ export default {
         hid: 'om',
         name: 'om',
         content:
-          'Certifierade och behöriga elektriker med flera års samlade erfarenheter inom elbilsladdning',
+          'Certifierade och behöriga elektriker med flera års samlad erfarenhet inom elbilsladdning',
       },
     ],
   },
