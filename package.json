@@ -22,7 +22,7 @@
     "vant": "^2.12.18"
   },
   "devDependencies": {
-    "@nuxtjs/style-resources": "^1.0.0",
+    "@nuxtjs/style-resources": "^1.1.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
     "node-sass": "^5.0.0",
