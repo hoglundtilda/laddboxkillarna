@@ -70,7 +70,7 @@ export default {}
 
     video {
       width: 100%;
-      min-height: auto;
+      height: auto;
     }
   }
 }

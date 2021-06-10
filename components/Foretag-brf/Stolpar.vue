@@ -19,15 +19,24 @@
       <section class="stolpar">
         <div class="stolpe">
           <p class="text__standard">Flex</p>
-          <img src="@/assets/images/pro/flex_pole.png" alt="" />
+          <img
+            src="@/assets/images/pro/flex_pole.png"
+            alt="Zaptec Pro Flex pole"
+          />
         </div>
         <div class="stolpe">
           <p class="text__standard">Standard</p>
-          <img src="@/assets/images/pro/standard_pole.png" alt="" />
+          <img
+            src="@/assets/images/pro/standard_pole.png"
+            alt="Zaptec Pro Standard pole"
+          />
         </div>
         <div class="stolpe">
           <p class="text__standard">Premium</p>
-          <img src="@/assets/images/pro/premium_pole.png" alt="" />
+          <img
+            src="@/assets/images/pro/premium_pole.png"
+            alt="Zaptec Pro Premium pole"
+          />
         </div>
       </section>
     </div>

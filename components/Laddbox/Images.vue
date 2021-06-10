@@ -6,18 +6,24 @@
           <img
             :src="require(`~/assets/images/${color.smallImage1}`)"
             @click="changeBigImage(color.smallImage1)"
+            alt="image of Zaptec Go from the front"
           />
           <img
             :src="require(`~/assets/images/${color.smallImage2}`)"
             @click="changeBigImage(color.smallImage2)"
+            alt="image of Zaptec Go from the side"
           />
           <img
             :src="require(`~/assets/images/${color.smallImage3}`)"
             @click="changeBigImage(color.smallImage3)"
+            alt="image of Zaptec Go in profile"
           />
         </div>
         <div class="big_img">
-          <img :src="require(`~/assets/images/${color.bigImage}`)" />
+          <img
+            :src="require(`~/assets/images/${color.bigImage}`)"
+            alt="Big image of Zaptec Go"
+          />
         </div>
       </div>
       <div class="colorPicker">
@@ -74,12 +80,12 @@ export default {
       justify-content: center;
       width: 25%;
       cursor: pointer;
-      min-height: auto;
+      height: 100%;
 
       img {
-        margin: 1rem;
+        padding: 1rem;
         transition: all 0.05s ease-in-out;
-        min-height: auto;
+        height: auto;
         &:hover {
           transform: scale(1.05);
         }
@@ -88,6 +94,7 @@ export default {
     .big_img {
       img {
         width: 100%;
+        height: auto;
       }
     }
 
