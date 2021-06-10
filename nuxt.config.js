@@ -34,7 +34,7 @@ export default {
 
   build: {},
 
-  buildModules: ['@nuxtjs/google-fonts'],
+  buildModules: ['@nuxtjs/google-fonts', '@nuxtjs/style-resources',],
 
   modules: [
     '@nuxtjs/axios',
