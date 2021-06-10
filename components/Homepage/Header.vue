@@ -4,10 +4,10 @@
       <section class="text">
         <h1>Din helhetslösning</h1>
         <div>
-          <h4 class="check">&#x2714; Laddbox</h4>
-          <h4 class="check">&#x2714; Installation</h4>
-          <h4 class="check">&#x2714; Grön Teknik avdrag</h4>
-          <h4 class="check">&#x2714; Fast pris</h4>
+          <h4 class="check"> <span></span> Laddbox</h4>
+          <h4 class="check"> <span></span> Installation</h4>
+          <h4 class="check"> <span></span> Grön Teknik avdrag</h4>
+          <h4 class="check"> <span></span> Fast pris</h4>
         </div>
         <p class="description text__standard">
           Vår helhetslösning går ut på att göra det så enkelt som möjligt för
@@ -43,7 +43,7 @@ export default {}
       $black 94.27%
     ),
     url(@/assets/images/background_laddboxkillarna_1.png);
-    background-position: center;
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   padding: 10% 0;
@@ -57,7 +57,16 @@ export default {}
   }
 
   .check {
-    padding: 0.2rem 0;
+    padding: 0.2rem ;
+    color: $white;
+
+    span {
+      &:before {
+      color: $white;
+      content: '✔\fe0e';
+      padding-right: 0.5rem;
+    }
+  }
   }
   .description {
     width: 60%;
@@ -87,7 +96,7 @@ export default {}
     background: linear-gradient(
         180deg,
         rgba(18, 18, 18, 0) 0%,
-        $black 90.00%,
+        $black 90%,
         $black 100%
       ),
       url('@/assets/images/background_laddboxkillarna_1_pad.png');
