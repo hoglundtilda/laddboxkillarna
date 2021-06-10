@@ -119,7 +119,7 @@ export default {}
 }
 @media only screen and (max-width: 600px) {
   #header__section {
-    height: 80vh;
+    height: 100vh;
     background: linear-gradient(
         180deg,
         rgba(18, 18, 18, 0) 0%,
