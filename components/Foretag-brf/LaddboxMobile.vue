@@ -36,7 +36,10 @@
       </div>
     </section>
     <section class="mid-section">
-      <img src="@/assets/images/pro/Zaptec_Pro.png" alt="" />
+      <img
+        src="@/assets/images/pro/Zaptec_Pro.png"
+        alt="Image of a Zaptec Pro charger"
+      />
     </section>
     <section class="bottom-section">
       <div class="checkmark">
@@ -103,6 +106,7 @@ export default {}
     padding: 3rem;
     img {
       width: 50%;
+      height: auto;
     }
   }
   .checkmark {

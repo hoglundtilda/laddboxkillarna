@@ -28,7 +28,10 @@
         </article>
       </div>
       <div class="pro__right">
-        <img src="@/assets/images/pro/zaptec_app.png" alt="" />
+        <img
+          src="@/assets/images/pro/zaptec_app.png"
+          alt="Image of Zaptec portal app"
+        />
         <article>
           <h4>Zaptec Portal</h4>
           <p class="text__standard">
