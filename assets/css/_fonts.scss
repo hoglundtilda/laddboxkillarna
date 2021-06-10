@@ -86,8 +86,6 @@ h4 {
   font-family: $text;
 }
 
-input::placeholder, textarea::placeholder {
-  @include placeholder;
-}
+
 
 
