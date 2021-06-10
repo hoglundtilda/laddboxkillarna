@@ -94,8 +94,8 @@
             autocomplete="off"
             required
           ></textarea>
-          <ButtonPrimaryBlack
-            btn_text="Skicka"
+          <ButtonSubmit
+            btn_text="Beställ laddbox"
             class="primary"
             @btn_click="sendEmail"
           />

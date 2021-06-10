@@ -24,7 +24,7 @@ export default {
     baseURL:
       process.env.NODE_ENV === 'production'
         ? 'https://www.laddboxkillarna.se/api'
-        : 'http://localhost:8000',
+        : 'http://localhost:5050',
   },
 
   env: {
