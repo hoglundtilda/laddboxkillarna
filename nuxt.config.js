@@ -16,7 +16,6 @@ export default {
   components: true,
   ssr: false,
   target: 'static',
-  
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
@@ -34,7 +33,7 @@ export default {
 
   build: {},
 
-  buildModules: ['@nuxtjs/google-fonts', '@nuxtjs/style-resources',],
+  buildModules: ['@nuxtjs/google-fonts', '@nuxtjs/style-resources'],
 
   modules: [
     '@nuxtjs/axios',
