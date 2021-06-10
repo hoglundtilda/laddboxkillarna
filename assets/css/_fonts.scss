@@ -1,18 +1,45 @@
 @import 'variables.scss';
-
+@import 'mixins.scss';
 html {
   font-size: 16px;
+}
+
+input::placeholder, textarea::placeholder {
+  font-size: 1.3rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: 14px;
+  }
+
+  input::placeholder, textarea::placeholder {
+    font-size: 1.3rem;
+  }
 }
 
 @media only screen and (max-width: 900px) {
   html {
     font-size: 12px;
   }
+
+
 }
 
 @media only screen and (max-width: 600px) {
   html {
     font-size: 10px;
+    .text__standard {
+      font-size: 1.7rem;
+    }
+    .text__secondary {
+      font-size: 1.5rem;
+    }
+  }
+
+  
+  input::placeholder, textarea::placeholder {
+    font-size: 1.5rem;
   }
 }
 
@@ -26,16 +53,18 @@ h6 {
 }
 
 h1 {
-  font-size: 4.5rem;
+  font-size: 4.2rem;
   font-weight: 500;
 }
 
 h2 {
   font-size: 3rem;
+  font-weight: 500;
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 2rem;
+  font-weight: 400;
 }
 
 h4 {
@@ -45,9 +74,20 @@ h4 {
 
 .text__standard {
   font-size: 1.5rem;
-  font-weight: 400;
+  line-height: 140%;
+  font-weight: 300;
+  font-family: $text;
 }
 
 .text__secondary {
   font-size: 1.125rem;
+  line-height: 140%;
+  font-weight: 300;
+  font-family: $text;
 }
+
+input::placeholder, textarea::placeholder {
+  @include placeholder;
+}
+
+

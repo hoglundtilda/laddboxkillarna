@@ -1,24 +1,37 @@
 <template>
   <div class="wrapper__colorpicker">
     <form>
-      <input name="radio" value="" type="radio" id="whtie" class="white" />
-      <input name="radio" value="" type="radio" id="rock" class="rock" />
-      <input name="radio" value="" type="radio" id="moss" class="moss" />
       <input
+        v-for="color in products.colors"
+        :key="color.id"
+        :style="{ backgroundColor: color.color }"
         name="radio"
-        value=""
+        value="color.color"
         type="radio"
-        id="midnight"
-        class="midnight"
+        id="white"
+        class="white"
+        @click="selectColor(color)"
+        required
       />
-      <input name="radio" value="" type="radio" id="wood" class="wood" />
-      <input name="radio" value="" type="radio" id="black" class="black" />
     </form>
   </div>
 </template>
 
 <script>
-export default {}
+import products from '@/assets/productJSON/products.json'
+export default {
+  data() {
+    return {
+      products: products,
+    }
+  },
+  methods: {
+    selectColor(color) {
+      console.log(color)
+      this.$emit('selectColor', color)
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
@@ -32,23 +45,27 @@ form {
     width: 2.5rem;
     height: 2.5rem;
     outline: none;
-    padding: 0;
+    padding: 1rem;
     appearance: none;
     border-radius: 100%;
     margin: 0.5rem;
     border: none;
-  }
-  .white:checked,
-  .rock:checked,
-  .moss:checked,
-  .midnight:checked,
-  .wood:checked,
-  .black:checked {
-    transform: scale(1.35);
+    box-shadow: $radio_shadow;
+    transition: all 0.05s ease-in-out;
+    cursor: pointer;
+
+    &:checked:hover {
+      transform: scale(1.2);
+    }
+    &:hover {
+      transform: scale(1.08);
+    }
+    &:checked {
+      transform: scale(1.2);
+    }
   }
 
   .white {
-    box-shadow: 0px 0px 1.5px 0.001px #000000;
     background-color: $cloud_white;
   }
   .rock {

@@ -16,7 +16,7 @@ export default {}
   }
 }
 
-@media only screen and (max-width: 1070px) {
+@media only screen and (max-width: 1240px) {
   .wrapper__nav {
     .desktop {
       display: none;

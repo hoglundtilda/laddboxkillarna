@@ -1,23 +1,28 @@
 <template>
   <div id="header__section">
-    <section class="text">
-      <h1>Din helhetslösning</h1>
-      <div>
-        <h4 class="check">&#x2714; Köp din laddbox</h4>
-        <h4 class="check">&#x2714; Installerat & klart</h4>
-        <h4 class="check">&#x2714; Inga mellanhänder</h4>
-        <h4 class="check">&#x2714; Till Fast Pris</h4>
+    <div class="container">
+      <section class="text">
+        <h1>Din helhetslösning</h1>
+        <div>
+          <h4 class="check">&#x2714; Laddbox</h4>
+          <h4 class="check">&#x2714; Installation</h4>
+          <h4 class="check">&#x2714; Grön Teknik avdrag</h4>
+          <h4 class="check">&#x2714; Fast pris</h4>
+        </div>
+        <p class="description text__standard">
+          Vår helhetslösning går ut på att göra det så enkelt som möjligt för
+          dig som kund. <br />
+          Vi sköter allt från beställning till installation för ett fast pris.
+        </p>
+      </section>
+      <div class="buttons">
+        <nuxt-link to="/laddbox">
+          <ButtonPrimary btn_text="Produkter" class="primary"
+        /></nuxt-link>
+        <nuxt-link to="/bestall"
+          ><ButtonGhost btn_text="Beställ här" class="ghost"
+        /></nuxt-link>
       </div>
-      <p class="description text__standard">
-        Vår helhetslösning går ut på att göra det så enkelt som möjligt för dig
-        som kund. Vi sköter allt inkl. installation. Inga mellanhänder som drar
-        ut på tiden eller trissar upp priser. Det enda du behöver göra är att
-        lägga en beställning. Vi garanterar återkoppling inom 24 timmar
-      </p>
-    </section>
-    <div class="buttons">
-      <ButtonPrimary btn_text="Produkter" class="primary" />
-      <ButtonGhost btn_text="Beställ här" class="ghost" />
     </div>
   </div>
 </template>
@@ -32,14 +37,24 @@ export default {}
   height: 100vh;
   background: linear-gradient(
       180deg,
-      rgba(18, 18, 18, 0) 0%,
-      rgba(18, 18, 18, 0.87) 78.65%,
-      #121212 100%
+      rgba(12, 12, 12, 0) 0%,
+      rgba(12, 12, 12, 0.789338) 59.9%,
+      rgba(12, 12, 12, 0.98) 88.54%,
+      $black 94.27%
     ),
-    url('@/assets/images/background_laddboxkillarna_1.png');
+    url(@/assets/images/background_laddboxkillarna_1.png);
+    background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 10%;
+  padding: 10% 0;
+
+  .container {
+    width: 1300px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
   .check {
     padding: 0.2rem 0;
@@ -51,17 +66,66 @@ export default {}
 
   .buttons {
     display: flex;
+    margin-top: 2rem;
   }
 
   .primary {
     margin-right: 2rem;
   }
 }
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1350px) {
+  #header__section {
+    padding: 10% 5%;
+    .container {
+      width: 1100px;
+    }
+  }
+}
+@media only screen and (max-width: 1150px) {
   #header__section {
     padding: 20% 10%;
+    background: linear-gradient(
+        180deg,
+        rgba(18, 18, 18, 0) 0%,
+        $black 90.00%,
+        $black 100%
+      ),
+      url('@/assets/images/background_laddboxkillarna_1_pad.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    .container {
+      width: 100%;
+    }
+
+    .text {
+      margin-top: 5rem;
+    }
+
+    .description {
+      width: 100%;
+      margin: 2rem 0;
+    }
   }
 }
 @media only screen and (max-width: 600px) {
+  #header__section {
+    height: 80vh;
+    background: linear-gradient(
+        180deg,
+        rgba(18, 18, 18, 0) 0%,
+        rgba(18, 18, 18, 0.87) 78.65%,
+        $black 100%
+      ),
+      url('@/assets/images/background_laddboxkillarna_1_mob.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 10%;
+
+    .text {
+      margin-top: 10rem;
+    }
+  }
 }
 </style>

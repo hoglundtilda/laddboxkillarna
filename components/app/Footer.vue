@@ -1,17 +1,20 @@
 <template>
   <div class="wrapper__footer">
-    <img
-      src="@/assets/logo/logo_full_white.svg"
-      alt="logo with name of company"
-      class="logo"
-    />
+    <div class="image-container">
+      <img
+        src="@/assets/logo/logo_full_white.svg"
+        alt="logo with name of company"
+        class="logo"
+      />
+    </div>
     <div class="socials">
-      <img src="@/assets/logo/linkedIn.svg" alt="linkedIn" />
+      <img src="@/assets/logo/linkedIn.svg" alt="linkedIn" /> <a href=""></a>
       <img src="@/assets/logo/instagram.svg" alt="instagram" />
       <img src="@/assets/logo/facebook.svg" alt="facebook" />
     </div>
     <div class="footer_text text__secondary">
-      <p>&#169; Laddboxkillarna AB</p>
+      <p>&#169;Laddboxkillarna AB</p>
+      <p>Org nr: 559311-4142</p>
       <nuxt-link to="Kontakt"> <p class="underline">Kontakt</p></nuxt-link>
       <nuxt-link to="Policys"
         ><p class="underline">Integritetspolicy</p></nuxt-link
@@ -33,7 +36,7 @@ export default {
 
 <style lang="scss" scoped>
 .wrapper__footer {
-  padding: 3% 5%;
+  padding: 1% 5%;
   color: white;
   display: grid;
   grid-template-areas:
@@ -45,9 +48,15 @@ export default {
   box-shadow: 1px 0px 10px 1px #00000044;
   background-color: $black;
 
-  img {
-    width: 50%;
+  .image-container {
+    width: 35%;
+    img {
+      width: 100%;
+      height: auto;
+      shape-rendering: geometricPrecision;
+    }
   }
+
   .socials {
     display: flex;
 
@@ -55,10 +64,14 @@ export default {
       width: 3rem;
       height: 3rem;
       margin: 1rem;
+      shape-rendering: crispEdges;
     }
   }
   .footer_text {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     margin: 1rem;
     a {
       text-decoration: none;
@@ -70,6 +83,19 @@ export default {
     }
     .underline {
       text-decoration: underline;
+    }
+  }
+}
+@media only screen and (max-width: 950px) {
+  .wrapper__footer {
+    padding: 5%;
+    .footer_text {
+      p {
+        padding: 0 0.5rem;
+      }
+    }
+    .image-container {
+      width: 50%;
     }
   }
 }

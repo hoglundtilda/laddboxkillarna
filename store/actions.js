@@ -1,16 +1,27 @@
-import axios from "axios";
-
 export default {
-    async contactEmail({ commit }, email) {
-      console.log(email)
-      const response = await this.$axios
-        .post(`/email/contact`, {email})
-        .then((response) => {
-          console.log(response)})
-        .catch((error) => {
-          console.log(error)
-        })
-      //console.log(response)
-      //commit('TEST', products)
-    },
+  async contactEmail({ commit }, email) {
+    await this.$axios
+      .post(`${this.$axios.defaults.baseURL}/email/contact`, email)
+      .then((response) => {
+        commit('responseHandler', response.data)
+      })
+      .catch((error) => {
+        if (error) {
+          commit('responseHandler', error.response.data.error)
+        }
+      })
+  },
+
+  async orderEmail({ commit }, order) {
+    await this.$axios
+      .post(`${this.$axios.defaults.baseURL}/email/order`, order)
+      .then((response) => {
+        commit('responseHandler', response.data)
+      })
+      .catch((error) => {
+        if (error) {
+          commit('responseHandler', error.response.data.error)
+        }
+      })
+  },
 }

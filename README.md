@@ -1,20 +1,21 @@
-# laddboxkillarna
+# www.laddboxkillarna.se
+
+# www.test.laddboxkillarna.se
 
 ## Build Setup
 
 ```bash
-# install dependencies
+# Kör npm install
 $ npm install
 
-# serve with hot reload at localhost:3000
+# Kör localt på port 5000
 $ npm run dev
 
-# build for production and launch server
-$ npm run build
-$ npm run start
+# Email funktion kommer ej fungera localt på grund av sekretess med .env
+$ Använd www.laddboxkillarna.se för att testa kontakt/beställning formulär.
 
-# generate static project
-$ npm run generate
+# starta server repo för sig 
+$ npm install
+$ nodemon app.js (or what ever floats your boat)
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).

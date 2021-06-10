@@ -1,5 +1,6 @@
 .nuxt
 node_modules
+dist
 # Created by .ignore support plugin (hsz.mobi)
 ### Node template
 # Logs
@@ -71,7 +72,7 @@ typings/
 .nuxt
 
 # Nuxt generate
-dist
+#dist
 
 # vuepress build output
 .vuepress/dist

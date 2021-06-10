@@ -1,25 +1,33 @@
 <template>
   <div class="wrapper__nav_overlay">
-    <img
-      src="@/assets/logo/logo_full_white.svg"
-      alt="logo with name of company"
-      class="logo"
-    />
-    <div class="links">
-      <NuxtLink to="/"> Hem </NuxtLink>
-      <NuxtLink to="/om"> Om oss </NuxtLink>
-      <NuxtLink to="/laddbox"> Laddbox </NuxtLink>
-      <NuxtLink to="/foretag-brf"> Företag/BRF </NuxtLink>
-      <NuxtLink to="/kontakt"> Kontakt </NuxtLink>
+    <div class="image-container">
+      <NuxtLink to="/">
+        <img src="@/assets/logo/logo_full_white.svg" alt="logga" class="logo"
+      /></NuxtLink>
     </div>
-    <NuxtLink to="/installation">
+    <div class="links">
+      <NuxtLink to="/" @click.native="showOverlay"> Hem </NuxtLink>
+      <NuxtLink to="/om" @click.native="showOverlay"> Om oss </NuxtLink>
+      <NuxtLink to="/laddbox" @click.native="showOverlay"> Laddbox </NuxtLink>
+      <NuxtLink to="/foretag-brf" @click.native="showOverlay">
+        Företag/BRF
+      </NuxtLink>
+      <NuxtLink to="/kontakt" @click.native="showOverlay"> Kontakt </NuxtLink>
+    </div>
+    <NuxtLink to="/bestall" @click.native="showOverlay">
       <ButtonGhost btn_text="Beställ laddbox" class="ghost" />
     </NuxtLink>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  methods: {
+    showOverlay() {
+      this.$emit('showOverlay')
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
@@ -31,23 +39,32 @@ export default {}
   align-items: center;
   justify-content: center;
   font-family: $headline;
-
   width: 100%;
 
-  img {
-    width: 50%;
+  .image-container {
+    width: 60%;
+    img {
+      width: 100%;
+      height: auto;
+      shape-rendering: crispEdges;
+    }
   }
 
   .links {
     display: flex;
     flex-direction: column;
     text-align: center;
+    padding: 6rem;
 
     a {
-      padding: 2rem;
+      padding: 2.5rem;
       color: $white;
-      font-size: 1.5rem;
+      font-size: 2rem;
     }
+  }
+  .ghost {
+    font-size: 2rem;
+    padding: 1.5rem 4rem;
   }
 }
 </style>

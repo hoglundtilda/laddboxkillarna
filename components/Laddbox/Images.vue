@@ -3,83 +3,124 @@
     <section class="box">
       <div class="images">
         <div class="small_img">
-          <img :src="require(`~/assets/images/${colors.white.white1}`)" />
-          <img :src="require(`~/assets/images/${colors.white.white2}`)" />
-          <img :src="require(`~/assets/images/${colors.white.white3}`)" />
+          <img
+            :src="require(`~/assets/images/${color.smallImage1}`)"
+            @click="changeBigImage(color.smallImage1)"
+            alt="image of Zaptec Go from the front"
+          />
+          <img
+            :src="require(`~/assets/images/${color.smallImage2}`)"
+            @click="changeBigImage(color.smallImage2)"
+            alt="image of Zaptec Go from the side"
+          />
+          <img
+            :src="require(`~/assets/images/${color.smallImage3}`)"
+            @click="changeBigImage(color.smallImage3)"
+            alt="image of Zaptec Go in profile"
+          />
         </div>
         <div class="big_img">
-          <img :src="require(`~/assets/images/${colors.white.white1}`)" />
+          <img
+            :src="require(`~/assets/images/${color.bigImage}`)"
+            alt="Big image of Zaptec Go"
+          />
         </div>
       </div>
-      <div>
-        <span>Välj färg:</span>
-        <SharedColorPicker />
+      <div class="colorPicker">
+        <span>{{ color.name }}</span>
+        <SharedColorPicker @selectColor="selectColor" />
       </div>
-      <LaddboxButtons />
+      <LaddboxButtons produktblad="Zaptec_Go.pdf" />
     </section>
   </div>
 </template>
 
 <script>
+import Products from '@/assets/productJSON/products.json'
 export default {
   data() {
     return {
-      image: '',
-
-      colors: {
-        white: {
-          white1: 'zaptec_products/zaptec_white_1.png',
-          white2: 'zaptec_products/zaptec_white_2.png',
-          white3: 'zaptec_products/zaptec_white_3.png',
-        },
-        grey: {
-          grey1: 'zaptec_products/zaptec_grey_1.png',
-          grey2: 'zaptec_products/zaptec_grey_2.png',
-          grey3: 'zaptec_products/zaptec_grey_3.png',
-        },
-        green: {
-          green1: 'zaptec_products/zaptec_green_1.png',
-          green2: 'zaptec_products/zaptec_green_2.png',
-          green3: 'zaptec_products/zaptec_green_3.png',
-        },
-        blue: {
-          blue1: 'zaptec_products/zaptec_blue_1.png',
-          blue2: 'zaptec_products/zaptec_blue_2.png',
-          blue3: 'zaptec_products/zaptec_blue_3.png',
-        },
-        brown: {
-          brown1: 'zaptec_products/zaptec_brown_1.png',
-          brown2: 'zaptec_products/zaptec_brown_2.png',
-          brown3: 'zaptec_products/zaptec_brown_3.png',
-        },
-        black: {
-          black1: 'zaptec_products/zaptec_black_1.png',
-          black2: 'zaptec_products/zaptec_black_2.png',
-          black3: 'zaptec_products/zaptec_black_3.png',
-        },
+      color: {
+        smallImage1: 'zaptec_products/zaptec_white_1.png',
+        smallImage2: 'zaptec_products/zaptec_white_2.png',
+        smallImage3: 'zaptec_products/zaptec_white_3.png',
+        bigImage: 'zaptec_products/zaptec_white_1.png',
+        name: 'Cloud White',
       },
+
+      products: Products,
     }
+  },
+  methods: {
+    selectColor(color) {
+      console.log(color)
+      const index = this.products.colors.findIndex(function (element) {
+        return element.id === color.id
+      })
+      console.log(index)
+      this.color = this.products.colors[index]
+    },
+    changeBigImage(smallImage) {
+      this.color.bigImage = smallImage
+    },
   },
 }
 </script>
 
-<style lang="scss" scoped>
-.box {
-  .images {
-    display: flex;
-  }
-  .small_img {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 25%;
-    img {
-      margin: 2rem;
+<style lang="scss">
+.wrapper__images {
+  .box {
+    .images {
+      display: flex;
+      justify-content: center;
+    }
+    .small_img {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 25%;
+      cursor: pointer;
+      height: 100%;
+
+      img {
+        padding: 1rem;
+        transition: all 0.05s ease-in-out;
+        height: auto;
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+    .big_img {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .colorPicker {
+      width: 100%;
+      justify-self: center;
+      margin: 2.5rem 2rem;
+
+      span {
+        font-size: 1.25rem;
+        margin: 0.5rem;
+      }
     }
   }
-  .big_img {
-    img {
-      width: 100%;
+}
+@media only screen and (max-width: 1400px) {
+  .box {
+    .small_img {
+      img {
+        margin: 0.5rem;
+      }
+    }
+
+    .colorPicker {
+      justify-self: center;
+      margin: 1rem 1rem;
     }
   }
 }

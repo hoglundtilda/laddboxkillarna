@@ -1,35 +1,31 @@
 <template>
   <div id="steps__section">
-    <h3>Så här går det till</h3>
+    <h2>Så här går det till</h2>
     <section class="steps">
       <article class="step1">
-        <img src="@/assets/images/steps/step1.png" alt="" />
-        <p>Fyll i kontaktformuläret</p>
+        <img src="@/assets/images/steps/step1.png" alt="Form icon " />
+        <p class="text__secondary">Fyll i kontaktformuläret</p>
       </article>
       <article class="step2">
-        <img src="@/assets/images/steps/step2.png" alt="" />
-        <p>
-          Vi kontaktar dig inom 24 h för att boka in tid för
-          installation/kundbesök
-        </p>
+        <img src="@/assets/images/steps/step2.png" alt="Phone icon" />
+        <p class="text__secondary">Vi kontaktar dig för att boka in tid</p>
       </article>
       <article class="step3">
-        <img src="@/assets/images/steps/step3.png" alt="" />
-        <p>Vi utför installationen</p>
+        <img src="@/assets/images/steps/step3.png" alt="Tool icon" />
+        <p class="text__secondary">Vi utför installationen</p>
       </article>
       <article class="step4">
-        <img src="@/assets/images/steps/step4.png" alt="" />
-        <p>
-          Vi skickar faktura och ansöker om avdraget grön teknik för din/er
-          räkning
+        <img src="@/assets/images/steps/step4.png" alt="Document icon" />
+        <p class="text__secondary">
+          Vi skickar faktura efter avdraget Grön Teknik
         </p>
       </article>
       <article class="step5">
-        <img src="@/assets/images/steps/step5.png" alt="" />
-        <p>Du kan nu ladda din bil säkert & snabbt!</p>
+        <img src="@/assets/images/steps/step5.png" alt="Charging icon" />
+        <p class="text__secondary">Du kan nu ladda din bil säkert & snabbt!</p>
       </article>
     </section>
-    <h4>Snabbt, smidigt och enkelt!</h4>
+    <span class="">Snabbt, smidigt och enkelt!</span>
   </div>
 </template>
 
@@ -39,22 +35,39 @@ export default {}
 
 <style lang="scss" scoped>
 #steps__section {
-  font-family: $headline;
   color: $white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10%;
+  justify-content: center;
+  padding: 10% 15%;
 
   .steps {
-    display: grid;
-    grid-template-areas: 'step1 step2 step3 step4 step5';
-    grid-template-columns: repeat(5, 1fr);
+    display: flex;
+    justify-content: space-evenly;
+    padding: 8rem 0;
 
-    justify-items: center;
-    text-align: center;
-    padding: 6rem 4rem;
-    grid-gap: 1rem;
+    width: 100%;
+
+    article {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 1rem;
+      min-width: 12rem;
+
+      img {
+        width: 7rem;
+        height: 7rem;
+      }
+
+      p {
+        padding-top: 1rem;
+        letter-spacing: 1px;
+        max-width: 10rem;
+      }
+    }
   }
   .step1 {
     grid-area: step1;
@@ -71,41 +84,58 @@ export default {}
   .step5 {
     grid-area: step5;
   }
+
+  span {
+    font-size: 2rem;
+  }
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
   #steps__section {
     .steps {
-      padding: 6rem 1rem;
+      flex-direction: column;
+      width: 60%;
+      padding: 4rem 0;
+      text-align: left;
+
+      article {
+        flex-direction: row;
+        justify-content: space-between;
+
+        padding: 1rem 0;
+        text-align: left;
+
+        p {
+          padding: 0 2.5rem;
+          min-width: 18rem;
+        }
+      }
     }
   }
 }
 @media only screen and (max-width: 850px) {
   #steps__section {
     .steps {
-      grid-template-areas:
-        'step1'
-        'step2'
-        'step3'
-        'step4'
-        'step5';
+      article {
+        width: 100%;
 
-      grid-template-columns: 1fr;
-      justify-items: flex-start;
-      text-align: left;
-      grid-gap: 3rem;
-      padding: 2rem 0rem;
+        p {
+          width: 100%;
+        }
+      }
     }
   }
-  .step1,
-  .step2,
-  .step3,
-  .step4,
-  .step5 {
-    img {
-      padding-right: 1rem;
+}
+@media only screen and (max-width: 550px) {
+  #steps__section {
+    .steps {
+      article {
+        width: 100%;
+        justify-content: center;
+
+        p {
+        }
+      }
     }
-    display: flex;
-    align-items: center;
   }
 }
 </style>

@@ -26,7 +26,6 @@
         Namn, adress, telefonnummer och epostadress lagras för att kunna skapa
         kontakt med dig för att möjliggöra en installation.
       </p>
-      <span>Bankuppgifter sparas för att bla bla </span>
       <p>
         Vi lagrar dina uppgifter under sju år med hänvisning till
         bokföringslagen
@@ -57,7 +56,20 @@
 </template>
 
 <script>
-export default {}
+export default {
+   head: {
+    title: 'Policys',
+    slug: 'https://www.laddboxkillarna.se/policys',
+    meta: [
+      {
+        hid: 'policys',
+        name: 'policys',
+        content:
+          'Hur behandlar vi dina personuppgifter? Laddboxkillarnas integritetspolicy',
+      },
+    ],
+  },
+}
 </script>
 
 <style lang="scss" scoped>
@@ -70,10 +82,6 @@ export default {}
     font-weight: 300;
   }
 
-  div > span {
-    color: red;
-  }
-
   .text__div {
     margin: 1.5rem 0;
 
@@ -84,6 +92,11 @@ export default {}
   .big {
     font-weight: 700;
     font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .wrapper__policys {
+    padding: 20% 10%;
   }
 }
 </style>
