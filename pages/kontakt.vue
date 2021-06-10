@@ -111,15 +111,15 @@ import { mapState, mapActions } from 'vuex'
 import { validateContactEmail } from '@/modules/validation'
 
 export default {
-    head: {
-    title: 'Kontakt',
+  head: {
+    title: 'Kontakt | Laddboxkillarna AB',
     slug: 'https://www.laddboxkillarna.se/kontakt',
     meta: [
       {
         hid: 'kontakt',
         name: 'kontakt',
         content:
-          'Kontakta oss - återkoppling inom 24 timmar',
+          'Frågor om laddbox och installationer? Kontakta oss - vi garanterar återkoppling inom 24h',
       },
     ],
   },

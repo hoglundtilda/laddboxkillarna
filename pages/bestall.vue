@@ -217,14 +217,13 @@ import { validateOrder } from '@/modules/validation'
 
 export default {
   head: {
-    title: 'Beställ laddbox',
+    title: 'Beställ laddbox & installation till fast pris | Laddboxkillarna AB',
     slug: 'https://www.laddboxkillarna.se/bestall',
     meta: [
       {
         hid: 'bestall',
         name: 'bestall',
-        content:
-          'Läs mer om installation och lägg din beställning här',
+        content: '',
       },
     ],
   },

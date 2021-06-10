@@ -9,14 +9,15 @@
 </template>
 <script>
 export default {
-    head: {
-    title: 'Laddbox och installation',
+  head: {
+    title: 'Laddbox & installation till fast pris | Laddboxkillarna AB',
     slug: 'https://www.laddboxkillarna.se',
     meta: [
       {
-        hid: 'Hem',
-        name: 'Hem',
-        content: 'Vi har lång erfarenhet av laddbox installationer och erbjuder allt i ett till fast pris',
+        hid: 'hem',
+        name: 'hem',
+        content:
+          'Helhetslösning för dig som behöver laddbox - Laddbox och installation till fast pris med avdraget Grön Teknik',
       },
     ],
   },
