@@ -21,17 +21,14 @@ export default {
   },
 }
 </script>
-<style lang="scss">
-* {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+<style lang="scss">¨
+
+
 
 html {
   scroll-behavior: smooth;
+    font-size: 16px;
+
 }
 
 @media (max-width: 900px) {
@@ -73,5 +70,151 @@ select:-webkit-autofill:focus {
 input::placeholder, textarea::placeholder {
   @include placeholder;
 }
+
+
+input::placeholder, textarea::placeholder {
+  font-size: 1.3rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: 14px;
+  }
+
+  input::placeholder, textarea::placeholder {
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  html {
+    font-size: 12px;
+  }
+
+
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 10px;
+    .text__standard {
+      font-size: 1.7rem;
+    }
+    .text__secondary {
+      font-size: 1.5rem;
+    }
+  }
+
+  
+  input::placeholder, textarea::placeholder {
+    font-size: 1.5rem;
+  }
+}
+
+// font elements
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $headline;
+}
+
+h1 {
+  font-size: 4.2rem;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.text__standard {
+  font-size: 1.5rem;
+  line-height: 140%;
+  font-weight: 300;
+  font-family: $text;
+}
+
+.text__secondary {
+  font-size: 1.125rem;
+  line-height: 140%;
+  font-weight: 300;
+  font-family: $text;
+}
+
+// transitions
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s;
+}
+
+.fade-enter,
+.fade-leave-to
+/* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+.slide-fade-enter-active {
+  transition: all 0.1s ease;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.welcome-enter {
+  opacity: 0;
+}
+
+.welcome-enter-active {
+  transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.welcome-leave-active,
+.welcome-leave-to {
+  opacity: 0;
+}
+
+.slide-fade-enter,
+.slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(1000px);
+  opacity: 0;
+}
+
+.bounce-enter-active {
+  animation: bounce-in 0.5s;
+}
+
+.bounce-leave-active {
+  animation: bounce-in 0.5s reverse;
+}
+
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 
 </style>

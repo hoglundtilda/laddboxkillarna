@@ -19,6 +19,7 @@
             alt="image of Zaptec Go in profile"
           />
         </div>
+
         <div class="big_img">
           <img
             :src="require(`~/assets/images/${color.bigImage}`)"
@@ -74,27 +75,31 @@ export default {
       display: flex;
       justify-content: center;
     }
+
     .small_img {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      width: 25%;
-      cursor: pointer;
+      align-items: flex-start;
       height: 100%;
-
+      width: 500px;
       img {
         padding: 1rem;
         transition: all 0.05s ease-in-out;
         height: auto;
+        width: 100%;
         &:hover {
           transform: scale(1.05);
         }
       }
     }
+
     .big_img {
+      display: flex;
+      align-items: flex-start;
       img {
-        width: 100%;
         height: auto;
+        width: 100%;
       }
     }
 
@@ -113,8 +118,12 @@ export default {
 @media only screen and (max-width: 1400px) {
   .box {
     .small_img {
-      img {
-        margin: 0.5rem;
+      .img__container {
+        width: 70px;
+        height: auto;
+        img {
+          margin: 0.5rem;
+        }
       }
     }
 

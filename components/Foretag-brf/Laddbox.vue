@@ -40,10 +40,12 @@
           </div>
         </section>
         <section class="laddboxImg">
+          <div class="img__container">
           <img
             src="@/assets/images/pro/Zaptec_Pro.png"
             alt="Image of a Zaptec Pro charger"
           />
+          </div>
         </section>
         <section class="right">
           <div class="checkmark">
@@ -134,10 +136,16 @@ export default {}
   }
 
   .laddboxImg {
-    img {
-      padding: 2rem;
-      height: auto;
-    }
+
+    .img__container {
+        display: flex;
+        align-items: flex-start;
+        img {
+          padding: 2rem;
+          height: auto;
+          width: 100%;
+        }
+      }
   }
 
   .right {
