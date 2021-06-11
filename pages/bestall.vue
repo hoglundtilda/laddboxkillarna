@@ -122,6 +122,7 @@
               required
             />
             <input
+              required="true"
               v-model="order.phoneNr"
               type="number"
               autocomplete="tel-national"
@@ -129,7 +130,6 @@
               class="user_input"
               pattern="(\+\d{2})?((\(0\)\d{2,3})|\d{2,3})?\d+"
               title="Fyll i ett giltigt telefonnummer"
-              required
             />
             <textarea
               v-model="order.information"
@@ -197,11 +197,9 @@
               beställning</span
             >
             <SharedStatusMessage :statusMessage="statusMessage" />
+          <button type="submit" class="primary submit__black" @submit.prevent="validateInputs">Skicka beställning</button>
 
-            <ButtonSubmit
-              btn_text="Skicka beställning"
-              @btn_click="validateInputs"
-            />
+
           </form>
         </section>
       </section>
@@ -223,8 +221,7 @@ export default {
       {
         hid: 'bestall',
         name: 'bestall',
-        content:
-          'Läs mer om installation och lägg din beställning här',
+        content: 'Läs mer om installation och lägg din beställning här',
       },
     ],
   },
@@ -278,17 +275,17 @@ export default {
     showExtra() {
       this.extra = !this.extra
     },
-    // async validateInputs() {
-    //   const validation = await validateOrder(this.order)
-    //   const isValid = Object.values(validation).every((item) => item === true)
+    async validateInputs() {
+      const validation = await validateOrder(this.order)
+      const isValid = Object.values(validation).every((item) => item === true)
 
-    //   this.colorErrorMsg = validation.color ? false : true
-    //   this.agreementErrorMsg = this.order.agreement ? false : true
+      this.colorErrorMsg = validation.color ? false : true
+      this.agreementErrorMsg = this.order.agreement ? false : true
 
-    //   if (isValid === true) {
-    //     this.sendOrder(this.order)
-    //   }
-    // },
+      if (isValid === true) {
+        this.sendOrder(this.order)
+      }
+    },
     sendOrder(order) {
       this.orderEmail(order)
     },
@@ -303,6 +300,29 @@ export default {
 </script>
 
 <style lang="scss">
+
+.submit__black {
+  @include btn;
+  background-color: $black;
+  color: $white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border: none;
+  box-shadow: $shadow_btn_black;
+  transition: all 0.3s ease-in-out;
+
+  &:active {
+    box-shadow: $shadow_btn_black-hover;
+    transform: scale(1.03);
+  }
+
+  &:hover {
+    color: $black;
+    background: none;
+  }
+}
+
 .wrapper__installation {
   min-height: 100vh;
   font-family: $headline;
