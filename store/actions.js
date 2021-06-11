@@ -13,6 +13,7 @@ export default {
   },
 
   async orderEmail({ commit }, order) {
+    console.log(order)
     await this.$axios
       .post(`${this.$axios.defaults.baseURL}/email/order`, order)
       .then((response) => {

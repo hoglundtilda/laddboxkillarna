@@ -43,7 +43,7 @@
             </article>
           </section>
         </section>
-        <form autocomplete="on" class="contact">
+        <form  autocomplete="on" class="contact">
           <div class="names">
             <input
               v-model="email.firstName"
@@ -94,11 +94,8 @@
             autocomplete="off"
             required
           ></textarea>
-          <ButtonSubmit
-            btn_text="Skicka meddelande"
-            class="primary"
-            @btn_click="sendEmail"
-          />
+
+          <button type="submit" class="primary submit__black" @submit.prevent="sendEmail">Skicka meddelande</button>
           <SharedStatusMessage :statusMessage="statusMessage" />
         </form>
       </div>
@@ -152,6 +149,28 @@ export default {
 </script>
 
 <style lang="scss">
+
+.submit__black {
+  @include btn;
+  background-color: $black;
+  color: $white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border: none;
+  box-shadow: $shadow_btn_black;
+  transition: all 0.3s ease-in-out;
+
+  &:active {
+    box-shadow: $shadow_btn_black-hover;
+    transform: scale(1.03);
+  }
+
+  &:hover {
+    color: $black;
+    background: none;
+  }
+}
 .wrapper__kontakt {
   padding: 10% 0;
   min-height: 100vh;
