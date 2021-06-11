@@ -278,17 +278,17 @@ export default {
     showExtra() {
       this.extra = !this.extra
     },
-    async validateInputs() {
-      const validation = await validateOrder(this.order)
-      const isValid = Object.values(validation).every((item) => item === true)
+    // async validateInputs() {
+    //   const validation = await validateOrder(this.order)
+    //   const isValid = Object.values(validation).every((item) => item === true)
 
-      this.colorErrorMsg = validation.color ? false : true
-      this.agreementErrorMsg = this.order.agreement ? false : true
+    //   this.colorErrorMsg = validation.color ? false : true
+    //   this.agreementErrorMsg = this.order.agreement ? false : true
 
-      if (isValid === true) {
-        this.sendOrder(this.order)
-      }
-    },
+    //   if (isValid === true) {
+    //     this.sendOrder(this.order)
+    //   }
+    // },
     sendOrder(order) {
       this.orderEmail(order)
     },

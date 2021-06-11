@@ -51,7 +51,7 @@ input[type='number'] {
 
 input:-webkit-autofill
 {
- -webkit-text-fill-color: none!important;
+ -webkit-text-fill-color: none !important;
 }
 
 
