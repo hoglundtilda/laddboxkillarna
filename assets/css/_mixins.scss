@@ -18,11 +18,11 @@
   border: 1px solid $black;
   font-family: $text;
   font-weight: 300;
-  font-size: 1.5rem;
 }
 
 @mixin placeholder {
   font-family: $text;
   color: $black;
   opacity: 0.6;
+  font-size: 1.25rem;
 }

@@ -49,6 +49,11 @@ input[type='number'] {
   -moz-appearance: textfield;
 }
 
+input:-webkit-autofill
+{
+ -webkit-text-fill-color: none !important;
+}
+
 
 
 input:-webkit-autofill,
@@ -73,7 +78,7 @@ input::placeholder, textarea::placeholder {
 
 
 input::placeholder, textarea::placeholder {
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 
 @media only screen and (max-width: 1200px) {

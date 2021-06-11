@@ -95,7 +95,7 @@
             required
           ></textarea>
           <ButtonSubmit
-            btn_text="Beställ laddbox"
+            btn_text="Skicka meddelande"
             class="primary"
             @btn_click="sendEmail"
           />
@@ -111,15 +111,14 @@ import { mapState, mapActions } from 'vuex'
 import { validateContactEmail } from '@/modules/validation'
 
 export default {
-    head: {
+  head: {
     title: 'Kontakt',
     slug: 'https://www.laddboxkillarna.se/kontakt',
     meta: [
       {
         hid: 'kontakt',
         name: 'kontakt',
-        content:
-          'Kontakta oss - återkoppling inom 24 timmar',
+        content: 'Kontakta oss - återkoppling inom 24 timmar',
       },
     ],
   },
