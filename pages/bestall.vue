@@ -229,6 +229,7 @@ export default {
       },
     ],
   },
+  middleware: 'status_message',
   data() {
     return {
       products: products,
