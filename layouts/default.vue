@@ -10,15 +10,15 @@
 import { mapMutations } from 'vuex'
 
 export default {
-  // methods: {
-  //   ...mapMutations(['responseHandler']),
-  //   async refresh() {
-  //     await this.responseHandler('refresh')
-  //   },
-  // },
-  // beforeCreated() {
-  //   this.refresh()
-  // },
+  /*   methods: {
+    ...mapMutations(['responseHandler']),
+    async refresh() {
+      await this.responseHandler('refresh')
+    },
+  },
+  beforeCreated() {
+    this.refresh()
+  }, */
 }
 </script>
 <style lang="scss">¨
@@ -110,7 +110,7 @@ input::placeholder, textarea::placeholder {
     }
   }
 
-  
+
   input::placeholder, textarea::placeholder {
     font-size: 1.5rem;
   }

@@ -197,9 +197,13 @@
               beställning</span
             >
             <SharedStatusMessage :statusMessage="statusMessage" />
-          <button type="submit" class="primary submit__black" @submit.prevent="validateInputs">Skicka beställning</button>
-
-
+            <button
+              type="submit"
+              class="primary submit__black"
+              @click.prevent="validateInputs"
+            >
+              Skicka beställning
+            </button>
           </form>
         </section>
       </section>
@@ -215,13 +219,13 @@ import { validateOrder } from '@/modules/validation'
 
 export default {
   head: {
-    title: 'Beställ laddbox',
+    title: 'Beställ laddbox & installation till fast pris | Laddboxkillarna AB',
     slug: 'https://www.laddboxkillarna.se/bestall',
     meta: [
       {
         hid: 'bestall',
         name: 'bestall',
-        content: 'Läs mer om installation och lägg din beställning här',
+        content: '',
       },
     ],
   },
@@ -300,7 +304,6 @@ export default {
 </script>
 
 <style lang="scss">
-
 .submit__black {
   @include btn;
   background-color: $black;
