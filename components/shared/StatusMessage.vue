@@ -2,7 +2,8 @@
   <div class="status__message__wrapper">
     <span
       v-if="statusMessage.message"
-      :class="[statusMessage.success ? 'success' : '', 'message']"
+      class="message"
+      :class="{ success_false: !statusMessage.success }"
       >{{ statusMessage.message }}</span
     >
   </div>
@@ -18,14 +19,14 @@ export default {
 .status__message__wrapper {
   margin: 1rem 0;
   .message {
-    color: $red;
+    color: $black;
     font-family: $text;
     font-size: 1rem;
     display: flex;
   }
 
-  .success {
-    color: $black;
+  .success_false {
+    color: $red;
   }
 }
 </style>

@@ -12,7 +12,7 @@
 <script>
 export default {
   head: {
-    title: 'Laddlösning för företag och brf | Laddboxkillarna AB',
+    title: 'Laddlösning för företag och brf | Laddboxkillarna AB Göteborg',
     slug: 'https://www.laddboxkillarna.se/foretag-brf',
     meta: [
       {

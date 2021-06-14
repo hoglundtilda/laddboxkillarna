@@ -251,7 +251,7 @@
 <script>
 export default {
   head: {
-    title: 'Villkor för dig som beställer laddbox | Laddboxkillarna AB',
+    title: 'Villkor vid beställning av laddbox | Laddboxkillarna AB',
     slug: 'https://www.laddboxkillarna.se/villkor',
     meta: [
       {

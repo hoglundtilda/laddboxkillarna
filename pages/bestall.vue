@@ -225,7 +225,8 @@ export default {
       {
         hid: 'bestall',
         name: 'bestall',
-        content: '',
+        content:
+          'Vi erbjuder laddbox och installation till fast pris och såklart med avdraget Grön Teknik!',
       },
     ],
   },

@@ -10,7 +10,8 @@
 <script>
 export default {
   head: {
-    title: 'Laddbox & installation till fast pris | Laddboxkillarna AB',
+    title:
+      'Laddbox & installation till fast pris | Laddboxkillarna AB Göteborg',
     slug: 'https://www.laddboxkillarna.se',
     meta: [
       {

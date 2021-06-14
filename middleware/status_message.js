@@ -1,3 +1,3 @@
 export default function ({ store }) {
-  store.state.message = {}
+  store.commit('refreshStatusMessage')
 }
