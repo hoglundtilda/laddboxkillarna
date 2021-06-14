@@ -1,7 +1,11 @@
 <template>
-  <span v-if="statusMessage.message" :class="[statusMessage.success ? 'success' : '', 'message']">{{
-    statusMessage.message
-  }}</span>
+  <div class="status__message__wrapper">
+    <span
+      v-if="statusMessage.message"
+      :class="[statusMessage.success ? 'success' : '', 'message']"
+      >{{ statusMessage.message }}</span
+    >
+  </div>
 </template>
 
 <script>
@@ -11,14 +15,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.message {
-  color: $red;
-  font-family: $text;
-  font-size: 1rem;
-  margin: 1.25rem 0.5rem;
-}
+.status__message__wrapper {
+  margin: 1rem 0;
+  .message {
+    color: $red;
+    font-family: $text;
+    font-size: 1rem;
+    display: flex;
+  }
 
-.success {
-  color: $black;
+  .success {
+    color: $black;
+  }
 }
 </style>

@@ -20,6 +20,7 @@
       <div class="div__video">
         <video
           autoplay
+          playsInline
           loop
           muted
           preload="metadata"

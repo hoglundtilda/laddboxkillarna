@@ -4,8 +4,6 @@
     "sources": [
         "main.scss",
         "_variables.scss",
-        "_base.scss",
-        "_fonts.scss",
         "_mixins"
     ],
     "names": [],

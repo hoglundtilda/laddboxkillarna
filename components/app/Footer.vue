@@ -8,9 +8,9 @@
       />
     </div>
     <div class="socials">
-      <img src="@/assets/logo/linkedIn.svg" alt="linkedIn" /> <a href=""></a>
-      <img src="@/assets/logo/instagram.svg" alt="instagram" />
-      <img src="@/assets/logo/facebook.svg" alt="facebook" />
+      <!-- <a href=""><img src="@/assets/logo/linkedIn.svg" alt="linkedIn" /> </a> -->
+     <a href="https://instagram.com/laddboxkillarna?utm_medium=copy_link" target="_blank"> <img src="@/assets/logo/instagram.svg" alt="instagram" /></a>
+      <a href="https://www.facebook.com/Laddboxkillarna-101947058713590/" target="_blank" ><img src="@/assets/logo/facebook.svg" alt="facebook" /></a>
     </div>
     <div class="footer_text text__secondary">
       <p>&#169;Laddboxkillarna AB</p>

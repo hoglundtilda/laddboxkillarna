@@ -16,7 +16,6 @@ export default {
   components: true,
   ssr: false,
   target: 'static',
-  
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
@@ -25,7 +24,7 @@ export default {
     baseURL:
       process.env.NODE_ENV === 'production'
         ? 'https://www.laddboxkillarna.se/api'
-        : 'http://localhost:8000',
+        : 'http://localhost:5050',
   },
 
   env: {
@@ -34,7 +33,7 @@ export default {
 
   build: {},
 
-  buildModules: ['@nuxtjs/google-fonts'],
+  buildModules: ['@nuxtjs/google-fonts', '@nuxtjs/style-resources'],
 
   modules: [
     '@nuxtjs/axios',
