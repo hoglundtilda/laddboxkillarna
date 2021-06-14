@@ -43,7 +43,7 @@
             </article>
           </section>
         </section>
-        <form  autocomplete="on" class="contact">
+        <form autocomplete="on" class="contact">
           <div class="names">
             <input
               v-model="email.firstName"
@@ -95,7 +95,13 @@
             required
           ></textarea>
 
-          <button type="submit" class="primary submit__black" @submit.prevent="sendEmail">Skicka meddelande</button>
+          <button
+            type="submit"
+            class="primary submit__black"
+            @click.prevent="sendEmail"
+          >
+            Skicka meddelande
+          </button>
           <SharedStatusMessage :statusMessage="statusMessage" />
         </form>
       </div>
@@ -141,6 +147,7 @@ export default {
 
     async sendEmail() {
       const isValid = await validateContactEmail(this.email)
+      console.log(isValid)
       if (isValid === true) {
         this.contactEmail(this.email)
       }
@@ -150,7 +157,6 @@ export default {
 </script>
 
 <style lang="scss">
-
 .submit__black {
   @include btn;
   background-color: $black;
