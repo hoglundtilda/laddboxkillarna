@@ -1,3 +1,5 @@
 export default function ({ store }) {
-  store.state.message = {}
+  console.log(store.state.statusMessage)
+
+  store.state.statusMessage = {}
 }
