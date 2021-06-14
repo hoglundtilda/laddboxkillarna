@@ -7,28 +7,14 @@
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
-
-export default {
-  /*   methods: {
-    ...mapMutations(['responseHandler']),
-    async refresh() {
-      await this.responseHandler('refresh')
-    },
-  },
-  beforeCreated() {
-    this.refresh()
-  }, */
-}
+export default {}
 </script>
-<style lang="scss">¨
 
 
-
-html {
+<style lang="scss">
+¨ html {
   scroll-behavior: smooth;
-    font-size: 16px;
-
+  font-size: 16px;
 }
 
 @media (max-width: 900px) {
@@ -49,12 +35,9 @@ input[type='number'] {
   -moz-appearance: textfield;
 }
 
-input:-webkit-autofill
-{
- -webkit-text-fill-color: none !important;
+input:-webkit-autofill {
+  -webkit-text-fill-color: none !important;
 }
-
-
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
@@ -72,12 +55,13 @@ select:-webkit-autofill:focus {
   transition: background-color 5000s ease-in-out 0s;
 }
 
-input::placeholder, textarea::placeholder {
+input::placeholder,
+textarea::placeholder {
   @include placeholder;
 }
 
-
-input::placeholder, textarea::placeholder {
+input::placeholder,
+textarea::placeholder {
   font-size: 1rem;
 }
 
@@ -86,7 +70,8 @@ input::placeholder, textarea::placeholder {
     font-size: 14px;
   }
 
-  input::placeholder, textarea::placeholder {
+  input::placeholder,
+  textarea::placeholder {
     font-size: 1.3rem;
   }
 }
@@ -95,8 +80,6 @@ input::placeholder, textarea::placeholder {
   html {
     font-size: 12px;
   }
-
-
 }
 
 @media only screen and (max-width: 600px) {
@@ -110,8 +93,8 @@ input::placeholder, textarea::placeholder {
     }
   }
 
-
-  input::placeholder, textarea::placeholder {
+  input::placeholder,
+  textarea::placeholder {
     font-size: 1.5rem;
   }
 }
@@ -220,6 +203,4 @@ h4 {
     transform: scale(1);
   }
 }
-
-
 </style>

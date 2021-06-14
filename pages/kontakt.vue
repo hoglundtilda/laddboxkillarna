@@ -126,6 +126,7 @@ export default {
       },
     ],
   },
+  middleware: 'status_message',
   data() {
     return {
       email: {
