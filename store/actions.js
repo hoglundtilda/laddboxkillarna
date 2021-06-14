@@ -8,6 +8,7 @@ export default {
       })
       .catch((error) => {
         if (error) {
+          console.log(error)
           commit('responseHandler', error.response.data.error)
         }
       })
@@ -18,9 +19,11 @@ export default {
     await this.$axios
       .post(`${this.$axios.defaults.baseURL}/email/order`, order)
       .then((response) => {
+        console.log(response)
         commit('responseHandler', response.data)
       })
       .catch((error) => {
+        console.log(error)
         commit('responseHandler', error.response.data.error)
       })
   },
