@@ -295,12 +295,6 @@ export default {
     sendOrder(order) {
       this.orderEmail(order)
     },
-    async refresh() {
-      await this.responseHandler('refresh')
-    },
-  },
-  beforeMount() {
-    this.refresh()
   },
 }
 </script>
