@@ -1,11 +1,5 @@
 export default {
   responseHandler(state, response) {
-    console.log(response)
-
-    if(response === 'refresh') {
-      state.statusMessage = {}
-    }
-
     if (response.status !== 200)
       state.statusMessage = {
         success: false,
@@ -21,7 +15,7 @@ export default {
       }
   },
 
-  validationMessage(state, response) {
-    
-  }
+  refreshStatusMessage(state) {
+    state.statusMessage = {}
+  },
 }

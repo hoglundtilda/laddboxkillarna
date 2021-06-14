@@ -39,14 +39,14 @@
 <script>
 export default {
   head: {
-    title: 'Om Laddboxkillarna AB',
+    title: 'Om Laddboxkillarna | Laddboxkillarna Göteborg',
     slug: 'https://www.laddboxkillarna.se/om',
     meta: [
       {
         hid: 'om',
         name: 'om',
         content:
-          'Certifierade och behöriga elektriker med flera års samlad erfarenhet inom elbilsladdning',
+          'Certifierade elektriker med många års samlad erfarenhet av laddboxar och installationer erbjuder helhetlösningar för privatpersoner och företag',
       },
     ],
   },
@@ -93,10 +93,7 @@ export default {
     }
   }
 }
-@media only screen and (max-width: 1100px) {
-  .wrapper__om {
-  }
-}
+
 @media only screen and (max-width: 900px) {
   .wrapper__om {
     background-image: linear-gradient(
