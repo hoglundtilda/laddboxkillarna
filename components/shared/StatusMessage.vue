@@ -24,9 +24,5 @@ export default {
     font-size: 1rem;
     display: flex;
   }
-
-  .success_false {
-    color: $red;
-  }
 }
 </style>
