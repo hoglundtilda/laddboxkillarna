@@ -63,8 +63,7 @@
                 autocomplete="given-name"
                 placeholder="Förnamn"
                 class="user_input"
-                pattern="^[a-zA-ZåäöÅÄÖ]+$"
-                title="Vänligen fyll i ett giltigt namn"
+                title="Vänligen fyll i namn"
                 required
               />
 
@@ -74,8 +73,7 @@
                 autocomplete="family-name"
                 placeholder="Efternamn"
                 class="user_input"
-                pattern="^[a-zA-ZåäöÅÄÖ]+$"
-                title="Vänligen fyll i ett giltigt namn"
+                title="Vänligen fyll i efternamn"
                 required
               />
             </div>
@@ -121,8 +119,7 @@
               title="Fyll i en giltig epost"
               required
             />
-            <input
-              required="true"
+            <input  
               v-model="order.phoneNr"
               type="number"
               autocomplete="tel-national"
@@ -130,6 +127,7 @@
               class="user_input"
               pattern="(\+\d{2})?((\(0\)\d{2,3})|\d{2,3})?\d+"
               title="Fyll i ett giltigt telefonnummer"
+              required
             />
             <textarea
               v-model="order.information"
