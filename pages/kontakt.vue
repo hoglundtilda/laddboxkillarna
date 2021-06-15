@@ -50,8 +50,7 @@
               type="text"
               placeholder="Förnamn"
               autocomplete="given-name"
-              pattern="^[a-zA-ZåäöÅÄÖ]+$"
-              title="Vänligen fyll i ett giltigt namn"
+              title="Vänligen fyll i namn"
               required
             />
 
@@ -60,8 +59,7 @@
               type="text"
               placeholder="Efternamn"
               autocomplete="family-name"
-              pattern="^[a-zA-ZåäöÅÄÖ]+$"
-              title="Vänligen fyll i ett giltigt namn"
+              title="Vänligen fyll i efternamn"
               required
             />
           </div>

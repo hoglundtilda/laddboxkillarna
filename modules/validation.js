@@ -2,8 +2,6 @@ import * as pattern from './pattern'
 
 export const validateOrder = (order) => {
   const isValid = {
-    firstName: pattern.name.test(order.firstName),
-    lastName: pattern.name.test(order.lastName),
     street: pattern.isNotEmpty(order.street),
     postNr: pattern.postNr.test(order.postNr),
     state: pattern.isNotEmpty(order.state),
@@ -17,8 +15,6 @@ export const validateOrder = (order) => {
 
 export const validateContactEmail = (email) => {
   const isValid = {
-    firstName: pattern.name.test(email.firstName),
-    lastName: pattern.name.test(email.lastName),
     email: pattern.email.test(email.email),
     subject: pattern.isNotEmpty(email.subject),
     message: pattern.isNotEmpty(email.message)
