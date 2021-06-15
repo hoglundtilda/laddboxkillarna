@@ -122,7 +122,7 @@
               required
             />
             <input
-              required="true"
+              
               v-model="order.phoneNr"
               type="number"
               autocomplete="tel-national"
@@ -130,6 +130,7 @@
               class="user_input"
               pattern="(\+\d{2})?((\(0\)\d{2,3})|\d{2,3})?\d+"
               title="Fyll i ett giltigt telefonnummer"
+              required
             />
             <textarea
               v-model="order.information"
