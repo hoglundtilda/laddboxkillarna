@@ -49,8 +49,9 @@
       </p>
     </div>
     <p class="big">
-      Tveka inte att kontakta oss om du har några frågor om vår behandling av
-      dina personuppgifter.
+      Tveka inte att
+      <a href="https://www.laddboxkillarna.se/kontakt">kontakta oss</a> om du
+      har några frågor om vår behandling av dina personuppgifter.
     </p>
   </div>
 </template>
@@ -65,7 +66,7 @@ export default {
         hid: 'policys',
         name: 'policys',
         content:
-          'Hur behandlar vi dina personuppgifter? Laddboxkillarnas integritetspolicy',
+          'Hur behandlar vi dina personuppgifter? Laddboxkillarnas integritetspolicy. Vilka utav dina uppgifter samlar vi in och vem har tillgång till dem.',
       },
     ],
   },
@@ -92,6 +93,11 @@ export default {
   .big {
     font-weight: 700;
     font-size: 1.2rem;
+
+    a {
+      color: $black;
+      text-decoration: underline;
+    }
   }
 }
 @media only screen and (max-width: 950px) {

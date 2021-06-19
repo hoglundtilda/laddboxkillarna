@@ -22,6 +22,10 @@ export default {}
 @media (max-width: 600px) {
 }
 
+input[type='text'] {
+  padding: 1rem 1.5rem;
+}
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
