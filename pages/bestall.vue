@@ -160,7 +160,7 @@
                   v-model="order.consultation"
                   type="checkbox"
                   id="consulation"
-                /><span></span>
+                />
                 <label for="consulation" class="custom-checkbox"
                   >Jag behöver konsultation kring extra tillägg vid
                   beställning</label
@@ -171,24 +171,25 @@
                   v-model="order.charging_cable"
                   type="checkbox"
                   id="cable"
-                /><span></span>
+                />
                 <label for="cable" class="custom-checkbox"
                   >Jag vill beställa till en laddkabel
                 </label>
-                <fa
-                  :icon="fas.faQuestionCircle"
-                  class="question"
-                  @mouseover="cable = true"
-                  @mouseleave="cable = false"
-                />
-                <InstallationLaddkabel v-if="cable" />
+                <div
+                  class="div__question"
+                  @mouseenter="cable = true"
+                  @mouseout="cable = false"
+                >
+                  <img src="@/assets/logo/question_mark.svg" alt="" />
+                </div>
               </div>
+              <InstallationLaddkabel v-if="cable" />
               <div class="checkbox">
                 <input
                   v-model="order.agreement"
                   type="checkbox"
                   id="agreement"
-                /><span></span>
+                />
                 <label for="agreement" class="custom-checkbox"
                   >Jag har tagit del av
                 </label>
@@ -467,10 +468,14 @@ export default {
             color: $white;
           }
         }
+        .div__question {
+          background: white;
 
-        .question {
-          cursor: pointer;
-          margin-left: 0.5rem;
+          img {
+            cursor: pointer;
+            margin-left: 0.7rem;
+            width: 80%;
+          }
         }
       }
     }
@@ -508,10 +513,10 @@ export default {
 
 @media only screen and (max-width: 950px) {
   .wrapper__installation {
-    grid-template-areas:
-      'text'
-      'form';
-    grid-template-columns: 1fr;
+    .standard,
+    .need {
+      font-size: 1.3rem;
+    }
     .text {
       padding: 0rem 1rem;
     }
@@ -519,20 +524,29 @@ export default {
       padding: 3rem 1rem;
 
       .checkboxes {
+        font-size: 1.3rem;
+
         .checkbox {
           #consulation,
           #cable,
           #agreement {
+            min-width: 2rem;
+            min-height: 2rem;
             &:checked {
               background-color: $black;
             }
             &:checked:after {
-              top: -1px;
-              left: 1.5px;
+              top: 50%;
+              transform: translate(-50%, -50%);
+              left: 50%;
             }
           }
         }
       }
+    }
+    input,
+    span {
+      font-size: 1.5rem;
     }
   }
 }

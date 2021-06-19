@@ -10,7 +10,6 @@
 export default {}
 </script>
 
-
 <style lang="scss">
 ¨ html {
   scroll-behavior: smooth;
@@ -79,18 +78,18 @@ textarea::placeholder {
 @media only screen and (max-width: 900px) {
   html {
     font-size: 12px;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  html {
-    font-size: 10px;
     .text__standard {
       font-size: 1.7rem;
     }
     .text__secondary {
       font-size: 1.5rem;
     }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 10px;
   }
 
   input::placeholder,

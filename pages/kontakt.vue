@@ -206,6 +206,7 @@ export default {
     flex-direction: column;
     justify-content: center;
     height: 100%;
+    margin-top: 3rem;
 
     article {
       margin: 1rem 0;
@@ -279,16 +280,12 @@ export default {
 }
 @media only screen and (max-width: 700px) {
   .wrapper__kontakt {
+    input,
+    textarea {
+      font-size: 1.5rem;
+    }
     .contact__information {
       flex-direction: column;
-    }
-
-    .information {
-      article {
-        .mail {
-          font-size: 1.2rem;
-        }
-      }
     }
   }
 }
