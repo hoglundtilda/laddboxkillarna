@@ -33,7 +33,7 @@ export default {
   }
 
   .success {
-    color: $black;
+    color: $successColor;
     font-family: $text;
     font-size: 1.25rem;
     display: flex;
