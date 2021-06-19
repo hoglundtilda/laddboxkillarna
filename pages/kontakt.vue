@@ -5,9 +5,9 @@
       <div class="contact__information">
         <section class="information">
           <p class="text__standard">
-            Har du frågor eller vill bli samarbetspartner? <br />
+            Har du frågor eller vill bli samarbetspartner?
 
-            Vi snackar gärna med Er! <br />
+            Vi snackar gärna med Er!
             Skicka ett meddelande till oss så hör vi av oss inom 24h
           </p>
 
@@ -43,7 +43,7 @@
             </article>
           </section>
         </section>
-        <form @submit="sendEmail" autocomplete="on" class="contact">
+        <form @submit.prevent="sendEmail" autocomplete="on" class="contact">
           <div class="names">
             <input
               v-model="email.firstName"
@@ -52,6 +52,7 @@
               autocomplete="given-name"
               title="Vänligen fyll i namn"
               required
+              :class="validation.firstName ? '' : 'inputNotValid'"
             />
 
             <input
@@ -61,6 +62,7 @@
               autocomplete="family-name"
               title="Vänligen fyll i efternamn"
               required
+              :class="validation.lastName ? '' : 'inputNotValid'"
             />
           </div>
           <input
@@ -70,6 +72,7 @@
             autocomplete="email"
             title="Fyll i en giltig epost"
             required
+            :class="validation.email ? '' : 'inputNotValid'"
           />
           <input
             v-model="email.subject"
@@ -80,6 +83,7 @@
             min="2"
             title="Fyll i ämne"
             required
+            :class="validation.subject ? '' : 'inputNotValid'"
           />
           <textarea
             v-model="email.message"
@@ -90,16 +94,17 @@
             placeholder="Meddelande"
             autocomplete="off"
             required
+            :class="validation.message ? '' : 'inputNotValid'"
           ></textarea>
 
-          <button type="submit" class="primary submit__black">
-            Skicka meddelande
-          </button>
           <SharedStatusMessage
             v-if="formatErrorMsg"
             :statusMessage="formatMessage"
           />
           <SharedStatusMessage :statusMessage="statusMessage" />
+          <button type="submit" class="primary submit__black">
+            Skicka meddelande
+          </button>
         </form>
       </div>
     </div>
@@ -227,6 +232,7 @@ export default {
   .information {
     display: flex;
     flex-direction: column;
+    max-width: 600px;
   }
 
   .bosses {
@@ -263,6 +269,8 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 100%;
+    margin-left: 5rem;
 
     .text__standard {
       margin-bottom: 1rem;
@@ -287,10 +295,13 @@ export default {
       max-width: 3;
     }
   }
-  .primary {
-    margin-top: 2rem;
-  }
+
 }
+
+.inputNotValid {
+  border: 1px solid $red !important;
+}
+
 @media only screen and (max-width: 1350px) {
   .wrapper__kontakt {
     .container {
@@ -311,6 +322,10 @@ export default {
     input,
     textarea {
       font-size: 1.5rem;
+    }
+
+    .contact {
+      margin-left: unset;
     }
     .contact__information {
       flex-direction: column;
