@@ -67,7 +67,7 @@
         <p class="text__secondary">3. Håltagningar</p>
         <p class="text__secondary">4. Fästmaterial</p>
         <p class="text__secondary">
-          5. Jordfelsbrytare typ A tillhörande säkring/ Personskyddsautomat 16A
+          5. Jordfelsbrytare typ A, tillhörande säkring/ Personskyddsautomat 16A
         </p>
         <p class="text__secondary">6. Driftsättning av laddbox</p>
       </div>

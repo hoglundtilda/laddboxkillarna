@@ -84,4 +84,27 @@ form {
     background-color: $asphalt_black;
   }
 }
+@media only screen and (max-width: 700px) {
+  form {
+    .white,
+    .rock,
+    .moss,
+    .midnight,
+    .wood,
+    .black {
+      width: 3.5rem;
+      height: 3.5rem;
+
+      &:checked:hover {
+        transform: scale(1.2);
+      }
+      &:hover {
+        transform: scale(1.08);
+      }
+      &:checked {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
 </style>
