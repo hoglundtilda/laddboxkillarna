@@ -5,13 +5,26 @@
       <div class="contact__information">
         <section class="information">
           <p class="text__standard">
-            Har du frågor eller vill bli samarbetspartner?
-
-            Vi snackar gärna med Er!
-            Skicka ett meddelande till oss så hör vi av oss inom 24h
+            Har du frågor eller vill bli samarbetspartner? Vi snackar gärna med
+            Er! Skicka ett meddelande till oss så hör vi av oss inom 24h
           </p>
 
           <section class="bosses">
+            <article>
+              <!--0<img src="@/assets/images/boss1.png" alt="" />-->
+              <h2>Kontaktuppgifter</h2>
+              <a
+                href="https://www.google.com/maps/place/L%C3%A5ng%C3%A4ngen+9,+417+22+G%C3%B6teborg/@57.7219141,11.9438371,17z/data=!3m1!4b1!4m5!3m4!1s0x464ff54d1e128f07:0x725ddeba20a932ee!8m2!3d57.7219113!4d11.9460259"
+                ><p class="text__secondary">Långängen 9</p>
+                </a>
+                <p class="text__secondary">417 22 Göteborg</p>
+              <div>
+                <img src="@/assets/logo/phone.svg" alt="phone" />
+                <a href="tel:+4631250100">
+                  <p class="text__secondary">031 - 25 01 00</p></a
+                >
+              </div>
+            </article>
             <article>
               <!--0<img src="@/assets/images/boss1.png" alt="" />-->
               <h3>Alexander Pettersson</h3>
@@ -21,7 +34,7 @@
                 </p></a
               >
               <div>
-                <img src="@/assets/logo/phone.svg" alt="" />
+                <img src="@/assets/logo/phone.svg" alt="phone" />
                 <a href="tel:+46700490657">
                   <p class="text__secondary">070 049 06 57</p></a
                 >
@@ -35,7 +48,7 @@
                 ><p class="text__secondary mail">kevin@laddboxkillarna.se</p></a
               >
               <div>
-                <img src="@/assets/logo/phone.svg" alt="" />
+                <img src="@/assets/logo/phone.svg" alt="phone" />
                 <a href="tel:+46704716221">
                   <p class="text__secondary">070 471 62 21</p></a
                 >
@@ -295,7 +308,6 @@ export default {
       max-width: 3;
     }
   }
-
 }
 
 .inputNotValid {
