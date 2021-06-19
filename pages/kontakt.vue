@@ -43,7 +43,7 @@
             </article>
           </section>
         </section>
-        <form autocomplete="on" class="contact">
+        <form @submit="sendEmail" autocomplete="on" class="contact">
           <div class="names">
             <input
               v-model="email.firstName"
@@ -68,7 +68,6 @@
             type="email"
             placeholder="Epost"
             autocomplete="email"
-            pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
             title="Fyll i en giltig epost"
             required
           />
@@ -93,13 +92,13 @@
             required
           ></textarea>
 
-          <button
-            type="submit"
-            class="primary submit__black"
-            @click.prevent="sendEmail"
-          >
+          <button type="submit" class="primary submit__black">
             Skicka meddelande
           </button>
+          <SharedStatusMessage
+            v-if="formatErrorMsg"
+            :statusMessage="formatMessage"
+          />
           <SharedStatusMessage :statusMessage="statusMessage" />
         </form>
       </div>
@@ -134,6 +133,18 @@ export default {
         subject: '',
         message: '',
       },
+      validation: {
+        firstName: true,
+        lastName: true,
+        email: true,
+        subject: true,
+        message: true,
+      },
+      formatErrorMsg: false,
+      formatMessage: {
+        success: false,
+        message: 'Röda fält ej giltiga',
+      },
     }
   },
   computed: {
@@ -143,12 +154,29 @@ export default {
   },
   methods: {
     ...mapActions(['contactEmail']),
+    trimObject(obj) {
+      return (obj = {
+        firstName: obj.firstName.trim(),
+        lastName: obj.lastName.trim(),
+        email: obj.email.trim(),
+        subject: obj.subject,
+        message: obj.message,
+      })
+    },
 
     async sendEmail() {
-      const isValid = await validateContactEmail(this.email)
-      console.log(isValid)
+      this.formatErrorMsg = false
+      const email = await this.trimObject(this.email)
+      this.validation = await validateContactEmail(email)
+
+      const isValid = Object.values(this.validation).every(
+        (item) => item === true
+      )
+
+      this.formatErrorMsg = !isValid
+
       if (isValid === true) {
-        this.contactEmail(this.email)
+        this.contactEmail(email)
       }
     },
   },

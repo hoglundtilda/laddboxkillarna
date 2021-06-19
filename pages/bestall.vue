@@ -87,7 +87,7 @@
               v-model="order.street"
               type="text"
               name="address-line1"
-              placeholder="Gatuadress (där laddbox ska installeras)"
+              placeholder="Gatuadress & Gatunummer (där laddbox ska installeras)"
               class="user_input"
               :class="validation.street ? '' : 'inputNotValid'"
               min="5"
@@ -101,7 +101,6 @@
               placeholder="Postnummer"
               class="user_input"
               :class="validation.postNr ? '' : 'inputNotValid'"
-              pattern="^(s-|S-){0,1}[0-9]{3}\s?[0-9]{2}$"
               required
               title="Fyll i ett giltigt postnummer '123 45'"
             />
@@ -124,8 +123,6 @@
               placeholder="Epost"
               class="user_input"
               :class="validation.email ? '' : 'inputNotValid'"
-              pattern="^\S+@\S+$"
-              title="Fyll i en giltig epost"
               required
             />
             <input
@@ -135,8 +132,6 @@
               placeholder="Telefonnummer"
               class="user_input"
               :class="validation.phoneNr ? '' : 'inputNotValid'"
-              pattern="(\+\d{2})?((\(0\)\d{2,3})|\d{2,3})?\d+"
-              title="Fyll i ett giltigt telefonnummer"
               required
             />
             <textarea
@@ -205,6 +200,10 @@
               beställning</span
             >
             <SharedStatusMessage :statusMessage="statusMessage" />
+            <SharedStatusMessage
+              v-if="formatErrorMsg"
+              :statusMessage="formatMessage"
+            />
             <button type="submit" class="primary submit__black">
               Skicka beställning
             </button>
@@ -269,6 +268,11 @@ export default {
       },
       agreementErrorMsg: false,
       colorErrorMsg: false,
+      formatErrorMsg: false,
+      formatMessage: {
+        success: false,
+        message: 'Röda fält ej giltiga',
+      },
     }
   },
   computed: {
@@ -296,17 +300,36 @@ export default {
     showExtra() {
       this.extra = !this.extra
     },
+    trimObject(obj) {
+      return (obj = {
+        firstName: obj.firstName.trim(),
+        lastName: obj.lastName.trim(),
+        street: obj.street.trim(),
+        postNr: obj.postNr.trim(),
+        state: obj.state.trim(),
+        email: obj.email.trim(),
+        phoneNr: obj.phoneNr.trim(),
+        information: obj.information,
+        color: obj.color,
+        consultation: obj.consultation,
+        charging_cable: obj.charging_cable,
+        agreement: obj.agreement,
+      })
+    },
     async validateInputs() {
-      this.validation = await validateOrder(this.order)
+      this.formatErrorMsg = false
+      const order = await this.trimObject(this.order)
+      this.validation = await validateOrder(order)
+
       const isValid = Object.values(this.validation).every(
         (item) => item === true
       )
-      console.log(this.validation)
       this.colorErrorMsg = this.validation.color ? false : true
       this.agreementErrorMsg = this.order.agreement ? false : true
+      this.formatErrorMsg = !isValid
 
       if (isValid === true) {
-        this.sendOrder(this.order)
+        this.sendOrder(order)
       }
     },
     sendOrder(order) {
