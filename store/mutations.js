@@ -2,14 +2,14 @@ export default {
   responseHandler(state, response) {
     console.log({mutation: response})
 
-    if (response.status !== 200)
+    if (response.success === false)
       state.statusMessage = {
         success: false,
         status: response.status,
         message: response.message,
       }
 
-    if (response.status === 200)
+    if (response.success === true)
       state.statusMessage = {
         success: true,
         status: response.status,
