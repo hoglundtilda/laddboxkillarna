@@ -15,8 +15,8 @@
     <div class="footer_text text__secondary">
       <p>&#169;Laddboxkillarna AB</p>
       <p>Org nr: 559311-4142</p>
-      <nuxt-link to="Kontakt"> <p class="underline">Kontakt</p></nuxt-link>
-      <nuxt-link to="Policys"
+      <nuxt-link to="kontakt"> <p class="underline">Kontakt</p></nuxt-link>
+      <nuxt-link to="policys"
         ><p class="underline">Integritetspolicy</p></nuxt-link
       >
     </div>
