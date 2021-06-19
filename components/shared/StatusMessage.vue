@@ -3,7 +3,7 @@
     <span
       v-if="statusMessage.message"
       class="message"
-              :class="statusMessage.success ? '' : 'error'"
+      :class="{'error': !statusMessage.success}"
       >{{ statusMessage.message }}</span
     >
   </div>
