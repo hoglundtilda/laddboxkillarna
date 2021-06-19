@@ -3,7 +3,7 @@
     <span
       v-if="statusMessage.message"
       class="message"
-      :class="{ success_false: !statusMessage.success }"
+              :class="statusMessage.success ? '' : 'error'"
       >{{ statusMessage.message }}</span
     >
   </div>
@@ -21,8 +21,13 @@ export default {
   .message {
     color: $black;
     font-family: $text;
-    font-size: 1rem;
+    font-size: 1.25rem;
     display: flex;
+    margin-bottom: 1rem;
+  }
+
+  .error {
+    color: $red;
   }
 }
 </style>
