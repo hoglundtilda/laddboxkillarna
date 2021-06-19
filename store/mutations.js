@@ -1,5 +1,6 @@
 export default {
   responseHandler(state, response) {
+    console.log({mutation: response})
 
     if (response.status !== 200)
       state.statusMessage = {
