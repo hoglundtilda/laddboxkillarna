@@ -53,7 +53,7 @@ export default {
         hid: 'laddbox',
         name: 'laddbox',
         content:
-          'Snabbare laddning med Zaptec Go - 5 års garanti för 6495:- efter avdraget Grön Teknik',
+          'Snabbare laddning med Zaptec Go - 5 års garanti för 6495:- efter avdraget Grön Teknik. Zaptec Go kan levereras i sex olika färger.',
       },
     ],
   },

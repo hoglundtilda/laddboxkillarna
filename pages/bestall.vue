@@ -229,7 +229,7 @@ export default {
         hid: 'bestall',
         name: 'bestall',
         content:
-          'Vi erbjuder laddbox och installation till fast pris och såklart med avdraget Grön Teknik!',
+          'Vi erbjuder laddbox och installation till fast pris och såklart med avdraget Grön Teknik! Vi kontaktar er inom 24 timmar efter lagd beställning.',
       },
     ],
   },

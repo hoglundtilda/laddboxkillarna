@@ -4,6 +4,7 @@
     <HomepageSteps />
     <HomepageWhyUs />
     <HomepageZaptec />
+    <HomepageReco />
     <SharedPhoneIcon />
   </div>
 </template>
@@ -18,7 +19,7 @@ export default {
         hid: 'hem',
         name: 'hem',
         content:
-          'Helhetslösning för dig som behöver laddbox - Laddbox och installation till fast pris med avdraget Grön Teknik',
+          'Helhetslösning för dig som behöver laddbox - Laddbox och installation till fast pris med avdraget Grön Teknik. Se vilket betyg våra kunder ger oss på Reco.se.',
       },
     ],
   },

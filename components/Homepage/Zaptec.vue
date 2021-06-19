@@ -77,7 +77,7 @@ export default {}
 }
 @media only screen and (max-width: 1150px) {
   #zaptec__section {
-    padding: 0 10% 10%;
+    padding: 0 10%;
 
     .main {
       flex-direction: column;
@@ -119,6 +119,7 @@ export default {}
 }
 @media only screen and (max-width: 600px) {
   #zaptec__section {
+    height: 85vh;
     video {
       width: 100%;
     }

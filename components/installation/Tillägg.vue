@@ -53,7 +53,7 @@ export default {
 <style lang="scss" scoped>
 .wrapper__tillägg {
   position: absolute;
-  width: 500px;
+  width: 70%;
   top: 50%;
   left: 2rem;
   z-index: 1;
@@ -76,7 +76,7 @@ export default {
     flex-direction: column;
 
     .information {
-      padding: 10%;
+      padding: 0 10% 10%;
     }
 
     p {

@@ -19,7 +19,7 @@ export default {
         hid: 'foretag-brf',
         name: 'foretag-brf',
         content:
-          'Vi utför installationer för företag och BRF med laddsystemet Zaptec Pro',
+          'Vi utför installationer för företag och BRF med laddsystemet Zaptec Pro. Kontakta oss för att veta hur vi kan hjälpa just ert företag.',
       },
     ],
   },

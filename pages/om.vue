@@ -46,7 +46,7 @@ export default {
         hid: 'om',
         name: 'om',
         content:
-          'Certifierade elektriker med många års samlad erfarenhet av laddboxar och installationer erbjuder helhetlösningar för privatpersoner och företag',
+          'Certifierade elektriker med många års samlad erfarenhet av laddboxar och installationer erbjuder helhetlösningar för privatpersoner och företag.',
       },
     ],
   },
