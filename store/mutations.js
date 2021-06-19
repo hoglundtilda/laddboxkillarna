@@ -1,5 +1,6 @@
 export default {
   responseHandler(state, response) {
+    console.log(response)
     if (response.status !== 200)
       state.statusMessage = {
         success: false,
@@ -13,6 +14,8 @@ export default {
         status: response.status,
         message: response.message,
       }
+
+      
   },
 
   refreshStatusMessage(state) {

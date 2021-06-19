@@ -62,12 +62,12 @@
         </p>
         <p class="text__secondary">
           2. Förläggning av kabel max 15 meter från elcentral/undercentral (över
-          15 meter enl. löpande meterpris)
+          10 meter enl. löpande meterpris)
         </p>
         <p class="text__secondary">3. Håltagningar</p>
         <p class="text__secondary">4. Fästmaterial</p>
         <p class="text__secondary">
-          5. Jordfelsbrytare typ Am tillhörande säkring/ Personskyddsautomat 16A
+          5. Jordfelsbrytare typ A tillhörande säkring/ Personskyddsautomat 16A
         </p>
         <p class="text__secondary">6. Driftsättning av laddbox</p>
       </div>

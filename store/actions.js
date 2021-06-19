@@ -19,12 +19,23 @@ export default {
     await this.$axios
       .post(`${this.$axios.defaults.baseURL}/email/order`, order)
       .then((response) => {
-        console.log(response)
-        commit('responseHandler', response.data)
+        console.log('here')
+        if (response.data) commit('responseHandler', response.data)
       })
       .catch((error) => {
-        console.log(error)
-        commit('responseHandler', error.response.data.error)
+        const customError = {
+          status: 500,
+          message: 'Tekniskt fel, vänligen kontakta oss via telefon',
+        }
+
+        if (error.response === undefined) {
+          commit('responseHandler', customError)
+        }
+        if (error.response.data.error) {
+          commit('responseHandler', error.response.data.error)
+        } else {
+          commit('responseHandler', customError)
+        }
       })
   },
 }

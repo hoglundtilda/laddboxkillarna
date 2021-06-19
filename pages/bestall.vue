@@ -55,7 +55,11 @@
 
         <section class="inputs">
           <h2>Dina beställningsuppgifter</h2>
-          <form class="form__container" autocomplete="on">
+          <form
+            @submit.prevent="validateInputs"
+            class="form__container"
+            autocomplete="on"
+          >
             <div class="names">
               <input
                 v-model="order.firstName"
@@ -63,6 +67,7 @@
                 autocomplete="given-name"
                 placeholder="Förnamn"
                 class="user_input"
+                :class="validation.firstName ? '' : 'inputNotValid'"
                 title="Vänligen fyll i namn"
                 required
               />
@@ -73,6 +78,7 @@
                 autocomplete="family-name"
                 placeholder="Efternamn"
                 class="user_input"
+                :class="validation.lastName ? '' : 'inputNotValid'"
                 title="Vänligen fyll i efternamn"
                 required
               />
@@ -83,6 +89,7 @@
               name="address-line1"
               placeholder="Gatuadress (där laddbox ska installeras)"
               class="user_input"
+              :class="validation.street ? '' : 'inputNotValid'"
               min="5"
               max="50"
               title="Vänligen fyll i en giltig gatuadress"
@@ -90,13 +97,13 @@
             />
             <input
               v-model="order.postNr"
-              type="number"
               autocomplete="postal-code"
               placeholder="Postnummer"
               class="user_input"
+              :class="validation.postNr ? '' : 'inputNotValid'"
               pattern="^(s-|S-){0,1}[0-9]{3}\s?[0-9]{2}$"
-              title="Fyll i ett giltigt postnummer '123 45'"
               required
+              title="Fyll i ett giltigt postnummer '123 45'"
             />
             <input
               v-model="order.state"
@@ -104,6 +111,7 @@
               name="address-level2"
               placeholder="Ort"
               class="user_input"
+              :class="validation.state ? '' : 'inputNotValid'"
               max="50"
               min="2"
               title="Fyll i en giltig postort"
@@ -115,16 +123,18 @@
               autocomplete="email"
               placeholder="Epost"
               class="user_input"
-              pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+              :class="validation.email ? '' : 'inputNotValid'"
+              pattern="^\S+@\S+$"
               title="Fyll i en giltig epost"
               required
             />
-            <input  
+            <input
               v-model="order.phoneNr"
               type="number"
               autocomplete="tel-national"
               placeholder="Telefonnummer"
               class="user_input"
+              :class="validation.phoneNr ? '' : 'inputNotValid'"
               pattern="(\+\d{2})?((\(0\)\d{2,3})|\d{2,3})?\d+"
               title="Fyll i ett giltigt telefonnummer"
               required
@@ -178,7 +188,6 @@
                   v-model="order.agreement"
                   type="checkbox"
                   id="agreement"
-                  required
                 /><span></span>
                 <label for="agreement" class="custom-checkbox"
                   >Jag har tagit del av
@@ -195,11 +204,7 @@
               beställning</span
             >
             <SharedStatusMessage :statusMessage="statusMessage" />
-            <button
-              type="submit"
-              class="primary submit__black"
-              @click.prevent="validateInputs"
-            >
+            <button type="submit" class="primary submit__black">
               Skicka beställning
             </button>
           </form>
@@ -236,6 +241,17 @@ export default {
       terms: false,
       cable: false,
       extra: false,
+      validation: {
+        firstName: true,
+        lastName: true,
+        street: true,
+        postNr: true,
+        state: true,
+        email: true,
+        phoneNr: true,
+        color: true,
+        agreement: true,
+      },
       order: {
         firstName: '',
         lastName: '',
@@ -280,10 +296,12 @@ export default {
       this.extra = !this.extra
     },
     async validateInputs() {
-      const validation = await validateOrder(this.order)
-      const isValid = Object.values(validation).every((item) => item === true)
-
-      this.colorErrorMsg = validation.color ? false : true
+      this.validation = await validateOrder(this.order)
+      const isValid = Object.values(this.validation).every(
+        (item) => item === true
+      )
+      console.log(this.validation)
+      this.colorErrorMsg = this.validation.color ? false : true
       this.agreementErrorMsg = this.order.agreement ? false : true
 
       if (isValid === true) {
@@ -461,6 +479,10 @@ export default {
 
 .error {
   color: $red;
+}
+
+.inputNotValid {
+  border: 1px solid $red !important;
 }
 @media only screen and (max-width: 1350px) {
   .wrapper__installation {
