@@ -130,7 +130,7 @@ import { validateContactEmail } from '@/modules/validation'
 
 export default {
   head: {
-    title: 'Kontakt | Laddboxkillarna AB',
+    title: 'Kontakt | Laddboxkillarna Göteborg',
     slug: 'https://www.laddboxkillarna.se/kontakt',
     meta: [
       {

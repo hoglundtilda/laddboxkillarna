@@ -134,14 +134,14 @@ h4 {
 
 .text__standard {
   font-size: 1.5rem;
-  line-height: 140%;
+  line-height: 150%;
   font-weight: 300;
   font-family: $text;
 }
 
 .text__secondary {
   font-size: 1.125rem;
-  line-height: 140%;
+  line-height: 150%;
   font-weight: 300;
   font-family: $text;
 }

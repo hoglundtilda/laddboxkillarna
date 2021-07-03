@@ -23,6 +23,8 @@ export default {}
   padding: 10% 0;
 }
 
+
+
 @media only screen and (max-width: 1400px) {
   .wrapper__reco {
     width: 1100px;

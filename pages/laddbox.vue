@@ -46,7 +46,7 @@
 <script>
 export default {
   head: {
-    title: 'Laddbox Zaptec Go | Laddboxkillarna AB',
+    title: 'Laddbox Zaptec Go | Laddboxkillarna Göteborg',
     slug: 'https://www.laddboxkillarna.se/laddbox',
     meta: [
       {

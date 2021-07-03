@@ -3,7 +3,7 @@
     <h2>Så här går det till</h2>
     <section class="steps">
       <article class="step1">
-        <img src="@/assets/images/steps/step1.png" alt="Form icon " />
+        <img src="@/assets/images/steps/step1.png" alt="Form icon" />
         <p class="text__secondary">Fyll i kontaktformuläret</p>
       </article>
       <article class="step2">
@@ -131,9 +131,6 @@ export default {}
       article {
         width: 100%;
         justify-content: center;
-
-        p {
-        }
       }
     }
   }

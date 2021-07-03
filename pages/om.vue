@@ -7,7 +7,7 @@
         fossila bränslen till eldrift ser vi ett kraftigt behov av säkra och
         smidiga helhetslösningar avseende laddlösningar.
       </p>
-      <p class="text__secondary">
+      <p class="text__standard">
         Vi är certifierade och behöriga elektriker med flera års samlade
         erfarenheter inom elbilsladdning. Laddboxkillarna AB grundades i början
         på 2021, dessförinnan arbetade vi flitigt med att installera olika
@@ -20,7 +20,7 @@
         framtidssäkrad lösning åt dig/er som skall ha laddlösning hemma eller på
         företaget.
       </p>
-      <p class="text__secondary">
+      <p class="text__standard">
         VI värdesätter denna förändring som sker just nu och BRINNER för det vi
         gör! Just detta gör att du som kund kan känna att du är i trygga händer
         och framförallt att du får en kvalitativ och smidig lösning efter dina
@@ -82,6 +82,7 @@ export default {
   .text__secondary,
   .text__standard {
     padding: 2rem 0;
+    font-weight: 200;
   }
 }
 @media only screen and (max-width: 1350px) {

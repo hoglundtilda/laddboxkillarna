@@ -2,7 +2,7 @@
   <div class="wrapper__installation">
     <InstallationVillkor v-if="terms" />
     <div class="container">
-      <h1>Beställ laddbox & installation</h1>
+      <h1>Beställ Laddbox</h1>
       <section class="divider">
         <section class="text">
           <h2>Installation</h2>
@@ -175,7 +175,7 @@
                   @mouseenter="cable = true"
                   @mouseout="cable = false"
                 >
-                  <img src="@/assets/logo/question_mark.svg" alt="" />
+                  <img src="@/assets/logo/question_mark.svg" alt="question mark" />
                 </div>
               </div>
               <InstallationLaddkabel v-if="cable" />
@@ -222,14 +222,14 @@ import { validateOrder } from '@/modules/validation'
 
 export default {
   head: {
-    title: 'Beställ laddbox & installation till fast pris | Laddboxkillarna AB',
+    title: 'Beställ laddbox & installation till fast pris | Laddboxkillarna Göteborg',
     slug: 'https://www.laddboxkillarna.se/bestall',
     meta: [
       {
         hid: 'bestall',
         name: 'bestall',
         content:
-          'Vi erbjuder laddbox och installation till fast pris och såklart med avdraget Grön Teknik! Vi kontaktar er inom 24 timmar efter lagd beställning.',
+          'Vi erbjuder laddbox och installation till fast pris med avdraget Grön Teknik! Vi kontaktar er inom 24 timmar efter lagd beställning.',
       },
     ],
   },

@@ -59,7 +59,7 @@
 <script>
 export default {
   head: {
-    title: 'Policys | Laddboxkillarna AB',
+    title: 'Policys | Laddboxkillarna Göteborg',
     slug: 'https://www.laddboxkillarna.se/policys',
     meta: [
       {
