@@ -5,14 +5,14 @@
     <HomepageWhyUs />
     <HomepageZaptec />
     <HomepageReco />
+    <HomepageSamarbetspartners />
     <SharedPhoneIcon />
   </div>
 </template>
 <script>
 export default {
   head: {
-    title:
-      'Laddbox & installation till fast pris | Laddboxkillarna Göteborg',
+    title: 'Laddbox & installation till fast pris | Laddboxkillarna Göteborg',
     slug: 'https://www.laddboxkillarna.se',
     meta: [
       {
@@ -29,5 +29,6 @@ export default {
 <style lang="scss">
 .wrapper {
   background-color: $black;
+  padding-bottom: 5rem;
 }
 </style>

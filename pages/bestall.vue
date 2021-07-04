@@ -52,7 +52,6 @@
             <InstallationTillägg v-if="extra" @showExtra="showExtra" />
           </div>
         </section>
-
         <section class="inputs">
           <h2>Dina beställningsuppgifter</h2>
           <form
@@ -71,7 +70,6 @@
                 title="Vänligen fyll i namn"
                 required
               />
-
               <input
                 v-model="order.lastName"
                 type="text"
@@ -175,7 +173,10 @@
                   @mouseenter="cable = true"
                   @mouseout="cable = false"
                 >
-                  <img src="@/assets/logo/question_mark.svg" alt="question mark" />
+                  <img
+                    src="@/assets/logo/question_mark.svg"
+                    alt="question mark"
+                  />
                 </div>
               </div>
               <InstallationLaddkabel v-if="cable" />
@@ -222,7 +223,8 @@ import { validateOrder } from '@/modules/validation'
 
 export default {
   head: {
-    title: 'Beställ laddbox & installation till fast pris | Laddboxkillarna Göteborg',
+    title:
+      'Beställ laddbox & installation till fast pris | Laddboxkillarna Göteborg',
     slug: 'https://www.laddboxkillarna.se/bestall',
     meta: [
       {

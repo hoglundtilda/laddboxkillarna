@@ -69,7 +69,7 @@ export default {
   }
 
   .text {
-    background-color: $white;
+    background-color: white;
     box-shadow: $box-shadow;
     padding: 0;
     display: flex;
