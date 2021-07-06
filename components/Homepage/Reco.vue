@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper__reco">
     <iframe
-      src="https://widget.reco.se/v2/widget/4038326?mode=HORIZONTAL_QUOTE&bg=0c0d0e&border=false"
+      src="https://widget.reco.se/v2/widget/4038326?mode=HORIZONTAL_QUOTE&bg=0c0d0e&border=false&inverted=true"
       width="100%"
       height="275"
       scrolling="no"
@@ -21,6 +21,7 @@ export default {}
   width: 1300px;
   margin: auto;
   padding: 10% 0;
+  opacity: 0.9;
 }
 
 
