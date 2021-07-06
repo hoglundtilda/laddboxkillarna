@@ -197,8 +197,7 @@
               </div>
             </div>
             <span class="validation_agreement" v-if="agreementErrorMsg"
-              >Du behöver läsa och acceptera Integritetspolicy för att lägga en
-              beställning</span
+              >Du behöver läsa och acceptera Integritetspolicy för att lägga en intresseanmälan</span
             >
             <SharedStatusMessage :statusMessage="statusMessage" />
             <SharedStatusMessage
@@ -206,11 +205,20 @@
               :statusMessage="formatMessage"
             />
             <button type="submit" class="primary submit__black">
-              Skicka beställning
+              Skicka intresseanmälan
             </button>
           </form>
         </section>
       </section>
+      <!-- <iframe
+        src="https://widget.reco.se/v2/widget/4038326?mode=MINI&border=false"
+        width="100%"
+        height="225"
+        scrolling="no"
+        style="border: 0; display: block"
+        data-reactroot=""
+        class="reco__frame"
+      ></iframe> -->
     </div>
   </div>
 </template>
@@ -513,6 +521,10 @@ export default {
 
 .inputNotValid {
   border: 1px solid $red !important;
+}
+
+.reco__frame {
+  margin-top: 6rem;
 }
 @media only screen and (max-width: 1350px) {
   .wrapper__installation {
