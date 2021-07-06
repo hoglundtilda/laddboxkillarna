@@ -26,7 +26,7 @@
         Namn, adress, telefonnummer och epostadress lagras för att kunna skapa
         kontakt med dig för att möjliggöra en installation.
       </p>
-      <p>
+      <p class="text__secondary">
         Vi lagrar dina uppgifter under sju år med hänvisning till
         bokföringslagen
       </p>

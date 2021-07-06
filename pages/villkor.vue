@@ -61,7 +61,7 @@
           1. Montering och inkoppling av laddbox på vägg
         </p>
         <p class="text__secondary">
-          2. Förläggning av kabel max 15 meter från elcentral/undercentral (över
+          2. Förläggning av kabel max 10 meter från elcentral/undercentral (över
           10 meter enl. löpande meterpris)
         </p>
         <p class="text__secondary">3. Håltagningar</p>

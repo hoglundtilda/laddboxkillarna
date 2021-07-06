@@ -22,9 +22,9 @@ export default {}
 @media (max-width: 600px) {
 }
 
-input[type='text'] {
-  padding: 1rem 1.5rem;
-}
+// input[type='text'] {
+//   padding: 0.7rem 1.2rem;
+// }
 
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,

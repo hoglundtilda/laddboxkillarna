@@ -49,11 +49,11 @@
               >Läs mer om extra tillägg och se prislista
             </span>
             <fa :icon="fas.faLink" />
-            <InstallationTillägg v-if="extra" @showExtra="showExtra" />
+            <InstallationTillagg v-if="extra" @showExtra="showExtra" />
           </div>
         </section>
         <section class="inputs">
-          <h2>Dina beställningsuppgifter</h2>
+          <h2>Dina uppgifter</h2>
           <form
             @submit.prevent="validateInputs"
             class="form__container"
@@ -189,15 +189,15 @@
                 <label for="agreement" class="custom-checkbox"
                   >Jag har tagit del av
                 </label>
-                <nuxt-link to="/villkor"
+                <nuxt-link target="_blank" to="/policys"
                   ><span @click="showTerms" class="span_underline villkor">
-                    avtalsvillkoren</span
+                    integritetspolicy</span
                   ></nuxt-link
                 >
               </div>
             </div>
             <span class="validation_agreement" v-if="agreementErrorMsg"
-              >Du behöver läsa och acceptera avtalsvillkor för att lägga en
+              >Du behöver läsa och acceptera Integritetspolicy för att lägga en
               beställning</span
             >
             <SharedStatusMessage :statusMessage="statusMessage" />
