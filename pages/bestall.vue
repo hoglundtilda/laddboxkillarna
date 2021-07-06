@@ -53,7 +53,7 @@
           </div>
         </section>
         <section class="inputs">
-          <h2>Dina uppgifter</h2>
+          <h2>Intresseanmälan</h2>
           <form
             @submit.prevent="validateInputs"
             class="form__container"
