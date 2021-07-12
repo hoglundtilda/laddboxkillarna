@@ -32,7 +32,7 @@ export default {
 
   build: {},
 
-  buildModules: ['@nuxtjs/google-fonts', '@nuxtjs/style-resources'],
+  buildModules: ['@nuxtjs/google-fonts', '@nuxtjs/style-resources', '@nuxtjs/google-analytics'],
 
   modules: [
     '@nuxtjs/axios',
@@ -50,6 +50,10 @@ export default {
       },
     ],
   ],
+
+  googleAnalytics: {
+    id: process.env.GOOGLE_ANALYTICS_ID
+  },
 
   googleFonts: {
     download: true,
