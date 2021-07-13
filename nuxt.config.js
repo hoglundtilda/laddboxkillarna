@@ -57,6 +57,12 @@ export default {
       screenview: true
     }
   },
+  
+  publicRuntimeConfig: {
+    googleAnalytics: {
+      id: process.env.GOOGLE_ANALYTICS_ID
+    }
+  },
 
   googleFonts: {
     download: true,
