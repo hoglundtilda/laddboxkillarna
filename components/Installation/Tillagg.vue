@@ -22,7 +22,7 @@
         </div>
         <div class="prices">
           <p class="text__secondary">Uppsäkring</p>
-          <p class="text__secondary right">1600kr</p>
+          <p class="text__secondary right">1800kr</p>
         </div>
         <div class="prices">
           <p class="text__secondary">Extra arbete</p>
