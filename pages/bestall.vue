@@ -503,12 +503,17 @@ export default {
         }
         .div__question {
           background: white;
+          cursor: pointer;
 
           img {
-            cursor: pointer;
-            margin-left: 0.7rem;
-            width: 80%;
+            padding: 5px;
           }
+
+
+
+
+
+
         }
       }
     }
