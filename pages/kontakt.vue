@@ -71,7 +71,6 @@
         />
         <input
           v-model="email.telephonenumber"
-          type="number"
           placeholder="Telefonnummer"
           autocomplete="tel"
           :class="validation.email ? '' : 'inputNotValid'"
