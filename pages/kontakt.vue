@@ -2,125 +2,124 @@
   <div class="wrapper__kontakt">
     <div class="container">
       <h1>Kontakta oss</h1>
-      <div class="contact__information">
-        <section class="information">
-          <p class="text__standard">
-            Har du frågor eller vill bli samarbetspartner? Vi snackar gärna med
-            Er! Skicka ett meddelande till oss så hör vi av oss inom 24h
-          </p>
+      <p class="text__standard top__text">
+        Har du frågor eller vill bli samarbetspartner? Vi snackar gärna med Er!
+        Ring eller skicka ett meddelande till oss så hör vi av oss inom 24h
+      </p>
+      <section class="bosses">
+        <article>
+          <img src="@/assets/images/alex.png" alt="picture of employee" />
+          <div class="employee__contact">
+            <span class="text__standard">Alexander Pettersson</span>
+            <a href="mailto:alexander@laddboxkillarna.se"
+              ><p class="text__standard mail">
+                alexander@laddboxkillarna.se
+              </p></a
+            >
 
-          <section class="bosses">
-            <article>
-              <!--0<img src="@/assets/images/boss1.png" alt="" />-->
-              <h2>Kontaktuppgifter</h2>
-              <a
-                href="https://www.google.com/maps/place/L%C3%A5ng%C3%A4ngen+9,+417+22+G%C3%B6teborg/@57.7219141,11.9438371,17z/data=!3m1!4b1!4m5!3m4!1s0x464ff54d1e128f07:0x725ddeba20a932ee!8m2!3d57.7219113!4d11.9460259"
-                ><p class="text__secondary">Långängen 9</p>
-                </a>
-                <p class="text__secondary">417 22 Göteborg</p>
-              <div>
-                <img src="@/assets/logo/phone.svg" alt="phone" />
-                <a href="tel:+4631250100">
-                  <p class="text__secondary">031 - 25 01 00</p></a
-                >
-              </div>
-            </article>
-            <article>
-              <!--0<img src="@/assets/images/boss1.png" alt="" />-->
-              <h3>Alexander Pettersson</h3>
-              <a href="mailto:alexander@laddboxkillarna.se"
-                ><p class="text__secondary mail">
-                  alexander@laddboxkillarna.se
-                </p></a
-              >
-              <div>
-                <img src="@/assets/logo/phone.svg" alt="phone" />
-                <a href="tel:+46700490657">
-                  <p class="text__secondary">070 049 06 57</p></a
-                >
-              </div>
-            </article>
-            <article>
-              <!--<img src="@/assets/images/boss2.png" alt="" />-->
-
-              <h3>Kevin Olsson</h3>
-              <a href="mailto:kevin@laddboxkillarna.se"
-                ><p class="text__secondary mail">kevin@laddboxkillarna.se</p></a
-              >
-              <div>
-                <img src="@/assets/logo/phone.svg" alt="phone" />
-                <a href="tel:+46704716221">
-                  <p class="text__secondary">070 471 62 21</p></a
-                >
-              </div>
-            </article>
-          </section>
-        </section>
-        <form @submit.prevent="sendEmail" autocomplete="on" class="contact">
-          <div class="names">
-            <input
-              v-model="email.firstName"
-              type="text"
-              placeholder="Förnamn"
-              autocomplete="given-name"
-              title="Vänligen fyll i namn"
-              required
-              :class="validation.firstName ? '' : 'inputNotValid'"
-            />
-
-            <input
-              v-model="email.lastName"
-              type="text"
-              placeholder="Efternamn"
-              autocomplete="family-name"
-              title="Vänligen fyll i efternamn"
-              required
-              :class="validation.lastName ? '' : 'inputNotValid'"
-            />
+            <a href="tel:+46700490657">
+              <p class="text__standard">tlf: 070 049 06 57</p></a
+            >
           </div>
-          <input
-            v-model="email.email"
-            type="email"
-            placeholder="Epost"
-            autocomplete="email"
-            title="Fyll i en giltig epost"
-            required
-            :class="validation.email ? '' : 'inputNotValid'"
-          />
-          <input
-            v-model="email.subject"
-            type="text"
-            placeholder="Ämne"
-            autocomplete="off"
-            max="50"
-            min="2"
-            title="Fyll i ämne"
-            required
-            :class="validation.subject ? '' : 'inputNotValid'"
-          />
-          <textarea
-            v-model="email.message"
-            name=""
-            id=""
-            cols="30"
-            rows="10"
-            placeholder="Meddelande"
-            autocomplete="off"
-            required
-            :class="validation.message ? '' : 'inputNotValid'"
-          ></textarea>
+        </article>
+        <article>
+          <img src="@/assets/images/kevin.png" alt="picture of employee" />
+          <div class="employee__contact">
+            <span class="text__standard">Kevin Olsson</span>
+            <a href="mailto:kevin@laddboxkillarna.se"
+              ><p class="text__standard mail">kevin@laddboxkillarna.se</p></a
+            >
 
-          <SharedStatusMessage
-            v-if="formatErrorMsg"
-            :statusMessage="formatMessage"
+            <a href="tel:+46704716221">
+              <p class="text__standard">tlf: 070 471 62 21</p></a
+            >
+          </div>
+        </article>
+      </section>
+
+      <!--kontaktformulär-->
+      <form @submit.prevent="sendEmail" autocomplete="on" class="contact">
+        <div class="names">
+          <input
+            v-model="email.firstName"
+            type="text"
+            placeholder="Förnamn"
+            autocomplete="given-name"
+            title="Vänligen fyll i namn"
+            required
+            :class="validation.firstName ? '' : 'inputNotValid'"
           />
-          <SharedStatusMessage :statusMessage="statusMessage" />
-          <button type="submit" class="primary submit__black">
-            Skicka meddelande
-          </button>
-        </form>
-      </div>
+
+          <input
+            v-model="email.lastName"
+            type="text"
+            placeholder="Efternamn"
+            autocomplete="family-name"
+            title="Vänligen fyll i efternamn"
+            required
+            :class="validation.lastName ? '' : 'inputNotValid'"
+          />
+        </div>
+        <input
+          v-model="email.email"
+          type="email"
+          placeholder="Epost"
+          autocomplete="email"
+          title="Fyll i en giltig epost"
+          required
+          :class="validation.email ? '' : 'inputNotValid'"
+        />
+        <input
+          v-model="email.telephonenumber"
+          type="number"
+          placeholder="Telefonnummer"
+          autocomplete="tel"
+          :class="validation.email ? '' : 'inputNotValid'"
+        />
+        <input
+          v-model="email.subject"
+          type="text"
+          placeholder="Ämne"
+          autocomplete="off"
+          max="50"
+          min="2"
+          title="Fyll i ämne"
+          required
+          :class="validation.subject ? '' : 'inputNotValid'"
+        />
+        <textarea
+          v-model="email.message"
+          name=""
+          id=""
+          cols="30"
+          rows="10"
+          placeholder="Meddelande"
+          autocomplete="off"
+          required
+          :class="validation.message ? '' : 'inputNotValid'"
+        ></textarea>
+
+        <SharedStatusMessage
+          v-if="formatErrorMsg"
+          :statusMessage="formatMessage"
+        />
+        <SharedStatusMessage :statusMessage="statusMessage" />
+        <button type="submit" class="primary submit__black">
+          Skicka meddelande
+        </button>
+      </form>
     </div>
+    <section class="contact_info">
+      <a href="tel:+4631250100">
+        <p class="text__secondary">tlf: 031 250 100</p></a
+      >
+      <a
+        href="https://www.google.com/maps/place/L%C3%A5ng%C3%A4ngen+9,+417+22+G%C3%B6teborg/@57.7219141,11.9438371,17z/data=!3m1!4b1!4m5!3m4!1s0x464ff54d1e128f07:0x725ddeba20a932ee!8m2!3d57.7219113!4d11.9460259"
+        target="_blank"
+        ><p class="text__secondary">Långängen 9</p>
+      </a>
+      <p class="text__secondary">417 22 Göteborg</p>
+    </section>
   </div>
 </template>
 
@@ -148,6 +147,7 @@ export default {
         firstName: '',
         lastName: '',
         email: '',
+        telephonenumber: '',
         subject: '',
         message: '',
       },
@@ -177,6 +177,7 @@ export default {
         firstName: obj.firstName.trim(),
         lastName: obj.lastName.trim(),
         email: obj.email.trim(),
+        telephonenumber: obj.telephonenumber.trim(),
         subject: obj.subject,
         message: obj.message,
       })
@@ -233,38 +234,27 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }
+    align-items: center;
 
-  .contact__information {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 2rem;
-    gap: 3rem;
+    .top__text {
+      margin-top: 2rem;
+      width: 45%;
+      text-align: center;
+    }
   }
 
   .information {
     display: flex;
     flex-direction: column;
-    max-width: 600px;
   }
 
   .bosses {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-    margin-top: 3rem;
+    justify-content: space-evenly;
+    margin-top: 5rem;
+    width: 100%;
 
     article {
-      margin: 1rem 0;
-      div {
-        display: flex;
-        img {
-          width: 1.125rem;
-          margin-right: 0.4rem;
-        }
-      }
-
       a {
         text-decoration: underline;
         color: $black;
@@ -275,6 +265,27 @@ export default {
           margin: 0.2rem 0;
         }
       }
+      img {
+        margin: 1.5rem 0;
+      }
+    }
+  }
+
+  .contact_info {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 70%;
+    margin: auto;
+    margin-top: 10rem;
+
+    .text__secondary {
+      font-weight: 900;
+    }
+
+    a {
+      color: $black;
+      text-decoration: underline;
     }
   }
 
@@ -282,8 +293,8 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
-    margin-left: 5rem;
+    width: 600px;
+    margin-top: 5rem;
 
     .text__standard {
       margin-bottom: 1rem;
@@ -329,18 +340,66 @@ export default {
     }
   }
 }
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 750px) {
   .wrapper__kontakt {
+    .container {
+      .text__standard {
+        width: 100%;
+      }
+    }
+    article {
+      img {
+        width: 80%;
+      }
+    }
+    .contact {
+      width: 100%;
+    }
     input,
     textarea {
       font-size: 1.5rem;
     }
 
-    .contact {
-      margin-left: unset;
+    .contact_info {
+      width: 100%;
+      justify-content: space-between;
     }
-    .contact__information {
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .wrapper__kontakt {
+    .bosses {
       flex-direction: column;
+      align-items: center;
+
+      article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1rem 0;
+
+        img {
+          width: 100%;
+        }
+
+        .employee__contact {
+          align-self: flex-start;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .wrapper__kontakt {
+    .contact_info {
+      flex-direction: column;
+      justify-content: space-between;
+
+      p {
+        margin: 1rem 0;
+      }
     }
   }
 }

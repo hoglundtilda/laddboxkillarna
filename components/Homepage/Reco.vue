@@ -1,5 +1,7 @@
 <template>
   <div class="wrapper__reco">
+  <div id="reco--badge-2021" class="reco"></div>
+  <script src="https://widget.reco.se/badge/2021/4038326.js"></script>
     <iframe
       src="https://widget.reco.se/v2/widget/4038326?mode=HORIZONTAL_QUOTE&bg=0c0d0e&border=false&inverted=true"
       width="100%"
@@ -22,6 +24,10 @@ export default {}
   margin: auto;
   padding: 10% 0;
   opacity: 0.9;
+
+  .reco {
+  margin: 1rem 0;
+  }
 }
 
 

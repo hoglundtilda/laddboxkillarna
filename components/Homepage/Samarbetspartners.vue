@@ -67,6 +67,7 @@ export default {}
 
 @media only screen and (max-width: 600px) {
   .wrapper__samarbetspartners {
+  min-height: 100vh;
     .container {
       .img__container {
         width: 150px;

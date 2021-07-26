@@ -1,5 +1,6 @@
 export default {
   async contactEmail({ commit }, email) {
+    console.log(email)
     await this.$axios
       .post(`${this.$axios.defaults.baseURL}/email/contact`, email)
       .then((response) => {
