@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper__laddkabel">
-    <p>Laddkabel 3-Fas Typ 2 - 32 A (22kW) 7.5m - 2990 kr</p>
+    <p>Laddkabel 3-Fas Typ 2 - 32 A (22kW) 7.5m - 3495kr inkl moms</p>
   </div>
 </template>
 
@@ -10,14 +10,11 @@ export default {}
 
 <style lang="scss" scoped>
 .wrapper__laddkabel {
-  padding: 15px;
-  border-radius: 50;
+  padding: 10px 25px;
   position: absolute;
   background: white;
   box-shadow: $shadow_btn_white-hover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50px;
+  border-radius: 10rem;
+
 }
 </style>
