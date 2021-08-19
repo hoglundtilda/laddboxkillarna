@@ -2,6 +2,7 @@
   <div>
     <AppNav />
     <Nuxt />
+    <AppCookie />
     <AppFooter />
   </div>
 </template>
@@ -144,53 +145,6 @@ h4 {
   line-height: 150%;
   font-weight: 300;
   font-family: $text;
-}
-
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.2s;
-}
-
-.fade-enter,
-.fade-leave-to
-/* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
-}
-
-.slide-fade-enter-active {
-  transition: all 0.1s ease;
-}
-
-.slide-fade-leave-active {
-  transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);
-}
-
-.welcome-enter {
-  opacity: 0;
-}
-
-.welcome-enter-active {
-  transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);
-}
-
-.welcome-leave-active,
-.welcome-leave-to {
-  opacity: 0;
-}
-
-.slide-fade-enter,
-.slide-fade-leave-to
-/* .slide-fade-leave-active below version 2.1.8 */ {
-  transform: translateX(1000px);
-  opacity: 0;
-}
-
-.bounce-enter-active {
-  animation: bounce-in 0.5s;
-}
-
-.bounce-leave-active {
-  animation: bounce-in 0.5s reverse;
 }
 
 @keyframes bounce-in {

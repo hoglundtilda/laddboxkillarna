@@ -32,7 +32,6 @@ export default {
   computed: {
     setBackground() {
       const path = this.$route.path
-      console.log(path)
 
       if (path === '/' || path === '/om') {
         if (this.scrollPosition < 1000) {
