@@ -32,11 +32,12 @@ export default {
 
   build: {},
 
-  buildModules: ['@nuxtjs/google-fonts', '@nuxtjs/style-resources', '@nuxtjs/google-analytics'],
+  buildModules: ['@nuxtjs/google-fonts', '@nuxtjs/style-resources'],
 
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/style-resources',
+    '@nuxtjs/gtm',
     [
       'nuxt-fontawesome',
       {
@@ -51,18 +52,35 @@ export default {
     ],
   ],
 
-  googleAnalytics: {
-    id: process.env.GOOGLE_ANALYTICS_ID,
-    autoTracking: {
-      screenview: true
-    }
+  gtm: {
+    id: process.env.GTM_ID,
+    //id:'GTM-WDBBFCC',
+
+    enabled: true,
+    autoInit: true,
+    //pageTracking: true,
   },
-  
+
   publicRuntimeConfig: {
-    googleAnalytics: {
-      id: process.env.GOOGLE_ANALYTICS_ID
+    gtm: {
+     id: process.env.GTM_ID,
+     //id: 'GTM-WDBBFCC',
+
     }
   },
+
+  // googleAnalytics: {
+  //   id: process.env.GOOGLE_ANALYTICS_ID,
+  //   autoTracking: {
+  //     screenview: true
+  //   }
+  // },
+  
+  // publicRuntimeConfig: {
+  //   googleAnalytics: {
+  //     id: process.env.GOOGLE_ANALYTICS_ID
+  //   }
+  // },
 
   googleFonts: {
     download: true,
@@ -84,7 +102,7 @@ export default {
     //'~assets/css/main.scss'
   ],
 
-  plugins: ['@/plugins/vant'],
+  plugins: ['@/plugins/vant', '@/plugins/gtm'],
 
   styleResources: {
     scss: ['~/assets/css/*.scss'],

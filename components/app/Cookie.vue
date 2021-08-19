@@ -1,19 +1,18 @@
 <template>
-  <div
-    class="wrapper__cookie"
-    id="wrapper__cookie"
-    @click="hidePopUP"
-    :class="setBackground ? '' : 'display'"
-  >
+  <div v-if="cookieConsent" class="wrapper__cookie" id="wrapper__cookie">
     <div class="container">
       <section class="text">
         <p class="text__secondary">Vi använder cookies</p>
         <p class="text__secondary">
           Genom att acceptera godkänner du användningen av cookies
         </p>
+        <NuxtLink to="/policys"> Läs mer om cookies</NuxtLink>
       </section>
       <section class="button">
-        <ButtonPrimaryBlack btn_text="Acceptera" />
+        <ButtonPrimaryBlack
+          btn_text="Acceptera"
+          @btn_click="cookieConsentAccept"
+        />
       </section>
     </div>
   </div>
@@ -23,32 +22,16 @@
 export default {
   data() {
     return {
-      nav_background: false,
-      scrollPosition: null,
+      cookieConsent: false,
     }
   },
-  computed: {
-    setBackground() {
-      const path = this.$route.path
-
-      if (this.scrollPosition < 500) {
-        console.log('here')
-        return true
-      }
-    },
-  },
   methods: {
-    updateScroll() {
-      this.scrollPosition = window.scrollY
-    },
-    hidePopUP() {
-      console.log('hre')
-      document.getElementById('wrapper__cookie').style.display = 'none'
+    cookieConsentAccept() {
+      this.cookieConsent = false
     },
   },
-
   mounted() {
-    window.addEventListener('scroll', this.updateScroll)
+    console.log(document.cookie)
   },
 }
 </script>
@@ -57,12 +40,11 @@ export default {
 .wrapper__cookie {
   width: 100%;
   position: fixed;
-  top: 50%;
+  bottom: 0;
   height: 20vh;
   background-color: $white;
   display: flex;
   justify-content: center;
-  display: none;
 
   .container {
     width: 900px;
@@ -72,13 +54,7 @@ export default {
     border: none;
   }
 }
-.hide {
-  display: none;
-}
 
-.display {
-  display: flex;
-}
 @media only screen and (max-width: 950px) {
   .wrapper__cookie {
     .container {
