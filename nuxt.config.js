@@ -54,19 +54,16 @@ export default {
 
   gtm: {
     id: process.env.GTM_ID,
-    //id:'GTM-WDBBFCC',
 
     enabled: true,
     autoInit: true,
-    //pageTracking: true,
+    pageTracking: true,
   },
 
   publicRuntimeConfig: {
     gtm: {
-     id: process.env.GTM_ID,
-     //id: 'GTM-WDBBFCC',
-
-    }
+      id: process.env.GTM_ID,
+    },
   },
 
   // googleAnalytics: {
@@ -75,7 +72,7 @@ export default {
   //     screenview: true
   //   }
   // },
-  
+
   // publicRuntimeConfig: {
   //   googleAnalytics: {
   //     id: process.env.GOOGLE_ANALYTICS_ID

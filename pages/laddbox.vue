@@ -56,6 +56,11 @@ export default {
           'Snabbare laddning med Zaptec Go - 5 års garanti för 6495:- efter avdraget Grön Teknik. Zaptec Go kan levereras i sex olika färger.',
       },
     ],
+    script: [
+      {
+        src: `https://www.googletagmanager.com/ns.html?id=${process.env.GTM_ID}`,
+      },
+    ],
   },
 }
 </script>

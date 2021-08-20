@@ -31,24 +31,24 @@
         till bokföringslagen.
       </p>
       <p class="text__secondary">
-        När du besöker www.laddboxkillarna.se samlar vi in ​​information om vilka sidor
-        du besöker Hur du interagerar med dessa sidor Vi använder "cookies" för
-        att samla in denna information. Cookies är en standardteknik som de
-        flesta webbplatser använder idag. En cookie är en liten textfil som
-        läggs till i din webbläsares interna minne och låter oss se vad
-        användare tittar på, hur de navigerar på webbplatsen och hur innehållet
-        på webbplatsen fungerar. Vi samlar dessutom in ​​information om
-        besökstid, navigation och webbläsarversion och liknande statistik. Det är för att bäst matcha
-        innehållet på vår webbplats med dig som användare.
+        När du besöker www.laddboxkillarna.se samlar vi in ​​information om
+        vilka sidor du besöker Hur du interagerar med dessa sidor Vi använder
+        "cookies" för att samla in denna information. Cookies är en
+        standardteknik som de flesta webbplatser använder idag. En cookie är en
+        liten textfil som läggs till i din webbläsares interna minne och låter
+        oss se vad användare tittar på, hur de navigerar på webbplatsen och hur
+        innehållet på webbplatsen fungerar. Vi samlar dessutom in ​​information
+        om besökstid, navigation och webbläsarversion och liknande statistik.
+        Det är för att bäst matcha innehållet på vår webbplats med dig som
+        användare.
       </p>
     </div>
     <div class="text__div">
       <p class="text__standard">Vem har tillgång till dina uppgifter?</p>
       <p class="text__secondary">
         Endast Laddboxkillarna AB har tillgång till dina personuppgifter, vi
-        kommer aldrig att lämna ut dina uppgifter till tredje part.
-
-        Statistik från cookies delas med tredje part för att förbättra vår marknadsföring.
+        kommer aldrig att lämna ut dina uppgifter till tredje part. Statistik
+        från cookies delas med tredje part för att förbättra vår marknadsföring.
       </p>
     </div>
     <div class="text__div">
@@ -80,6 +80,11 @@ export default {
         name: 'policys',
         content:
           'Hur behandlar vi dina personuppgifter? Laddboxkillarnas integritetspolicy. Vilka utav dina uppgifter samlar vi in och vem har tillgång till dem.',
+      },
+    ],
+    script: [
+      {
+        src: `https://www.googletagmanager.com/ns.html?id=${process.env.GTM_ID}`,
       },
     ],
   },

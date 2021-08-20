@@ -197,7 +197,8 @@
               </div>
             </div>
             <span class="validation_agreement" v-if="agreementErrorMsg"
-              >Du behöver läsa och acceptera Integritetspolicy för att lägga en intresseanmälan</span
+              >Du behöver läsa och acceptera Integritetspolicy för att lägga en
+              intresseanmälan</span
             >
             <SharedStatusMessage :statusMessage="statusMessage" />
             <SharedStatusMessage
@@ -240,6 +241,11 @@ export default {
         name: 'bestall',
         content:
           'Vi erbjuder laddbox och installation till fast pris med avdraget Grön Teknik! Vi kontaktar er inom 24 timmar efter lagd beställning.',
+      },
+    ],
+    script: [
+      {
+        src: `https://www.googletagmanager.com/ns.html?id=${process.env.GTM_ID}`,
       },
     ],
   },
@@ -508,12 +514,6 @@ export default {
           img {
             padding: 5px;
           }
-
-
-
-
-
-
         }
       }
     }

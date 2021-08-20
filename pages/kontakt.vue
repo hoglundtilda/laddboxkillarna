@@ -138,6 +138,11 @@ export default {
           'Frågor om laddbox och installationer? Kontakta oss - vi garanterar återkoppling inom 24h',
       },
     ],
+    script: [
+      {
+        src: `https://www.googletagmanager.com/ns.html?id=${process.env.GTM_ID}`,
+      },
+    ],
   },
   middleware: 'status_message',
   data() {
