@@ -25,14 +25,14 @@ export default {
       cookieConsent: false,
     }
   },
-  methods: {
-    cookieConsentAccept() {
-      this.cookieConsent = false
-    },
-  },
-  mounted() {
-    console.log(document.cookie)
-  },
+  // methods: {
+  //   cookieConsentAccept() {
+  //     this.cookieConsent = false
+  //   },
+  // },
+  // mounted() {
+  //   console.log(document.cookie)
+  // },
 }
 </script>
 

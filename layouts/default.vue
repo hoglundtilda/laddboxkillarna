@@ -2,7 +2,7 @@
   <div>
     <AppNav />
     <Nuxt />
-    <AppCookie />
+    <!-- <AppCookie /> -->
     <AppFooter />
   </div>
 </template>
