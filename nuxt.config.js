@@ -14,7 +14,7 @@ export default {
     script: [
       {
         hid: 'gtm-script1',
-        src: `https://www.googletagmanager.com/ns.html?id=${process.env.GTM_ID}`,
+        src: 'https://www.googletagmanager.com/ns.html?id=GTM-WDBBFCC',
         defer: true,
       },
       {
@@ -24,7 +24,7 @@ export default {
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer', ${process.env.GTM_ID})
+        })(window,document,'script','dataLayer', 'GTM-WDBBFCC')
         `,
         type: 'text/javascript',
         charset: 'utf-8',
