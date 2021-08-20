@@ -243,11 +243,6 @@ export default {
           'Vi erbjuder laddbox och installation till fast pris med avdraget Grön Teknik! Vi kontaktar er inom 24 timmar efter lagd beställning.',
       },
     ],
-    script: [
-      {
-        src: `https://www.googletagmanager.com/ns.html?id=${process.env.GTM_ID}`,
-      },
-    ],
   },
   middleware: 'status_message',
   data() {

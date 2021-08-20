@@ -261,11 +261,6 @@ export default {
           'Avtalsvillkor för beställning av laddbox via Laddboxkillarna.se',
       },
     ],
-    script: [
-      {
-        src: `https://www.googletagmanager.com/ns.html?id=${process.env.GTM_ID}`,
-      },
-    ],
   },
 }
 </script>

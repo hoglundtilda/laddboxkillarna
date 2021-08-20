@@ -22,11 +22,6 @@ export default {
           'Vi utför installationer för företag och BRF med laddsystemet Zaptec Pro. Kontakta oss för att veta hur vi kan hjälpa just ert företag.',
       },
     ],
-    script: [
-      {
-        src: `https://www.googletagmanager.com/ns.html?id=${process.env.GTM_ID}`,
-      },
-    ],
   },
 }
 </script>

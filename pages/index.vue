@@ -22,11 +22,6 @@ export default {
           'Helhetslösning för dig som behöver laddbox - Laddbox och installation till fast pris med avdraget Grön Teknik. Se vilket betyg våra kunder ger oss på Reco.se.',
       },
     ],
-    script: [
-      {
-        src: `https://www.googletagmanager.com/ns.html?id=${process.env.GTM_ID}`,
-      },
-    ],
   },
 }
 </script>

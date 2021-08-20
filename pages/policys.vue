@@ -82,11 +82,6 @@ export default {
           'Hur behandlar vi dina personuppgifter? Laddboxkillarnas integritetspolicy. Vilka utav dina uppgifter samlar vi in och vem har tillgång till dem.',
       },
     ],
-    script: [
-      {
-        src: `https://www.googletagmanager.com/ns.html?id=${process.env.GTM_ID}`,
-      },
-    ],
   },
 }
 </script>
