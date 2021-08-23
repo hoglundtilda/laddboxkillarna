@@ -12,11 +12,11 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }],
     __dangerouslyDisableSanitizers: ['script'],
     script: [
-      {
-        hid: 'gtm-script1',
-        src: 'https://www.googletagmanager.com/ns.html?id=GTM-WDBBFCC',
-        defer: true,
-      },
+      // {
+      //   hid: 'gtm-script1',
+      //   src: 'https://www.googletagmanager.com/ns.html?id=GTM-WDBBFCC',
+      //   defer: true,
+      // },
       {
         hid: 'gtm-script2',
         innerHTML: `
@@ -57,7 +57,6 @@ export default {
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/style-resources',
-    '@nuxtjs/gtm',
     [
       'nuxt-fontawesome',
       {
@@ -119,7 +118,7 @@ export default {
     //'~assets/css/main.scss'
   ],
 
-  plugins: ['@/plugins/vant', '@/plugins/gtm'],
+  plugins: ['@/plugins/vant'],
 
   styleResources: {
     scss: ['~/assets/css/*.scss'],
