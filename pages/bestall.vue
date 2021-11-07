@@ -174,7 +174,7 @@
                   @mouseout="cable = false"
                 >
                   <img
-                    src="@/assets/logo/question_mark.svg"
+                    src="~/assets/logo/question_mark.svg"
                     alt="question mark"
                   />
                 </div>

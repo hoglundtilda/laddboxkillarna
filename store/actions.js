@@ -1,10 +1,8 @@
 export default {
   async contactEmail({ commit }, email) {
-    console.log(email)
     await this.$axios
       .post(`${this.$axios.defaults.baseURL}/email/contact`, email)
       .then((response) => {
-        console.log(response)
         commit('responseHandler', response.data)
       })
       .catch((error) => {
@@ -25,11 +23,9 @@ export default {
   },
 
   async orderEmail({ commit }, order) {
-    console.log(order)
     await this.$axios
       .post(`${this.$axios.defaults.baseURL}/email/order`, order)
       .then((response) => {
-        console.log(response)
         if (response.data) commit('responseHandler', response.data)
       })
       .catch((error) => {

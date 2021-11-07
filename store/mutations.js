@@ -1,6 +1,5 @@
 export default {
   responseHandler(state, response) {
-    console.log({mutation: response})
 
     if (response.success === false)
       state.statusMessage = {
@@ -16,7 +15,6 @@ export default {
         message: response.message,
       }
 
-      console.log(state.statusMessage)
 
       
   },

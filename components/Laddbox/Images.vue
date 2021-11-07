@@ -54,11 +54,9 @@ export default {
   },
   methods: {
     selectColor(color) {
-      console.log(color)
       const index = this.products.colors.findIndex(function (element) {
         return element.id === color.id
       })
-      console.log(index)
       this.color = this.products.colors[index]
     },
     changeBigImage(smallImage) {

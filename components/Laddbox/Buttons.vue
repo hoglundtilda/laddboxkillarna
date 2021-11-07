@@ -34,7 +34,6 @@ export default {
     },
     setBackground() {
       const path = this.$route.path
-      console.log(path)
       if (path === '/foretag-brf') {
         return true
       }
