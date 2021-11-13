@@ -54,10 +54,9 @@ export default {
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 6rem;
-
+    padding: 4rem;
     a {
-      padding: 2.5rem;
+      padding: 2rem;
       color: $white;
       font-size: 2rem;
     }

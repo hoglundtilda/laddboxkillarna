@@ -83,6 +83,15 @@ img{
     padding: 20% 10%;
     .container {
       width: 100%;
+
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .wrapper__laddboxar {
+    .zaptec {
+      margin-top: 4rem;
     }
   }
 }

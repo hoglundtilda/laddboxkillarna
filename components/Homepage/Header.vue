@@ -20,7 +20,7 @@
           <ButtonPrimary btn_text="Produkter" class="primary"
         /></nuxt-link>
         <nuxt-link to="/bestall"
-          ><ButtonGhost btn_text="Beställ här" class="ghost"
+          ><ButtonGhost btn_text="Beställ" class="ghost"
         /></nuxt-link>
       </div>
     </div>
