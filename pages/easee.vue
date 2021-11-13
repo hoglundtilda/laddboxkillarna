@@ -7,10 +7,10 @@
     <div class="divider">
       <LaddboxEaseeImages class="divider" />
       <section class="information">
-        <h3>6 990 SEK <span class="moms"> Inkl. 25% moms</span></h3>
+        <h3>6 495 SEK <span class="moms"> Inkl. 25% moms</span></h3>
         <p class="text__secondary headline">
           Vi ansöker om avdraget Grön Teknik för er räkning
-          <span class="moms">(Ord pris: 13 980:-) </span>
+          <span class="moms">(Ord pris: 12 990:-) </span>
         </p>
         <p class="text__secondary">
           <span>Universell</span>, passar alla elbilar och laddhybrider. Easee

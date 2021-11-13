@@ -9,7 +9,7 @@
    <NuxtLink to="/easee">
   <img src="~/assets/images/easee/front_easee.png" alt="easee charger">
   <p class="text__standard">Easee</p>
-  <p class="text__standard price">6 990:- </p>
+  <p class="text__standard price">6 495:- </p>
 </NuxtLink>
   </div>
   <div class="zaptec">
