@@ -3,7 +3,7 @@
     <button
       :class="setBackground ? 'dark-theme left-btn' : 'light-theme left-btn'"
     >
-      <a :href="produktblad" target="_blank"> Teknisk specifikation</a>
+      <a :href="produktblad" target="_blank"> Specifikation</a>
     </button>
 
     <button

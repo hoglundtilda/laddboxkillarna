@@ -130,10 +130,14 @@ export default {}
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 10%;
+    padding: 6%;
 
     .text {
       margin-top: 10rem;
+    }
+
+    h1 {
+      font-size: 36px;
     }
   }
 }
