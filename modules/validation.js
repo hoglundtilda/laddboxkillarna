@@ -11,6 +11,7 @@ export const validateOrder = (order) => {
     state: pattern.isNotEmpty(order.state),
     email: pattern.email.test(order.email),
     phoneNr: pattern.phoneNr.test(order.phoneNr),
+    charger: pattern.isNotEmpty(order.laddbox),
     color: pattern.isNotEmpty(order.color),
   }
 
