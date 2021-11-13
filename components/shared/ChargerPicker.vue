@@ -10,7 +10,7 @@
         </div>
         <div class="info">
           <h4>Easee</h4>
-          <h5>6 990:-</h5>
+          <h5>6 495:-</h5>
         </div>
       </div>
       <div
