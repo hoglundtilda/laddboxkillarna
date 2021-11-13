@@ -11,7 +11,7 @@
     <div class="links">
       <NuxtLink to="/"> Hem </NuxtLink>
       <NuxtLink to="/om"> Om oss </NuxtLink>
-      <NuxtLink to="/laddbox"> Laddbox </NuxtLink>
+      <NuxtLink to="/laddboxar"> Laddboxar </NuxtLink>
       <NuxtLink to="/foretag-brf"> Företag/BRF </NuxtLink>
       <NuxtLink to="/kontakt"> Kontakt </NuxtLink>
     </div>
@@ -34,7 +34,7 @@ export default {
       const path = this.$route.path
 
       if (path === '/' || path === '/om') {
-        if (this.scrollPosition < 1000) {
+        if (this.scrollPosition < 300) {
           return true
         }
       } else {
