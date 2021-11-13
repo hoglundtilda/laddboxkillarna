@@ -8,7 +8,7 @@
     <div class="links">
       <NuxtLink to="/" @click.native="showOverlay"> Hem </NuxtLink>
       <NuxtLink to="/om" @click.native="showOverlay"> Om oss </NuxtLink>
-      <NuxtLink to="/laddboxar" @click.native="showOverlay"> Laddbox </NuxtLink>
+      <NuxtLink to="/laddboxar" @click.native="showOverlay"> Laddboxar </NuxtLink>
       <NuxtLink to="/foretag-brf" @click.native="showOverlay">
         Företag/BRF
       </NuxtLink>
