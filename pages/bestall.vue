@@ -139,13 +139,23 @@
               cols="30"
               rows="5"
               placeholder="Övriga upplysningar"
-              class="user_input"
+              class="user_input textarea"
             ></textarea>
             <div>
+              <span :class="chargerErrorMsg ? 'error' : ''"
+                >Välj laddbox: {{ charger }}</span
+              >
+              <SharedChargerPicker @selectCharger="selectCharger" />
+            </div>
+            <div v-if="this.order.charger == 'Zaptec Go'">
               <span :class="colorErrorMsg ? 'error' : ''"
                 >Välj färg: {{ color }}</span
               >
               <SharedColorPicker @selectColor="selectColor" />
+            </div>
+            <div v-if="this.order.charger === 'Easee'">
+              <span>Välj färg: Svart</span>
+              <SharedBlackColor />
             </div>
             <div class="checkboxes">
               <div class="checkbox">
@@ -249,6 +259,7 @@ export default {
     return {
       products: products,
       color: '',
+      charger: '',
       terms: false,
       cable: false,
       extra: false,
@@ -260,6 +271,7 @@ export default {
         state: true,
         email: true,
         phoneNr: true,
+        charger: true,
         color: true,
         agreement: true,
       },
@@ -272,12 +284,14 @@ export default {
         email: '',
         phoneNr: '',
         information: '',
+        charger: '',
         color: '',
         consultation: false,
         charging_cable: false,
         agreement: false,
       },
       agreementErrorMsg: false,
+      chargerErrorMsg: false,
       colorErrorMsg: false,
       formatErrorMsg: false,
       formatMessage: {
@@ -305,6 +319,15 @@ export default {
       this.color = this.products.colors[index].name
       this.order.color = color.name
     },
+    selectCharger(charger) {
+      this.charger = charger
+      this.order.charger = charger
+
+      if (this.order.charger === 'Easee') {
+        this.color = "Svart"
+        this.order.color = 'Svart'
+      }
+    },
     showTerms() {
       this.terms = true
     },
@@ -321,6 +344,7 @@ export default {
         email: obj.email.trim(),
         phoneNr: obj.phoneNr.trim(),
         information: obj.information,
+        charger: obj.charger,
         color: obj.color,
         consultation: obj.consultation,
         charging_cable: obj.charging_cable,
@@ -332,14 +356,17 @@ export default {
       const order = await this.trimObject(this.order)
       this.validation = await validateOrder(order)
 
+
       const isValid = Object.values(this.validation).every(
         (item) => item === true
       )
+      this.chargerErrorMsg = this.validation.charger ? false : true
       this.colorErrorMsg = this.validation.color ? false : true
       this.agreementErrorMsg = this.order.agreement ? false : true
       this.formatErrorMsg = !isValid
 
-      if (isValid === true) {
+
+      if (isValid === true && this.order.agreement === true) {
         this.sendOrder(order)
       }
     },
@@ -449,9 +476,14 @@ export default {
       .user_input {
         @include input;
       }
+
       .user_input {
         @include input;
         border-radius: 2rem;
+      }
+
+      .textarea {
+        margin-bottom: 1rem;
       }
 
       .validation_agreement {
