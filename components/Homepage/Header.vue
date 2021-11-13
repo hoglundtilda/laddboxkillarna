@@ -16,8 +16,8 @@
         </p>
       </section>
       <div class="buttons">
-        <nuxt-link to="/laddbox">
-          <ButtonPrimary btn_text="Produkter" class="primary"
+        <nuxt-link to="/laddboxar">
+          <ButtonPrimary btn_text="Laddboxar" class="primary"
         /></nuxt-link>
         <nuxt-link to="/bestall"
           ><ButtonGhost btn_text="Beställ" class="ghost"

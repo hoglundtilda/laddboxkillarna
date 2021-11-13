@@ -91,8 +91,8 @@ form {
     .midnight,
     .wood,
     .black {
-      width: 3.5rem;
-      height: 3.5rem;
+      width: 2.7rem;
+      height: 2.7rem;
 
       &:checked:hover {
         transform: scale(1.2);

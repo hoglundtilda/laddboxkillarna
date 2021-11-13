@@ -13,7 +13,7 @@
           minsta 22kW (Maximal laddeffekt) laddaren på marknaden och den är lika
           smart på insidan som enkel på utsidan.
         </p>
-        <nuxt-link to="/laddbox"
+        <nuxt-link to="/zaptec"
           ><ButtonPrimary btn_text="Utforska Zaptec Go" class="primary"
         /></nuxt-link>
       </div>
