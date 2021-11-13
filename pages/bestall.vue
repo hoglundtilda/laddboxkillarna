@@ -326,6 +326,8 @@ export default {
       if (this.order.charger === 'Easee') {
         this.color = "Svart"
         this.order.color = 'Svart'
+      } else {
+        this.color = ''
       }
     },
     showTerms() {

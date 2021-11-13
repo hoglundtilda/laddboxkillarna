@@ -5,7 +5,7 @@
     </div>
 
     <div class="divider">
-    <LaddboxEaseeImages class="divider" />
+      <LaddboxEaseeImages class="divider" />
       <section class="information">
         <h3>6 990 SEK <span class="moms"> Inkl. 25% moms</span></h3>
         <p class="text__secondary headline">
@@ -13,24 +13,28 @@
           <span class="moms">(Ord pris: 13 980:-) </span>
         </p>
         <p class="text__secondary">
-          <span>Passar alla bilar</span> samt hem.
+          <span>Universell</span>, passar alla elbilar och laddhybrider. Easee
+          laddbox känner automatiskt av vilken kraft fordonet behöver, 1.4 -
+          22kW.
         </p>
         <p class="text__secondary">
-          <span>Med Zaptec Go laddar du 10 gånger snabbare</span> än via ett
-          vanligt eluttag. Med en 22kW-bil och laddning i endast en timme får du
-          en räckvidd på 100 km på nolltid.
+          <span>Snabbare laddning</span> än via ett vanligt eluttag. Med en
+          22kW-bil och laddning i endast en timme får du en räckvidd på 100 km
+          på nolltid.
         </p>
         <p class="text__secondary">
           <span>Tålig </span>
           <br />
-          Laddaren är designad, utvecklad och tillverkad i Norge för nordiska förhållanden.
+          Laddaren är designad, utvecklad och tillverkad i Norge för nordiska
+          förhållanden.
         </p>
         <p class="text__secondary">
           <span>Framtidssäkrad och alltid uppdaterad. </span>
           <br />
           Easee är fullmatad med den allra senaste tekniken och alltid
           uppkopplad med WiFi eller 4G för att du ska ha tillgång till de
-          senaste funktionerna och uppdateringarna.
+          senaste funktionerna och uppdateringarna. Easee upptäcker om det
+          uppstår problem och utför förebyggande underhåll.
         </p>
         <nuxt-link to="/bestall"
           ><ButtonPrimaryBlack btn_text="Beställ laddbox" class="primary"
@@ -50,14 +54,14 @@ export default {
         hid: 'easee',
         name: 'easee',
         content:
-          'En av marknades mest inteligenta laddare. Passar till lla elbilar och laddhybrider',
+          'Köp Easee laddbox - Marknadens smartaste laddbox med både WiFi & 4G uppkoppling. Passar alla bilar. 50% med avdraget Grön Teknik',
       },
     ],
   },
 }
 </script>
 
-<style lang="scss" >
+<style lang="scss">
 .wrapper__easee {
   min-height: 100vh;
   padding: 10% 0;
@@ -96,9 +100,14 @@ export default {
     }
 
     .text__secondary {
+      margin: 10px 0;
       span {
         font-weight: 600;
       }
+    }
+
+    a {
+      margin-top: 1.5rem;
     }
   }
 }

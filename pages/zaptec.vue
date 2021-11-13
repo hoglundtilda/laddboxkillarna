@@ -99,9 +99,15 @@ export default {
     }
 
     .text__secondary {
+      margin: 10px 0;
+
       span {
         font-weight: 600;
       }
+    }
+
+    a {
+      margin-top: 1.5rem;
     }
   }
 }

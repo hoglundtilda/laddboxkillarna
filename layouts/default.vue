@@ -71,7 +71,7 @@ textarea::placeholder {
 
 @media only screen and (max-width: 1200px) {
   html {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   input::placeholder,
@@ -82,7 +82,7 @@ textarea::placeholder {
 
 @media only screen and (max-width: 900px) {
   html {
-    font-size: 12px;
+    font-size: 14px;
     .text__standard {
       font-size: 1.7rem;
     }
@@ -94,7 +94,7 @@ textarea::placeholder {
 
 @media only screen and (max-width: 600px) {
   html {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   input::placeholder,
