@@ -108,10 +108,7 @@ form {
   form {
     .easee,
     .zaptec {
-      width: 3.5rem;
-      height: 3.5rem;
-
-      &:checked:hover {
+           &:checked:hover {
         transform: scale(1.2);
       }
       &:hover {
