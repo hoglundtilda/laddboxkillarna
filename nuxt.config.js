@@ -8,6 +8,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: "facebook-domain-verification", content: "qtaync5qm7bh3c6gkiq95pp2b8kjrd" },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }],
     __dangerouslyDisableSanitizers: ['script'],
